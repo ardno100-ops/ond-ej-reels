@@ -34,13 +34,17 @@ const TOWER_X = 790;
 
 const towerH = (landed: number) => 260 + landed * 26;
 
-export const Hook: React.FC = () => {
+export const Hook: React.FC<{coinEvery?: number; coinCount?: number; payDrop?: number}> = ({
+	coinEvery = COIN_EVERY,
+	coinCount = COIN_COUNT,
+	payDrop = PAY_DROP,
+}) => {
 	const f = useCurrentFrame();
-	const landed = Array.from({length: COIN_COUNT}).filter((_, i) => f >= COIN_FIRST + i * COIN_EVERY + COIN_FLIGHT).length;
+	const landed = Array.from({length: coinCount}).filter((_, i) => f >= COIN_FIRST + i * coinEvery + COIN_FLIGHT).length;
 	const th = towerH(landed);
 	const top = BASE - th;
-	const pay = prog(f, PAY_DROP, 26, Easing.in(Easing.quad));
-	const payLabel = prog(f, PAY_DROP + 28, 12, Easing.out(Easing.back(2)));
+	const pay = prog(f, payDrop, 26, Easing.in(Easing.quad));
+	const payLabel = prog(f, payDrop + 28, 12, Easing.out(Easing.back(2)));
 	const typing = f < 120 ? Math.sin(f / 2) * 3 : 0;
 
 	return (
@@ -68,8 +72,8 @@ export const Hook: React.FC = () => {
 				<rect x={DESK_X + 116} y={BASE - 98} width={14} height={98} fill={C.gray} />
 				<path d={`M ${DESK_X - 20} ${BASE - 120} L ${DESK_X + 70} ${BASE - 120} L ${DESK_X + 54} ${BASE - 186} L ${DESK_X - 36} ${BASE - 186} Z`} fill={C.dark} stroke={C.white} strokeWidth={4} />
 				{/* flying coins */}
-				{Array.from({length: COIN_COUNT}).map((_, i) => {
-					const start = COIN_FIRST + i * COIN_EVERY;
+				{Array.from({length: coinCount}).map((_, i) => {
+					const start = COIN_FIRST + i * coinEvery;
 					const p = (f - start) / COIN_FLIGHT;
 					if (p < 0 || p > 1) return null;
 					const tgtY = BASE - towerH(i) - 10;
@@ -78,7 +82,7 @@ export const Hook: React.FC = () => {
 					return <Coin key={i} x={x} y={y} />;
 				})}
 				{/* the one coin coming back */}
-				{f >= PAY_DROP ? (
+				{f >= payDrop ? (
 					<Coin
 						x={TOWER_X + (DESK_X - TOWER_X) * pay}
 						y={top - 10 + (BASE - 300 - (top - 10)) * pay - Math.sin(pay * Math.PI) * 120}
@@ -93,8 +97,8 @@ export const Hook: React.FC = () => {
 					</Pill>
 				</div>
 			) : null}
-			<Headline small="KOLIK VYDĚLÁŠ" big="FIRMĚ?" at={2} until={PAY_DROP - 10} top={270} bigSize={128} />
-			<Headline small="…A KOLIK Z TOHO" big="VIDÍŠ TY?" at={PAY_DROP} top={270} bigSize={128} />
+			<Headline small="KOLIK VYDĚLÁŠ" big="FIRMĚ?" at={2} until={payDrop - 10} top={270} bigSize={128} />
+			<Headline small="…A KOLIK Z TOHO" big="VIDÍŠ TY?" at={payDrop} top={270} bigSize={128} />
 		</AbsoluteFill>
 	);
 };
@@ -163,7 +167,7 @@ export const SamePay: React.FC = () => {
 /* =====================================================================
    Ladder (shared by LADDER and TIMELINE scenes)
    ===================================================================== */
-const RUNGS: {code: string; name: string}[] = [
+export const RUNGS: {code: string; name: string}[] = [
 	{code: 'C', name: 'CONSULTANT'},
 	{code: 'SC I', name: 'SENIOR CONSULTANT'},
 	{code: 'SC II', name: 'SENIOR CONSULTANT'},
@@ -175,15 +179,15 @@ const RUNGS: {code: string; name: string}[] = [
 	{code: 'D3', name: 'PARTNER'},
 ];
 // relative commission share per position (ratio only, no rates shown)
-const SHARE = [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5];
-const L_LEFT = 250;
-const L_RIGHT = 400;
-const L_BOTTOM = 1700;
-const rungY = (i: number) => 1630 - i * 106;
+export const SHARE = [3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5];
+export const L_LEFT = 250;
+export const L_RIGHT = 400;
+export const L_BOTTOM = 1700;
+export const rungY = (i: number) => 1630 - i * 106;
 const BAR_X = 920;
 const BAR_W = 84;
 
-const Ladder: React.FC<{reached: number; climb: number; showShare: boolean; shareLabel: number}> = ({reached, climb, showShare, shareLabel}) => {
+export const Ladder: React.FC<{reached: number; climb: number; showShare: boolean; shareLabel: number}> = ({reached, climb, showShare, shareLabel}) => {
 	const share = SHARE[Math.max(0, Math.min(8, Math.floor(climb)))] + (SHARE[Math.min(8, Math.floor(climb) + 1)] - SHARE[Math.max(0, Math.min(8, Math.floor(climb)))]) * (climb % 1);
 	const barH = (share / 7.5) * 860;
 	const ci = Math.max(0, Math.min(8, climb));
