@@ -208,6 +208,75 @@ def pop():
 
 
 
+# --- extra sound design (also used by pecka) ---
+def sub_boom(dur=1.6):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    f = 32 + 60 * np.exp(-t * 6)
+    s = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 1.6)
+    return np.tanh(s * 2.2) * 0.75
+
+
+def shatter():
+    n = int(1.6 * SR)
+    t = np.arange(n) / SR
+    out = highpass(rng.standard_normal(n), 3500) * np.exp(-t * 7) * 0.45
+    for _ in range(70):
+        st = int(rng.uniform(0, 0.6) * SR)
+        fq = rng.uniform(2500, 9500)
+        m = int(rng.uniform(0.05, 0.35) * SR)
+        m = min(m, n - st)
+        tt = np.arange(m) / SR
+        out[st:st + m] += np.sin(2 * np.pi * fq * tt) * np.exp(-tt * rng.uniform(15, 45)) * rng.uniform(0.04, 0.12)
+    return out * 0.9
+
+
+def kaching():
+    n = int(1.2 * SR)
+    t = np.arange(n) / SR
+    s = np.zeros(n)
+    for st, base in ((0.0, 2093.0), (0.09, 2637.0)):
+        i = int(st * SR)
+        tt = t[: n - i]
+        for ratio, amp in ((1, 1.0), (2.76, 0.5), (5.4, 0.25)):
+            s[i:] += np.sin(2 * np.pi * base * ratio * tt) * np.exp(-tt * 4.5) * amp
+    s += highpass(rng.standard_normal(n), 3000) * np.exp(-t * 60) * 0.6
+    return s * 0.14
+
+
+def bulb_buzz(dur):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    s = np.sign(np.sin(2 * np.pi * 100 * t)) * 0.4 + 0.3 * highpass(rng.standard_normal(n), 2000)
+    gate = (np.floor(t * 22) % 3 != 1).astype(float)
+    return lowpass(s, 2500) * gate * 0.18
+
+
+def chime(freqs, dur=1.6):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    s = sum(np.sin(2 * np.pi * fq * t) * np.exp(-t * 2.5) for fq in freqs)
+    return s * 0.12
+
+
+def tape_stop(dur=0.7, f0=220.0):
+    n = int(dur * SR)
+    t = np.arange(n) / SR
+    f = f0 * (1 - t / dur) ** 1.6 + 25
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    s = np.sin(ph) + 0.5 * np.sin(ph * 1.5) + 0.3 * np.sign(np.sin(ph * 0.5))
+    return lowpass(s, 1800) * np.linspace(1, 0, n) * 0.35
+
+
+def heartbeat():
+    return np.concatenate([thud(), np.zeros(int(0.06 * SR)), thud() * 0.7])
+
+
+def coin_clink(i):
+    return ping(2600 + (i % 5) * 170, 0.14)
+
+
+
 def write_wav(path, mono, peak=0.89):
     m = np.tanh(mono * 1.2)
     m = m / (np.max(np.abs(m)) + 1e-9) * peak
