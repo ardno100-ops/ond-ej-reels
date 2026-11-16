@@ -68,4 +68,5 @@ add(sfx, fr(CTA), whoosh(0.6, True), 1)
 add(sfx, fr(CTA + 34), pop(), 1.1)
 add(sfx, fr(CTA + 34), kaching(), 0.8)
 
-finish('env-soundtrack.wav', music, sfx, end)
+# music removed on request – SFX only
+finish('env-soundtrack.wav', music * 0, sfx, end)
