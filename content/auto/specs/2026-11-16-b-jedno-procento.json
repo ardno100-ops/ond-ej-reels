@@ -1,0 +1,11 @@
+{
+  "id": "2026-11-16-b-jedno-procento",
+  "audio": "auto/2026-11-16-b-jedno-procento.wav",
+  "scenes": [
+    {"type": "slam", "dur": 80, "emoji": "📈", "lines": [{"t": "1 % LEPŠÍ", "size": 130, "tone": "accent"}, {"t": "KAŽDÝ DEN.", "size": 100}, {"t": "VÍŠ, KAM SE DOSTANEŠ?", "size": 56, "tone": "muted"}]},
+    {"type": "counter", "dur": 125, "kicker": "1,01 NA 365. DEN", "value": 37.8, "suffix": "×", "label": "LEPŠÍ ZA ROK", "after": [{"t": "A KDYŽ POLEVÍŠ O 1 %?", "size": 56}, {"t": "0,03×", "size": 130, "tone": "red"}]},
+    {"type": "list", "dur": 124, "title": "V KARIÉŘE TO ZNAMENÁ:", "items": ["1 HOVOR S KLIENTEM NAVÍC", "10 MINUT UČENÍ DENNĚ", "1 NOVÝ KONTAKT TÝDNĚ", "1 VĚC LÍP NEŽ VČERA"]},
+    {"type": "slam", "dur": 85, "lines": [{"t": "SÁM TO", "size": 110}, {"t": "VYDRŽÍŠ TÝDEN.", "size": 96, "tone": "red"}, {"t": "S TÝMEM ROKY.", "size": 110, "tone": "accent"}]},
+    {"type": "cta", "dur": 150, "pre": "CHCEŠ RŮST KAŽDÝ DEN?", "word": "TÝM", "sub": "POZVU TĚ MEZI LIDI, KTEŘÍ MAKAJÍ.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}

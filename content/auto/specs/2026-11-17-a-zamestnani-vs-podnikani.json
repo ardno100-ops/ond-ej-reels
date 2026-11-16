@@ -1,0 +1,11 @@
+{
+  "id": "2026-11-17-a-zamestnani-vs-podnikani",
+  "audio": "auto/2026-11-17-a-zamestnani-vs-podnikani.wav",
+  "scenes": [
+    {"type": "slam", "dur": 80, "emoji": "⚖️", "lines": [{"t": "ZAMĚSTNÁNÍ,", "size": 110}, {"t": "NEBO PODNIKÁNÍ?", "size": 100, "tone": "accent"}, {"t": "ROZDÍL, KTERÝ TI NIKDO NEŘEKNE.", "size": 46, "tone": "muted"}]},
+    {"type": "compare", "dur": 145, "title": "KDO ROZHODUJE?", "left": {"head": "ZAMĚSTNÁNÍ", "items": ["PŘÍJEM Z TABULKY", "ROZVRH OD ŠÉFA", "STROP", "STAVÍŠ CIZÍ FIRMU"]}, "right": {"head": "PODNIKÁNÍ", "items": ["PŘÍJEM PODLE VÝSLEDKŮ", "TVŮJ ROZVRH", "BEZ STROPU", "STAVÍŠ SVOJI"]}, "foot": "Podnikání nese i riziko a začátek bývá pomalejší."},
+    {"type": "list", "dur": 124, "title": "JENŽE POTŘEBUJEŠ:", "items": ["NÁPAD", "KNOW-HOW", "ZÁZEMÍ", "LIDI KOLEM SEBE"], "mark": "x"},
+    {"type": "slam", "dur": 85, "emoji": "💡", "lines": [{"t": "TO VŠECHNO", "size": 100}, {"t": "U MĚ DOSTANEŠ.", "size": 100, "tone": "accent"}]},
+    {"type": "cta", "dur": 150, "pre": "CHCEŠ PODNIKAT, ALE NEMÁŠ NÁPAD?", "word": "NÁPAD", "sub": "POŠLU TI, JAK TO U NÁS FUNGUJE.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}
