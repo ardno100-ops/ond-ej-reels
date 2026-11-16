@@ -3,6 +3,7 @@ import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
 import {Footnote, Person, Pill} from '../components';
 import {C, FONT, glow, prog} from '../theme';
 import {FullSvg, SceneDef, makeReel, sumDur} from '../week/common';
+import {useMono} from '../style';
 
 const RED = '#ff8a7a';
 const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
@@ -10,8 +11,15 @@ const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as c
 /** Text that slams in (scale 1.5 -> 1) at frame `at`. */
 export const Slam: React.FC<{at: number; children: React.ReactNode; style?: React.CSSProperties; color?: string; size: number}> = ({at, children, style, color = C.white, size}) => {
 	const f = useCurrentFrame();
+	const mono = useMono();
 	if (f < at) return null;
 	const k = f - at;
+	if (mono) {
+		const p = interpolate(k, [0, 12], [0, 1], {...clamp, easing: Easing.out(Easing.cubic)});
+		return (
+			<div style={{fontFamily: FONT, fontWeight: 800, fontSize: size * 0.86, lineHeight: 1.12, letterSpacing: '0.12em', color, textShadow: glow(color, 22), opacity: p, filter: `blur(${(1 - p) * 10}px)`, transform: `translateY(${(1 - p) * 14}px)`, ...style}}>{children}</div>
+		);
+	}
 	const s = interpolate(k, [0, 5, 9], [1.6, 0.96, 1], clamp);
 	const o = interpolate(k, [0, 3], [0, 1], clamp);
 	return (
@@ -21,6 +29,8 @@ export const Slam: React.FC<{at: number; children: React.ReactNode; style?: Reac
 
 export const Shake: React.FC<{hits: number[]; children: React.ReactNode}> = ({hits, children}) => {
 	const f = useCurrentFrame();
+	const mono = useMono();
+	if (mono) return <AbsoluteFill>{children}</AbsoluteFill>;
 	let dx = 0;
 	let dy = 0;
 	hits.forEach((h) => {
@@ -36,6 +46,8 @@ export const Shake: React.FC<{hits: number[]; children: React.ReactNode}> = ({hi
 
 export const Flash: React.FC<{at: number[]}> = ({at}) => {
 	const f = useCurrentFrame();
+	const mono = useMono();
+	if (mono) return null;
 	const o = Math.max(0, ...at.map((a) => (f >= a && f < a + 4 ? 0.3 * (1 - (f - a) / 4) : 0)));
 	return <AbsoluteFill style={{backgroundColor: '#fff', opacity: o, pointerEvents: 'none'}} />;
 };

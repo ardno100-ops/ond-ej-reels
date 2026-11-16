@@ -1,0 +1,15 @@
+{
+  "id": "ukazka-mono-ostatni",
+  "audio": "auto/ukazka-mono-ostatni.wav",
+  "style": "mono",
+  "scenes": [
+    {"type": "slam", "dur": 80, "lines": [{"t": "PŘESTAŇ ŘEŠIT,", "size": 96}, {"t": "CO SI MYSLÍ", "size": 96}, {"t": "OSTATNÍ.", "size": 120}]},
+    {"type": "bubbles", "dur": 125, "kicker": "CO NA TO ŘEKNOU OSTATNÍ", "words": ["TO NEDĚLEJ", "RISK", "BLBOST", "PROČ?", "NEVYJDE TO", "JISTOTA"], "mute": true, "caption": "CO ŘÍKAJÍ LIDI"},
+    {"type": "spotlight", "dur": 110, "title": "JEN TY", "sub": "ŽIJEŠ SVŮJ ŽIVOT", "caption": "NIKDO JINÝ HO ZA TEBE NEPROŽIJE"},
+    {"type": "shield", "dur": 120, "kicker": "ŽÁDNÝ NÁZOR SE K TOBĚ NEDOSTANE", "words": ["NÁZOR", "KRITIKA", "ŘEČI", "RADA"]},
+    {"type": "arrows", "dur": 110, "kicker": "DĚLEJ, CO DÁVÁ SMYSL TOBĚ", "label": "TVOJE CESTA"},
+    {"type": "countdown", "dur": 120, "kicker": "KAŽDÝ DEN", "head": "DEN", "from": 1, "to": 365, "caption": "ČAS NEČEKÁ"},
+    {"type": "progress", "dur": 140, "title": "JDI ZA SVÝM CÍLEM", "sub": "KROK ZA KROKEM", "steps": ["1.", "2.", "3.", "4.", "5.", "6."], "goal": "TVŮJ CÍL", "caption": "6 MĚSÍCŮ"},
+    {"type": "cta", "dur": 150, "pre": "CHCEŠ BÝT MEZI LIDMI, CO TĚ PODRŽÍ?", "word": "TÝM", "sub": "POZVU TĚ MEZI NÁS.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}

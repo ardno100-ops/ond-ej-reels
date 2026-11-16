@@ -4,6 +4,8 @@ import {Background, Footnote, SceneFade} from '../components';
 import {Flash, Shake, Slam} from '../nabor/reel';
 import {PunchIn} from '../pecka/scenes';
 import {C, FONT, fmt, glow, prog} from '../theme';
+import {MonoCtx} from '../style';
+import {Arrows, ArrowsScene, Bubbles, BubblesScene, Countdown, CountdownScene, Progress, ProgressScene, Shield, ShieldScene, Spotlight, SpotlightScene} from './monoScenes';
 
 /* =====================================================================
    Data-driven reel. A spec (JSON) describes scenes; this renders them.
@@ -32,9 +34,16 @@ export type AutoScene =
 	| {type: 'list'; dur: number; title: string; title2?: string; items: string[]; mark?: 'check' | 'x'; foot?: string}
 	| {type: 'compare'; dur: number; title: string; left: {head: string; items: string[]}; right: {head: string; items: string[]}; foot?: string}
 	| {type: 'bars'; dur: number; title: string; bars: {label: string; value: number; display: string}[]; foot?: string}
-	| {type: 'cta'; dur: number; pre: string; word: string; sub: string; foot?: string};
+	| {type: 'cta'; dur: number; pre: string; word: string; sub: string; foot?: string}
+	| BubblesScene
+	| SpotlightScene
+	| ShieldScene
+	| ArrowsScene
+	| CountdownScene
+	| ProgressScene;
 
-export type AutoSpec = {id: string; audio: string; scenes: AutoScene[]};
+/** style: 'glow' = zelený glow (default), 'mono' = černobílý minimalistický styl. */
+export type AutoSpec = {id: string; audio: string; style?: 'glow' | 'mono'; scenes: AutoScene[]};
 
 const RED = '#ff8a7a';
 const toneColor = (t?: Tone) => (t === 'accent' ? C.accent : t === 'red' ? RED : t === 'muted' ? C.muted : C.white);
@@ -276,31 +285,52 @@ const SceneSwitch: React.FC<{s: AutoScene}> = ({s}) => {
 			return <BarsScene s={s} />;
 		case 'cta':
 			return <CtaScene s={s} />;
+		case 'bubbles':
+			return <Bubbles s={s} />;
+		case 'spotlight':
+			return <Spotlight s={s} />;
+		case 'shield':
+			return <Shield s={s} />;
+		case 'arrows':
+			return <Arrows s={s} />;
+		case 'countdown':
+			return <Countdown s={s} />;
+		case 'progress':
+			return <Progress s={s} />;
 		default:
 			return null;
 	}
 };
 
-export const AutoReel: React.FC<AutoSpec> = ({scenes, audio}) => {
+export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style}) => {
+	const mono = style === 'mono';
 	let from = 0;
 	return (
-		<AbsoluteFill style={{backgroundColor: C.bg}}>
-			<Background />
-			{scenes.map((s, i) => {
-				const seq = (
-					<Sequence key={i} name={`${i + 1}. ${s.type}`} from={from} durationInFrames={s.dur}>
-						<SceneFade dur={s.dur} inF={i === 0 ? 0 : 4} outF={i === scenes.length - 1 ? 14 : 4}>
-							<PunchIn>
-								<SceneSwitch s={s} />
-							</PunchIn>
-						</SceneFade>
-					</Sequence>
-				);
-				from += s.dur;
-				return seq;
-			})}
-			{audio ? <Audio src={staticFile(audio)} /> : null}
-		</AbsoluteFill>
+		<MonoCtx.Provider value={mono}>
+			<AbsoluteFill style={{backgroundColor: mono ? '#000' : C.bg}}>
+				{mono ? <AbsoluteFill style={{background: 'radial-gradient(ellipse 75% 50% at 50% 50%, #161616 0%, #000 70%)'}} /> : <Background />}
+				<AbsoluteFill style={mono ? {filter: 'grayscale(1) contrast(1.05)'} : undefined}>
+					{scenes.map((s, i) => {
+						const seq = (
+							<Sequence key={i} name={`${i + 1}. ${s.type}`} from={from} durationInFrames={s.dur}>
+								<SceneFade dur={s.dur} inF={i === 0 ? 0 : mono ? 8 : 4} outF={i === scenes.length - 1 ? 14 : mono ? 8 : 4}>
+									{mono ? (
+										<SceneSwitch s={s} />
+									) : (
+										<PunchIn>
+											<SceneSwitch s={s} />
+										</PunchIn>
+									)}
+								</SceneFade>
+							</Sequence>
+						);
+						from += s.dur;
+						return seq;
+					})}
+				</AbsoluteFill>
+				{audio ? <Audio src={staticFile(audio)} /> : null}
+			</AbsoluteFill>
+		</MonoCtx.Provider>
 	);
 };
 

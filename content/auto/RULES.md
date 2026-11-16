@@ -9,9 +9,23 @@ Cílovka: 20–25 let, téma kariéra / podnikání / finance. Cíl: leady pro n
 - Témata vybírej z `TOPICS.md`, nikdy neopakuj téma z posledních 14 dní (`log.md`).
 - Jeden reel kariéra/mindset, druhý finance v číslech s kariérním úhlem (střídej).
 
+## Vizuální styl – VÝCHOZÍ: `"style": "mono"`
+Inspirace: černobílé minimalistické piktogramové explainery (čisté černé pozadí, bílá + šedá s jemnou září,
+široce prostrkané verzálky, malé bílé štítky, jedna myšlenka na scénu, klidné plynulé animace bez třesení).
+- Každý spec má `"style": "mono"`. Zelený `glow` styl jen výjimečně (max 1× týdně pro pestrost).
+- Preferuj piktogramové scény: `bubbles` (ty vs. řeči ostatních, `mute: true` = umlčení), `spotlight` (jen ty),
+  `shield` (názory se odrazí od kruhu), `arrows` (všichni radí, ty jdeš svou cestou), `countdown` (přesýpací hodiny + kalendář),
+  `progress` (cesta k cíli se segmenty a hvězdou). Kombinuj s `slam`, `counter`, `list`, `cta`.
+- Pole: bubbles {kicker?, title?, center?, words[max 6, krátká], mute?, caption?}; spotlight {title, sub?, caption?};
+  shield {kicker?, words[3–5], caption?}; arrows {kicker?, label, caption?}; countdown {kicker?, head?, from, to, caption?};
+  progress {title, sub?, steps[4–6 krátkých], goal, caption?}. Všechny mají `dur` a volitelně `foot`.
+- Délky: bubbles 120–130, spotlight 100–120, shield 110–130, arrows 100–120, countdown 110–130, progress 130–150.
+- `kicker` a `caption` max ~32 znaků. Titulky v mono stylu max ~14 znaků na řádek při size 96.
+- Vzor: `content/auto/specs/ukazka-mono-ostatni.json`.
+
 ## Formát videa (AutoReel)
 - Spec v `content/auto/specs/YYYY-MM-DD-<a|b>-<slug>.json`, `audio`: `auto/<id>.wav`.
-- 4–6 scén, celkem **18–35 s** (540–1050 snímků při 30 fps).
+- 5–8 scén, celkem **20–35 s** (600–1050 snímků při 30 fps).
 - 1. scéna = háček typu `slam` nebo `counter`, max ~8 slov, okamžitě čitelný (žádné pomalé intro).
 - Poslední scéna = `cta` s klíčovým slovem v komentáři (START, NÁPAD, TÝM, PLÁN, KARIÉRA, INFO – střídej).
 - Texty VERZÁLKAMI, česky s diakritikou. Řádek v `slam` max ~16 znaků při size 100, ~24 znaků při size 70.
