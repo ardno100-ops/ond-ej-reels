@@ -4,7 +4,7 @@
 Cílovka: 20–25 let, téma kariéra / podnikání / finance. Cíl: leady pro nábor (komentář s klíčovým slovem).
 
 ## Každý den
-- **2 zkušební reely (TRIAL_REEL)**: 09:30 a 18:00 (Europe/Prague), `autoPublish: true`.
+- **2 reely denně**: 09:30 a 18:00 (Europe/Prague), `autoPublish: true`, **jedním příspěvkem na Instagram (TRIAL_REEL) i TikTok** (@ondrej.zemanek_finance, veřejně).
 - **Bez štítku AI** (`isAiGenerated: false`) – výslovné přání majitele účtu.
 - Témata vybírej z `TOPICS.md`, nikdy neopakuj téma z posledních 14 dní (`log.md`).
 - Jeden reel kariéra/mindset, druhý finance v číslech s kariérním úhlem (střídej).
@@ -37,11 +37,14 @@ CTA: „Napiš do komentáře <SLOVO> 👇“. Poté případný disclaimer/zdro
 ```json
 {"autoPublish": true, "draft": false, "text": "<caption>", "firstCommentText": "",
  "media": ["https://raw.githubusercontent.com/ardno100-ops/ond-ej-reels/main/published/auto/<id>.mp4"],
- "providers": [{"network": "instagram"}],
+ "providers": [{"network": "instagram"}, {"network": "tiktok"}],
  "publicationDate": {"dateTime": "YYYY-MM-DDT09:30:00", "timezone": "Europe/Prague"},
  "instagramData": {"type": "TRIAL_REEL", "showReelOnFeed": true, "isAiGenerated": false},
+ "tiktokData": {"title": "<háček, max ~80 znaků + 1 emoji>", "disableComment": false, "disableDuet": false, "disableStitch": false,
+   "privacyOption": "PUBLIC_TO_EVERYONE", "commercialContentThirdParty": false, "commercialContentOwnBrand": true, "autoAddMusic": false, "isAigc": false},
  "shortener": false, "smartLinkData": {"ids": []}, "descendants": [], "hasNotReadNotes": false, "mediaAltText": []}
 ```
+TikTok **vyžaduje `tiktokData.title`** (jinak chyba „TikTok title is required“). `commercialContentOwnBrand: true` = označení „Vaše značka“ (propagace vlastního byznysu).
 Video musí být **pushnuté na `main` dřív**, než se plánuje (Metricool si ho stahuje z raw URL).
 
 ## Log
