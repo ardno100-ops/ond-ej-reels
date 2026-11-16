@@ -6,6 +6,7 @@ import {PECKA_DUR, PeckaReel} from './pecka/Reel';
 import {FPS, H, W} from './theme';
 import {WEEK_REELS} from './week/reels';
 import {ENV_DUR, EnvReel} from './env/reel';
+import {NABOR_DUR, NaborReel} from './nabor/reel';
 import {CH, CW, SO_SLIDES, SoCarousel, UT_SLIDES, UtCarousel} from './week/carousels';
 
 export const RemotionRoot: React.FC = () => (
@@ -19,5 +20,6 @@ export const RemotionRoot: React.FC = () => (
 		<Composition id="Tyden-Ut-Skola" component={UtCarousel} durationInFrames={UT_SLIDES.length} fps={FPS} width={CW} height={CH} />
 		<Composition id="Tyden-So-RedFlags" component={SoCarousel} durationInFrames={SO_SLIDES.length} fps={FPS} width={CW} height={CH} />
 		<Composition id="Prostredi" component={EnvReel} durationInFrames={ENV_DUR} fps={FPS} width={W} height={H} />
+		<Composition id="Nabor" component={NaborReel} durationInFrames={NABOR_DUR} fps={FPS} width={W} height={H} />
 	</>
 );
