@@ -7,41 +7,102 @@ import {FullSvg, PopPill, SceneDef, makeCta, makeReel, rnd, sumDur} from '../wee
 const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
 const RED = '#ff8a7a';
 
-/* ---------- 1) HOOK: 5 lidí kolem tebe ---------- */
-export const H_ABSORB = 50;
+/* ---------- 1) HOOK: kde budeš za 5 let? ---------- */
+export const H_STRIKES = [26, 42, 58];
+export const H_REVEAL = 82;
+const HOOK_ITEMS = ['TALENT', 'ŠKOLA', 'ŠTĚSTÍ'];
 const Hook: React.FC = () => {
 	const f = useCurrentFrame();
-	const cx = 540;
-	const cy = 1180;
-	const absorb = prog(f, H_ABSORB, 40);
-	const ring = [0, 1, 2, 3, 4].map((i) => {
-		const a = -Math.PI / 2 + (i * 2 * Math.PI) / 5;
-		return {x: cx + Math.cos(a) * 300, y: cy + 60 + Math.sin(a) * 300};
-	});
-	const mix = (a: number) => {
-		// white -> gray as absorb grows
-		const c1 = [241, 247, 236];
-		const c2 = [93, 107, 98];
-		return `rgb(${c1.map((v, i) => Math.round(v + (c2[i] - v) * a)).join(',')})`;
-	};
+	const outItems = prog(f, H_REVEAL - 6, 8);
+	const reveal = prog(f, H_REVEAL, 14, Easing.out(Easing.back(1.6)));
+	return (
+		<AbsoluteFill>
+			<div style={{position: 'absolute', top: 280, left: 0, right: 0, textAlign: 'center', fontFamily: FONT}}>
+				<div style={{fontSize: 40, fontWeight: 800, letterSpacing: 5, color: C.white, opacity: prog(f, 2, 10)}}>KDE BUDEŠ ZA 5 LET?</div>
+				<div style={{fontSize: 40, fontWeight: 800, letterSpacing: 5, color: C.muted, marginTop: 12, opacity: prog(f, 12, 10)}}>NEROZHODNE O TOM…</div>
+			</div>
+			<div style={{position: 'absolute', top: 640, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 34, opacity: 1 - outItems}}>
+				{HOOK_ITEMS.map((t, i) => {
+					const inP = prog(f, 14 + i * 6, 10, Easing.out(Easing.back(2)));
+					const strike = prog(f, H_STRIKES[i], 8);
+					return (
+						<div key={t} style={{position: 'relative', fontFamily: FONT, fontSize: 130, fontWeight: 900, color: strike > 0.5 ? C.gray : C.white, transform: `scale(${inP})`, textShadow: strike > 0.5 ? 'none' : glow(C.white, 20)}}>
+							{t}
+							{strike > 0 ? (
+								<div style={{position: 'absolute', left: -20, top: '52%', height: 14, width: `calc(${strike} * (100% + 40px))`, background: RED, borderRadius: 7, boxShadow: `0 0 16px ${RED}`, transform: 'rotate(-3deg)'}} />
+							) : null}
+						</div>
+					);
+				})}
+			</div>
+			{reveal > 0 ? (
+				<div style={{position: 'absolute', top: 640, left: 0, right: 0, textAlign: 'center', fontFamily: FONT, transform: `scale(${reveal})`}}>
+					<div style={{fontSize: 46, fontWeight: 800, letterSpacing: 5, color: C.white}}>ROZHODNOU O TOM</div>
+					<div style={{fontSize: 150, fontWeight: 900, lineHeight: 1.0, color: C.accent, textShadow: glow(C.accent, 40), marginTop: 20}}>LIDI</div>
+					<div style={{fontSize: 120, fontWeight: 900, lineHeight: 1.05, color: C.white, textShadow: glow(C.white, 24)}}>KOLEM TEBE.</div>
+				</div>
+			) : null}
+			{reveal > 0 ? (
+				<FullSvg>
+					{[-260, -130, 130, 260].map((dx, i) => (
+						<g key={i} opacity={prog(f, H_REVEAL + 10 + i * 4, 10)}>
+							<Person x={540 + dx} y={1400 + Math.abs(dx) * 0.1} s={1} color={C.accent} />
+						</g>
+					))}
+					<Person x={540} y={1400} s={1.35} color={C.white} />
+				</FullSvg>
+			) : null}
+		</AbsoluteFill>
+	);
+};
+
+/* ---------- 1b) STORY: dva kamarádi ---------- */
+export const ST_BUBBLES = [40, 56, 72];
+export const ST_RESULT = 120;
+const STORY_L = ['TO NEMÁ CENU', 'BUĎ RÁD ZA JISTOTU', 'TO JE RISKANTNÍ'];
+const STORY_R = ['JDEME NA TO', 'UKÁŽU TI JAK', 'ZVLÁDNEŠ TO'];
+const Story: React.FC = () => {
+	const f = useCurrentFrame();
+	const res = f >= ST_RESULT;
+	const crowd = prog(f, 20, 16);
 	return (
 		<AbsoluteFill>
 			<FullSvg>
-				{ring.map((p, i) => {
-					const o = prog(f, 6 + i * 5, 10);
-					return <line key={`l${i}`} x1={cx} y1={cy - 40} x2={p.x} y2={p.y - 40} stroke={C.white} strokeOpacity={0.18 * o} strokeWidth={3} strokeDasharray="6 10" />;
-				})}
-				{ring.map((p, i) => {
-					const o = prog(f, 6 + i * 5, 12, Easing.out(Easing.back(2)));
-					return (
-						<g key={i} opacity={o}>
-							<Person x={p.x} y={p.y} s={1.05} color={C.gray} glowOn={false} />
-						</g>
-					);
-				})}
-				<Person x={cx} y={cy} s={1.7} color={mix(absorb)} glowOn={absorb < 0.5} />
+				<line x1={540} y1={740} x2={540} y2={1620} stroke={C.white} strokeOpacity={0.12} strokeWidth={3} />
+				{[0, 1, 2].map((i) => (
+					<g key={`gl${i}`} opacity={crowd}>
+						<Person x={140 + i * 130} y={1560} s={0.8} color={C.gray} glowOn={false} />
+					</g>
+				))}
+				{[0, 1, 2].map((i) => (
+					<g key={`gr${i}`} opacity={crowd}>
+						<Person x={680 + i * 130} y={1560} s={0.8} color={C.accent} />
+					</g>
+				))}
+				<Person x={270} y={1330} s={1.5} color={res ? C.gray : C.white} glowOn={!res} headTilt={res ? 20 : 0} />
+				<Person x={810} y={1330} s={1.5} color={res ? C.accent : C.white} armsUp={res ? 1 : 0} />
 			</FullSvg>
-			<Headline small="UKAŽ MI 5 LIDÍ, SE KTERÝMI TRÁVÍŠ ČAS," big="A ŘEKNU TI," big2="KÝM BUDEŠ." at={2} top={260} bigSize={112} />
+			{STORY_L.map((t, i) => (
+				<PopPill key={t} at={ST_BUBBLES[i]} x={270} y={820 + i * 92} size={22}>
+					„{t}“
+				</PopPill>
+			))}
+			{STORY_R.map((t, i) => (
+				<PopPill key={t} at={ST_BUBBLES[i] + 6} x={810} y={820 + i * 92} light size={22}>
+					„{t}“
+				</PopPill>
+			))}
+			{res ? (
+				<>
+					<PopPill at={ST_RESULT} x={270} y={1700} size={26}>
+						ZŮSTAL STEJNÝ
+					</PopPill>
+					<PopPill at={ST_RESULT + 6} x={810} y={1700} light size={26}>
+						VYRŮSTL
+					</PopPill>
+				</>
+			) : null}
+			<Headline small="DVA KAMARÁDI. STEJNÁ ŠKOLA." big="JINÉ OKOLÍ." big2="JINÝ ŽIVOT." at={2} top={260} bigSize={104} />
 		</AbsoluteFill>
 	);
 };
@@ -174,66 +235,6 @@ const Study2: React.FC = () => {
 	);
 };
 
-/* ---------- 4) STUDY 3: talent nestačí – Bell, Chetty a kol. ---------- */
-export const S3_SPLIT = 40;
-export const S3_RESULT = 120;
-const Study3: React.FC = () => {
-	const f = useCurrentFrame();
-	const bars = prog(f, 6, 24);
-	const split = prog(f, S3_SPLIT, 30);
-	const res = prog(f, S3_RESULT, 14, Easing.out(Easing.back(2)));
-	const kid = (x: number, inventors: boolean) => (
-		<g>
-			{/* math score bar */}
-			<rect x={x - 30} y={1500 - 200 * bars} width={60} height={200 * bars} rx={10} fill={C.white} opacity={0.8} />
-			<text x={x} y={1545} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={22} letterSpacing={2} fill={C.muted}>
-				MATIKA
-			</text>
-			<Person x={x} y={1260} s={1.3 - 0.2 * (1 - split)} color={inventors && res > 0 ? C.accent : C.white} />
-			{inventors
-				? [0, 1, 2, 3].map((i) => {
-						const a = -Math.PI / 2 + (i - 1.5) * 0.7;
-						const p = prog(f, S3_SPLIT + i * 8, 12);
-						return (
-							<g key={i} opacity={p} transform={`translate(${x + Math.cos(a) * 190} ${1160 + Math.sin(a) * 120})`}>
-								<circle r={16} fill={C.accent} style={{filter: `drop-shadow(0 0 8px ${C.accent})`}} />
-								<rect x={-7} y={14} width={14} height={9} rx={2} fill={C.accent} />
-							</g>
-						);
-					})
-				: [0, 1, 2].map((i) => (
-						<g key={i} opacity={split * 0.6} transform={`translate(${x + (i - 1) * 120} 1050)`}>
-							<circle r={16} fill="none" stroke={C.gray} strokeWidth={3} />
-						</g>
-					))}
-			{res > 0 ? (
-				<g transform={`translate(${x} 960) scale(${res})`}>
-					<rect x={-150} y={-30} width={300} height={60} rx={30} fill={inventors ? C.accent : C.gray} />
-					<text y={10} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={24} letterSpacing={2} fill={C.dark}>
-						{inventors ? 'STANE SE VYNÁLEZCEM' : 'TALENT ZŮSTANE LEŽET'}
-					</text>
-				</g>
-			) : null}
-		</g>
-	);
-	return (
-		<AbsoluteFill>
-			<FullSvg>
-				<line x1={540} y1={900} x2={540} y2={1560} stroke={C.white} strokeOpacity={0.12} strokeWidth={3} />
-				{kid(290, false)}
-				{kid(790, true)}
-			</FullSvg>
-			<PopPill at={S3_SPLIT - 10} x={540} y={1640} size={26}>
-				STEJNÉ VÝSLEDKY Z MATIKY · JINÉ OKOLÍ
-			</PopPill>
-			<Headline small="STUDIE · 1,2 MILIONU VYNÁLEZCŮ" big="TALENT" big2="NESTAČÍ." at={2} top={250} bigSize={120} />
-			<Footnote bottom={110} o={prog(f, S3_RESULT + 10, 14)}>
-				Děti vyrůstající mezi vynálezci se jimi stávají častěji. Bell, Chetty a kol., Quarterly Journal of Economics, 2019.
-			</Footnote>
-		</AbsoluteFill>
-	);
-};
-
 /* ---------- 5) POINT: prostředí > motivace ---------- */
 export const P_MOVE = 20;
 const Point: React.FC = () => {
@@ -265,35 +266,50 @@ const Point: React.FC = () => {
 	);
 };
 
-/* ---------- 6) SELL: naše prostředí ---------- */
-export const SELL_CHECKS = [26, 38, 50, 62, 74];
+/* ---------- 6) SELL: z nuly k vlastnímu byznysu ---------- */
+export const SELL_STAGES = [16, 50, 84];
+export const SELL_FINAL = 124;
+const STAGES = [
+	{title: 'PŘIŠLI BEZ ZKUŠENOSTÍ', sub: 'bez know-how, bez kontaktů', color: C.gray, team: 0},
+	{title: 'DALI JSME JIM ZÁZEMÍ', sub: 'prostředí, mentora a know-how', color: C.white, team: 2},
+	{title: 'DNES BUDUJÍ BYZNYS', sub: 'vlastní klienty a vlastní tým', color: C.accent, team: 4},
+];
 const Sell: React.FC = () => {
 	const f = useCurrentFrame();
+	const fin = prog(f, SELL_FINAL, 14, Easing.out(Easing.back(1.8)));
 	return (
 		<AbsoluteFill>
-			<Headline small="TAKOVÉ PROSTŘEDÍ MÁME MY:" big="LIDI, KTEŘÍ" big2="TĚ POSOUVAJÍ." at={2} top={260} bigSize={104} />
-			<div style={{position: 'absolute', top: 760, left: 110, right: 60}}>
-				{[
-					'LÍDŘI, KTEŘÍ ZAČÍNALI JAKO STUDENTI',
-					'KONFERENCE A DVOUDENNÍ LIVE AKCE',
-					'BYZNYS TRIPY: LAS VEGAS, SRÍ LANKA',
-					'KANCELÁŘE A TÝM KAŽDÝ DEN',
-					'ZAŠKOLENÍ ZA 100 000 Kč ZDARMA',
-				].map((t, i) => {
-					const p = prog(f, SELL_CHECKS[i], 12);
-					return <Check key={t} text={t} o={p} dx={(1 - p) * -40} />;
-				})}
-			</div>
 			<FullSvg>
-				{Array.from({length: 7}).map((_, i) => {
-					const p = prog(f, 90 + i * 4, 12, Easing.out(Easing.back(2)));
+				<line x1={200} y1={800} x2={200} y2={800 + 600 * prog(f, SELL_STAGES[0], SELL_STAGES[2] - SELL_STAGES[0] + 10)} stroke={C.accent} strokeOpacity={0.5} strokeWidth={5} strokeDasharray="10 12" />
+				{STAGES.map((s, i) => {
+					const p = prog(f, SELL_STAGES[i], 12, Easing.out(Easing.back(2)));
+					const y = 860 + i * 290;
 					return (
-						<g key={i} opacity={p}>
-							<Person x={240 + i * 100} y={1560} s={0.85 + (i === 3 ? 0.25 : 0)} color={C.accent} armsUp={f > 120 ? 1 : 0} />
+						<g key={s.title} opacity={p}>
+							{Array.from({length: s.team}).map((_, k) => (
+								<Person key={k} x={200 + (k % 2 ? 1 : -1) * (60 + Math.floor(k / 2) * 46)} y={y + 10} s={0.55} color={s.color} glowOn={false} />
+							))}
+							<Person x={200} y={y} s={1.1} color={s.color} glowOn={i > 0} armsUp={i === 2 ? 1 : 0} />
 						</g>
 					);
 				})}
 			</FullSvg>
+			{STAGES.map((s, i) => {
+				const p = prog(f, SELL_STAGES[i], 12);
+				return (
+					<div key={s.title} style={{position: 'absolute', left: 360, right: 50, top: 860 + i * 290 - 150, fontFamily: FONT, opacity: p, transform: `translateX(${(1 - p) * 40}px)`}}>
+						<div style={{fontSize: 52, fontWeight: 900, color: i === 2 ? C.accent : C.white, textShadow: glow(i === 2 ? C.accent : C.white, 16), lineHeight: 1.05}}>{s.title}</div>
+						<div style={{fontSize: 30, fontWeight: 700, color: C.muted, marginTop: 10, letterSpacing: 1}}>{s.sub}</div>
+					</div>
+				);
+			})}
+			{fin > 0 ? (
+				<div style={{position: 'absolute', top: 1560, left: 0, right: 0, textAlign: 'center', fontFamily: FONT, transform: `scale(${fin})`}}>
+					<div style={{fontSize: 40, fontWeight: 900, color: C.white, letterSpacing: 2}}>ZA PÁR LET: ÚSPĚŠNÍ PODNIKATELÉ.</div>
+					<div style={{fontSize: 52, fontWeight: 900, color: C.accent, textShadow: glow(C.accent, 24), marginTop: 10}}>KDYŽ MAKAJÍ.</div>
+				</div>
+			) : null}
+			<Headline small="TAKOVÉ PROSTŘEDÍ MÁME MY:" big="Z NULY" big2="K VLASTNÍMU BYZNYSU." at={2} top={250} bigSize={92} />
 		</AbsoluteFill>
 	);
 };
@@ -317,12 +333,12 @@ const CtaVisual: React.FC = () => {
 };
 
 const SCENES: SceneDef[] = [
-	{name: 'Hook – 5 lidí kolem tebe', dur: 135, C: Hook},
-	{name: 'Studie 1 – síť (Christakis & Fowler)', dur: 240, C: Study1},
-	{name: 'Studie 2 – kolegové (Nanda & Sørensen)', dur: 210, C: Study2},
-	{name: 'Studie 3 – talent nestačí (Chetty)', dur: 210, C: Study3},
-	{name: 'Prostředí > motivace', dur: 120, C: Point},
-	{name: 'Naše prostředí', dur: 210, C: Sell},
+	{name: 'Hook – kde budeš za 5 let', dur: 150, C: Hook},
+	{name: 'Příběh – dva kamarádi', dur: 210, C: Story},
+	{name: 'Studie 1 – síť (Christakis & Fowler)', dur: 225, C: Study1},
+	{name: 'Studie 2 – kolegové (Nanda & Sørensen)', dur: 180, C: Study2},
+	{name: 'Motivace vyprchá, prostředí zůstane', dur: 120, C: Point},
+	{name: 'Naše prostředí – z nuly k byznysu', dur: 240, C: Sell},
 	{name: 'CTA TÝM', dur: 180, C: makeCta({small: 'CHCEŠ BÝT MEZI LIDMI,', big: 'KTEŘÍ TĚ', big2: 'TÁHNOU VÝŠ?', word: 'TÝM', sub: 'POZVU TĚ MEZI NÁS.', visual: CtaVisual})},
 ];
 export const ENV_DUR = sumDur(SCENES);
