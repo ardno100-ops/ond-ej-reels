@@ -8,7 +8,7 @@ const RED = '#ff8a7a';
 const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
 
 /** Text that slams in (scale 1.5 -> 1) at frame `at`. */
-const Slam: React.FC<{at: number; children: React.ReactNode; style?: React.CSSProperties; color?: string; size: number}> = ({at, children, style, color = C.white, size}) => {
+export const Slam: React.FC<{at: number; children: React.ReactNode; style?: React.CSSProperties; color?: string; size: number}> = ({at, children, style, color = C.white, size}) => {
 	const f = useCurrentFrame();
 	if (f < at) return null;
 	const k = f - at;
@@ -19,7 +19,7 @@ const Slam: React.FC<{at: number; children: React.ReactNode; style?: React.CSSPr
 	);
 };
 
-const Shake: React.FC<{hits: number[]; children: React.ReactNode}> = ({hits, children}) => {
+export const Shake: React.FC<{hits: number[]; children: React.ReactNode}> = ({hits, children}) => {
 	const f = useCurrentFrame();
 	let dx = 0;
 	let dy = 0;
@@ -34,7 +34,7 @@ const Shake: React.FC<{hits: number[]; children: React.ReactNode}> = ({hits, chi
 	return <AbsoluteFill style={{transform: `translate(${dx}px, ${dy}px)`}}>{children}</AbsoluteFill>;
 };
 
-const Flash: React.FC<{at: number[]}> = ({at}) => {
+export const Flash: React.FC<{at: number[]}> = ({at}) => {
 	const f = useCurrentFrame();
 	const o = Math.max(0, ...at.map((a) => (f >= a && f < a + 4 ? 0.3 * (1 - (f - a) / 4) : 0)));
 	return <AbsoluteFill style={{backgroundColor: '#fff', opacity: o, pointerEvents: 'none'}} />;
