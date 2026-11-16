@@ -6,7 +6,7 @@
 Ukaž mi 5 lidí, se kterými trávíš čas, a řeknu ti, kým budeš. 👇
 
 To není motivační citát. Říkají to studie:
-📊 Harvardská síť 12 067 lidí sledovaných 32 let: když přibere tvůj kamarád, tvoje šance přibrat roste o 57 %. Zvyky se šíří jako virus.
+📊 Studie 12 067 lidí sledovaných 32 let: když přibere tvůj kamarád, tvoje šance přibrat roste o 57 %. Zvyky se šíří jako virus.
 📊 Lidé, jejichž kolegové dřív podnikali, začínají podnikat častěji. Nejvíc ti, kdo podnikatele nikde jinde kolem sebe neměli.
 📊 1,2 milionu vynálezců: děti se stejnými výsledky z matiky, ale jiným okolím, mají úplně jiný život. Talent nestačí.
 
