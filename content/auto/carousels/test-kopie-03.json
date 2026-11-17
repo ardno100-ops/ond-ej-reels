@@ -1,0 +1,4 @@
+{"id": "test-kopie-03", "slides": [
+ {"kicker": "Prvních pět let", "title": ["Co každý z nich"], "accent": ["dělá doopravdy?"], "columns": [{"head": "Student", "text": "Rozebírá, proč některé firmy fungují. Na stáži vidí, jak se rozhoduje v reálu."}, {"head": "Podnikatel", "text": "Volá klientům, dostává první odmítnutí a podle zpětné vazby upravuje nabídku."}], "image": "carousel/lib/student-vs-podnikatel.png"},
+ {"kicker": "Další krok", "title": ["Za pět let ti bude 25", "tak jako tak."], "accent": ["Co chceš mít za sebou?"], "cta": "Napiš mi „KARIÉRA“", "body": "Ukážu ti, jak u nás vypadá práce v obchodě a financích a co obnáší začátek při škole nebo práci.", "image": "carousel/lib/dvere-mistnost.png"}
+]}

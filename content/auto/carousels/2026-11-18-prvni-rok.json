@@ -1,0 +1,105 @@
+{
+ "id": "2026-11-18-prvni-rok",
+ "slides": [
+  {
+   "kicker": "Kariéra · Podnikání",
+   "title": [
+    "Je ti 20.",
+    "Chceš podnikat."
+   ],
+   "accent": [
+    "Co tě naučí první rok?"
+   ],
+   "body": "Žádná teorie. Věci, které zjistíš, až když opravdu začneš.",
+   "image": "carousel/lib/student-vs-podnikatel.png",
+   "titleSize": 80
+  },
+  {
+   "kicker": "Měsíc 1–2",
+   "title": [
+    "Prodávat."
+   ],
+   "accent": [
+    "A přestaneš se stydět."
+   ],
+   "body": "Pochopíš, že prodej není vnucování. Je to pomoc člověku, který řeší problém.",
+   "bigNumber": "01"
+  },
+  {
+   "kicker": "Měsíc 3–4",
+   "title": [
+    "Slyšet „ne“."
+   ],
+   "accent": [
+    "A jít dál."
+   ],
+   "body": "Odmítnutí přijdou. Každé tě naučí, co příště říct jinak.",
+   "bigNumber": "02"
+  },
+  {
+   "kicker": "Měsíc 5–6",
+   "title": [
+    "Hlídat si čas."
+   ],
+   "accent": [
+    "Ten tvůj má cenu."
+   ],
+   "body": "Začneš plánovat týden dopředu a přestaneš ztrácet hodiny na věci, které tě neposouvají.",
+   "bigNumber": "03"
+  },
+  {
+   "kicker": "Měsíc 7–9",
+   "title": [
+    "Budovat kontakty."
+   ],
+   "accent": [
+    "Jsou tvůj kapitál."
+   ],
+   "body": "Každý spokojený člověk tě může doporučit dál. Tak roste byznys i bez reklamy.",
+   "bigNumber": "04"
+  },
+  {
+   "kicker": "Měsíc 10–12",
+   "title": [
+    "Po roce"
+   ],
+   "accent": [
+    "už nezačínáš od nuly."
+   ],
+   "columns": [
+    {
+     "head": "Spolužák",
+     "text": "Dokončuje školu a teprve hledá, co dál."
+    },
+    {
+     "head": "Ty",
+     "text": "Máš za sebou rok praxe, první klienty a jasno, co chceš."
+    }
+   ],
+   "image": "carousel/lib/kniha-model-domu.png"
+  },
+  {
+   "kicker": "Realita",
+   "title": [
+    "Nebude to snadné."
+   ],
+   "accent": [
+    "Ale bude to tvoje."
+   ],
+   "body": "Začátky jsou pomalé. Výsledky přijdou po měsících práce, ne přes noc.",
+   "bigNumber": "05"
+  },
+  {
+   "kicker": "Další krok",
+   "title": [
+    "Nevíš, kde začít?"
+   ],
+   "accent": [
+    "Ukážu ti jednu cestu."
+   ],
+   "cta": "Napiš mi „START“",
+   "body": "Pošlu ti, jak to vypadá, když začneš při škole nebo při práci.",
+   "image": "carousel/lib/dvere-mistnost.png"
+  }
+ ]
+}
