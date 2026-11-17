@@ -1,0 +1,17 @@
+{
+  "id": "2026-11-17-b-nemam-cas-studuju-v4",
+  "audio": "auto/2026-11-17-b-nemam-cas-studuju-v4.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "NEMÁM ČAS.", "size": 120}, {"t": "STUDUJU.", "size": 110, "tone": "accent"}, {"t": "ZNÁŠ TO?", "size": 56, "tone": "muted"}]},
+    {"type": "bubbles", "dur": 90, "kicker": "CO SI ŘÍKÁŠ", "words": ["AŽ PO ŠKOLE", "ZKOUŠKY", "PŘÍŠTÍ ROK", "NEJSEM READY"], "mute": true, "caption": "VÝMLUVY"},
+    {"type": "countdown", "dur": 108, "kicker": "KAŽDÝ TÝDEN MÁŠ", "head": "HODIN", "from": 0, "to": 168, "caption": "STAČÍ TI Z NICH PÁR"},
+    {"type": "list", "dur": 108, "title": "ZA 5 HODIN TÝDNĚ", "title2": "ZVLÁDNEŠ:", "items": ["NAUČIT SE PRODÁVAT", "OTESTOVAT SVŮJ NÁPAD", "NAJÍT PRVNÍHO KLIENTA", "POSTAVIT SI KONTAKTY"]},
+    {"type": "progress", "dur": 126, "title": "BYZNYS PŘI ŠKOLE", "sub": "KROK ZA KROKEM", "steps": ["NÁPAD", "1. KLIENT", "10 KLIENTŮ", "BYZNYS"], "goal": "PO ŠKOLE NAPLNO", "caption": "PO ŠKOLE NEZAČÍNÁŠ OD NULY"},
+    {"type": "arrows", "dur": 90, "kicker": "ZATÍMCO OSTATNÍ ČEKAJÍ", "label": "TY UŽ JDEŠ"},
+    {"type": "spotlight", "dur": 108, "title": "TY ROZHODUJEŠ", "sub": "KDY ZAČNEŠ", "caption": "NE ŠKOLA. NE ŠÉF. TY."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 84}, {"t": "JÁ JEDNU CESTU MÁM.", "size": 84, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ VĚDĚT JAKOU?", "word": "START", "sub": "POŠLU TI, JAK TO FUNGUJE.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}

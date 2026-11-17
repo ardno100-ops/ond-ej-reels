@@ -12,7 +12,7 @@ import numpy as np
 from audiolib import SR, add, chime, fr, impact, kaching, ping, pop, riser, sub_boom, t2i, thud, tick, whoosh, write_wav
 
 MT = dict(kicker=2, itemFirst=18, itemEvery=9, muteAfter=18, shieldFly=16, arrowsLen=30, mainArrow=40, progressStart=16)
-T = dict(itemFirst=16, itemEvery=16, counterStart=18, counterLen=40, afterCounter=66, ctaWord=18, ctaBox=28,
+T = dict(itemFirst=18, itemEvery=18, counterStart=18, counterLen=40, afterCounter=66, ctaWord=18, ctaBox=28,
          ctaType=40, ctaTypeEvery=5, ctaSend=72, slamEvery=8)
 
 spec = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
@@ -36,10 +36,13 @@ for i, s in enumerate(spec['scenes']):
         add(sfx, fr(t0), whoosh(0.35, True, 0.7), 1)
     if st == 'slam' and i == 0:
         # BOOM intro
-        add(sfx, 0, HARD_BOOM(), 1.0)
+        add(sfx, fr(s.get('hits', HOOK_HITS)[0]), HARD_BOOM(), 1.0)
+        hh = s.get('hits', HOOK_HITS)
+        if hh[0] > 0:
+            add(sfx, max(0.0, fr(hh[0]) - 0.25), riser(0.25), 0.6)
         for k, _ in enumerate(s['lines'][:3]):
-            add(sfx, fr(t0 + HOOK_HITS[k]), HARD_IMPACT(), 1.0 if k == 0 else 0.75)
-        add(sfx, 0.02, whoosh(0.5, False, 0.8), 1)
+            add(sfx, fr(t0 + hh[k]), HARD_IMPACT(), 1.0 if k == 0 else 0.75)
+        add(sfx, fr(hh[0]) + 0.02, whoosh(0.5, False, 0.8), 1)
     elif st == 'slam':
         for k, _ in enumerate(s['lines']):
             add(sfx, fr(t0 + k * T['slamEvery']), impact() if k == 0 else pop(), 1.0 if k == 0 else 0.8)

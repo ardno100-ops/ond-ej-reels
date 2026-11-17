@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, Audio, CalculateMetadataFunction, Easing, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Audio, CalculateMetadataFunction, Easing, Img, Sequence, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {Background, Footnote, SceneFade} from '../components';
 import {Flash, Shake, Slam} from '../nabor/reel';
 import {PunchIn} from '../pecka/scenes';
@@ -13,8 +13,8 @@ import {Arrows, ArrowsScene, Bubbles, BubblesScene, Countdown, CountdownScene, P
    ===================================================================== */
 
 export const T = {
-	itemFirst: 16,
-	itemEvery: 16,
+	itemFirst: 18,
+	itemEvery: 18,
 	counterStart: 18,
 	counterLen: 40,
 	afterCounter: 66,
@@ -29,7 +29,7 @@ export const T = {
 type Tone = 'white' | 'accent' | 'red' | 'muted';
 type Line = {t: string; size?: number; tone?: Tone};
 export type AutoScene =
-	| {type: 'slam'; dur: number; emoji?: string; lines: Line[]; foot?: string}
+	| {type: 'slam'; dur: number; emoji?: string; lines: Line[]; foot?: string; hits?: number[]}
 	| {type: 'counter'; dur: number; kicker?: string; value: number; prefix?: string; suffix?: string; label: string; after?: Line[]; tone?: Tone; foot?: string}
 	| {type: 'list'; dur: number; title: string; title2?: string; items: string[]; mark?: 'check' | 'x'; foot?: string}
 	| {type: 'compare'; dur: number; title: string; left: {head: string; items: string[]}; right: {head: string; items: string[]}; foot?: string}
@@ -43,7 +43,7 @@ export type AutoScene =
 	| ProgressScene;
 
 /** style: 'glow' = zelený glow (default), 'mono' = černobílý minimalistický styl. */
-export type AutoSpec = {id: string; audio: string; style?: 'glow' | 'mono'; scenes: AutoScene[]};
+export type AutoSpec = {id: string; audio: string; style?: 'glow' | 'mono'; brand?: boolean; scenes: AutoScene[]};
 
 const RED = '#ff8a7a';
 const toneColor = (t?: Tone) => (t === 'accent' ? C.accent : t === 'red' ? RED : t === 'muted' ? C.muted : C.white);
@@ -67,11 +67,12 @@ const SlamScene: React.FC<{s: Extract<AutoScene, {type: 'slam'}>; instant?: bool
 	const f = useCurrentFrame();
 	const hits = s.lines.map((_, i) => i * T.slamEvery);
 	if (instant) {
-		const punch = interpolate(f, [0, 7], [1.22, 1], {...clamp, easing: Easing.out(Easing.back(2))});
+		const h0 = (s.hits ?? HOOK_HITS)[0];
+		const punch = interpolate(f, [h0, h0 + 7], [1.22, 1], {...clamp, easing: Easing.out(Easing.back(2))});
 		const push = 1 + 0.06 * (f / Math.max(1, s.dur));
-		const wave = interpolate(f, [0, 20], [0, 1], clamp);
-		const flash = interpolate(f, [0, 1, 5], [0.12, 0.28, 0], clamp);
-		const hookHits = HOOK_HITS.slice(0, s.lines.length);
+		const wave = interpolate(f, [h0, h0 + 20], [0, 1], clamp);
+		const flash = interpolate(f, [h0, h0 + 1, h0 + 5], [0.12, 0.28, 0], clamp);
+		const hookHits = (s.hits ?? HOOK_HITS).slice(0, s.lines.length);
 		return (
 			<MonoCtx.Provider value={false}>
 				<Shake hits={hookHits}>
@@ -346,7 +347,7 @@ const SceneSwitch: React.FC<{s: AutoScene; first?: boolean}> = ({s, first}) => {
 	}
 };
 
-export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style}) => {
+export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style, brand}) => {
 	const mono = style === 'mono';
 	let from = 0;
 	return (
@@ -372,6 +373,9 @@ export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style}) => {
 						return seq;
 					})}
 				</AbsoluteFill>
+				{!mono && brand !== false ? (
+					<Img src={staticFile('brand/logo.png')} style={{position: 'absolute', top: 120, right: 70, width: 130, height: 130, borderRadius: 65, boxShadow: `0 0 26px ${C.accent}55`}} />
+				) : null}
 				{audio ? <Audio src={staticFile(audio)} /> : null}
 			</AbsoluteFill>
 		</MonoCtx.Provider>

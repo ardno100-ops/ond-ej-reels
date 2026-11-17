@@ -15,7 +15,7 @@ Cílovka: 20–25 let, téma kariéra / podnikání / finance. Cíl: leady pro n
 - Témata vybírej z `TOPICS.md`, nikdy neopakuj téma z posledních 14 dní (`log.md`).
 - Jeden reel kariéra/mindset, druhý finance v číslech s kariérním úhlem (střídej).
 
-## Vizuální styl – A/B test (viz PLAYBOOK): 09:30 = `"glow"`, 18:00 = `"mono"` (lichý den v měsíci), sudý den naopak
+## Vizuální styl – výchozí `"glow"` + logo (viz sekce „Styl značky + rytmus“ níže); mono jen výjimečně
 Inspirace: černobílé minimalistické piktogramové explainery (čisté černé pozadí, bílá + šedá s jemnou září,
 široce prostrkané verzálky, malé bílé štítky, jedna myšlenka na scénu, klidné plynulé animace bez třesení).
 - Styl podle A/B rozpisu výše, dokud PLAYBOOK nevyhlásí vítěze.
@@ -77,3 +77,14 @@ Po naplánování připiš do `log.md`: datum, čas, id, téma, klíčové slovo
 - **TikTok:** API neumožňuje vybrat zvuk k videu → TikTok jde automaticky bez hudby.
 - Doporučenou písničku pro IG zapiš do `content/auto/captions/<id>.md` (název + interpret + proč sedí).
 - Do `log.md` zapiš zvolenou písničku.
+
+## Styl značky + rytmus (od 17. 11., přání majitele)
+- **Výchozí styl: `"style": "glow"` (zelený glow jako původní videa) + logo vpravo nahoře** (šablona přidá automaticky, `public/brand/logo.png`).
+  Piktogramové scény (bubbles, spotlight, shield, arrows, countdown, progress) používej i v glow stylu – titulky jsou zelené.
+- **Střih do rytmu písničky:** ke každému videu vyber písničku (viz Hudba), zjisti její **BPM** (WebSearch „<song> BPM“).
+  Snímků na úder = 1800 / BPM (100 BPM → 18 snímků). **Délky všech scén = násobky úderu**, háček `hits` na údery
+  (např. [7, 25, 43] při 100 BPM s 1. úderem v 0,24 s), CTA tak, aby slovo (CTA start + 18 snímků) padlo na drop.
+  Do specu zapiš `"beat": {"song", "bpm", "firstBeatSec", "dropSec"}` a do popisku/balíčku napiš, ať majitel v IG
+  vybere úsek písničky tak, aby začátek písničky = začátek videa.
+- Default, když BPM nelze zjistit: 100 BPM (18 snímků/úder).
+- Hudbu do videa NIKDY nevkládej – jen zvukové efekty, které jsou do rytmu.

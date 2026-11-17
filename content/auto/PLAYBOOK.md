@@ -40,7 +40,7 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
 |---|---|---|
-| **Styl: glow vs. mono** | 09:30 = zelený glow, 18:00 = černobílý mono (střídat dny opačně) | po 5 videích každého stylu porovnat skip a sledování |
+| ~~Styl: glow vs. mono~~ | **Rozhodnuto majitelem 17. 11.: zelený glow + logo** (mono jen výjimečně) | – |
 | **CTA: klíčové slovo vs. emoji** | střídat „Napiš do komentáře START“ a „Napiš 🔥 do komentáře a pošlu ti…“ | počet komentářů na 1 000 zhlédnutí |
 | **Délka** | 25–30 s vs. 38–45 s | prům. sledování a skip |
 

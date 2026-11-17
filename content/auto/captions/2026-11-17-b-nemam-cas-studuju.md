@@ -1,7 +1,7 @@
-# 2026-11-17 18:00 – Nemám čas, studuju (v3 – hodnota napřed, nabídka nenápadně)
+# 2026-11-17 18:00 – Nemám čas, studuju (v4 – do rytmu písničky, zelený styl s logem)
 
-**Video:** published/auto/2026-11-17-b-nemam-cas-studuju-v3.mp4
-**Písnička (IG):** „What You Waiting For?“ – Gwen Stefani (trend „první den → dnes“, sedí k „začni hned, nečekej“)
+**Video:** published/auto/2026-11-17-b-nemam-cas-studuju-v4.mp4
+**Písnička (IG):** „Roncona (Hyper Slowed)“ – video je střižené do jejího rytmu (100 BPM, START na dropu). Vyber stejný úsek jako v nahrávce 17. 11. (začátek písničky = začátek videa).
 
 ## Popisek
 Nemám čas. Studuju. Znáš to? ⏳

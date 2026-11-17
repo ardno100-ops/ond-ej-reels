@@ -2,6 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Easing, interpolate, useCurrentFrame} from 'remotion';
 import {Footnote, Person, Pill} from '../components';
 import {Slam} from '../nabor/reel';
+import {useMono} from '../style';
 import {C, FONT, prog} from '../theme';
 
 /* Minimal monochrome scene types (inspired by black/white pictogram explainers).
@@ -41,10 +42,11 @@ const Kicker: React.FC<{text?: string; top?: number}> = ({text, top = 560}) => {
 
 const Title: React.FC<{text?: string; sub?: string; top?: number; size?: number}> = ({text, sub, top = 360, size = 96}) => {
 	const f = useCurrentFrame();
+	const mono = useMono();
 	if (!text) return null;
 	return (
 		<div style={{position: 'absolute', top, left: 40, right: 40, textAlign: 'center'}}>
-			<Slam at={0} size={size}>
+			<Slam at={0} size={size} color={mono ? C.white : C.accent}>
 				{text}
 			</Slam>
 			{sub ? (
