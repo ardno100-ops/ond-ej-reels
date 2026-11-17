@@ -105,3 +105,18 @@ Po naplánování připiš do `log.md`: datum, čas, id, téma, klíčové slovo
 - Správný slovosled, pády a interpunkce (otazník u otázek, čárky). Krátká, přirozená slova; žádné doslovné překlady z angličtiny.
 - Navazující scény na sebe musí jazykově navazovat (např. „UKÁŽU TI JEDNU CESTU.“ → CTA „CHCEŠ JI VIDĚT?“).
 - Popisek opakuje stejný příběh (stejné formulace jako ve videu), nabídka jen 1 větou na konci.
+
+## STŘEDA DOPOLEDNE = CAROUSEL (od 18. 11.)
+- Ve středu slot **09:30 = carousel místo reelu** (18:00 zůstává reel).
+- Šablona: composition `AutoCarousel` (`src/auto/Carousel.tsx`) = styl nejlepšího karuselu majitele (1080×1350, kicker
+  „NN / TÉMA“, logo vpravo nahoře, nadpis bílá + zelená, text / 2 sloupce / CTA pilulka, rytinová ilustrace dole, patička
+  „ONDŘEJ ZEMÁNEK / KARIÉRA & PODNIKÁNÍ“ + „NN / NN“). Spec: `content/auto/carousels/<datum>-<slug>.json`, vzor `2026-11-18-prvni-rok.json`.
+- Render: `scripts/carousel_render.sh <spec>` → `published/carousel/<id>/NN.png`, pak JPG (`ffmpeg -q:v 2`) pro TikTok.
+- 7–10 slidů: 01 háček (ilustrace), 02–0N hodnota (jedna myšlenka na slide, číslování), předposlední realita/kontrast, poslední
+  CTA pilulka „Napiš mi „START““ + nenápadná nabídka. Stejná pravidla češtiny a tónu jako u reelů (80 % hodnota).
+- **Ilustrace:** jen z knihovny `public/carousel/lib/` (obrázky majitele v rytinovém zeleném stylu – viz `lib/INDEX.md`);
+  nepoužívej stejný obrázek dva týdny po sobě. Když vhodný obrázek chybí, použij `bigNumber` (velké obrysové číslo).
+  Pokud majitel pošle podklady/obrázky k tématu, mají přednost.
+- **TikTok:** automaticky jako fotokarusel (media = JPG URL všech slidů, `tiktokData.autoAddMusic: true`, title).
+- **Instagram:** ručně – balíček v 9:25 pošle všechny slidy (SendUserFile) + popisek.
+- Caption soubor: `content/auto/captions/<datum>-a-carousel-<slug>.md` (řádek „**Slidy:**“ s cestou ke složce).
