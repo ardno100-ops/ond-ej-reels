@@ -16,6 +16,14 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 | 16. 9. | Finanční Chitchat s Jirkou | tvář + rozhovor | video s lidmi | – | 1 540 | 62,2 % | **16,6 s** | **14** | 0 | 4 |
 | 5. 10. | Cíl bez disciplíny | mindset citát | – | – | 1 496 | 57,6 % | 9,7 s | **18** | 1 | 0 |
 
+## 🧭 Tón a struktura (přání majitele 17. 11.) – NEPRODÁVAT NA SÍLU
+- **80 % hodnota, 20 % nabídka.** Video je o myšlence podnikání obecně (rozjet vlastní věc, naučit se prodávat, první klient,
+  čas, mindset, peníze) – užitečné, i kdyby divák nikdy nepřišel k nám.
+- Nemluvit v těle videa o „u nás / u mě dostaneš…“, žádné výčty našich výhod uprostřed.
+- **Nabídka až na konci a nenápadně**, jako „mimochodem“: např. předposlední scéna „NEVÍŠ, KDE ZAČÍT? / JÁ JEDNU CESTU MÁM.“
+  a pak CTA „CHCEŠ VĚDĚT JAKOU? → napiš START“.
+- Popisek stejně: nejdřív myšlenka a tipy, nabídka 1 větou na konci.
+
 ## Co funguje ✅ (dělej víc)
 1. **Háček viditelný na 1. snímku** – celý text + pohyb hned od frame 0 (budík zvoní, mince letí). Nikdy prázdný/naskakující 1. snímek.
 2. **Otázka/tvrzení o životě diváka s konkrétním číslem**: „Kolik vyděláš firmě?“, „Takhle vypadá 40 let tvého života“, „168 hodin týdně“. Oslovení „ty/tvůj“.

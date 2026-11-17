@@ -1,0 +1,15 @@
+{
+  "id": "2026-11-17-b-nemam-cas-studuju-v3",
+  "audio": "auto/2026-11-17-b-nemam-cas-studuju-v3.wav",
+  "style": "mono",
+  "scenes": [
+    {"type": "slam", "dur": 80, "lines": [{"t": "NEMÁM ČAS.", "size": 120}, {"t": "STUDUJU.", "size": 110}, {"t": "ZNÁŠ TO?", "size": 56, "tone": "muted"}]},
+    {"type": "bubbles", "dur": 125, "kicker": "CO SI ŘÍKÁŠ", "words": ["NEMÁM ČAS", "AŽ PO ŠKOLE", "ZKOUŠKY", "PŘÍŠTÍ ROK", "NEJSEM READY", "POZDĚJI"], "mute": true, "caption": "VÝMLUVY"},
+    {"type": "countdown", "dur": 115, "kicker": "KAŽDÝ TÝDEN MÁŠ", "head": "HODIN", "from": 0, "to": 168, "caption": "STAČÍ TI Z NICH PÁR"},
+    {"type": "list", "dur": 110, "title": "ZA 5 HODIN TÝDNĚ", "title2": "ZVLÁDNEŠ:", "items": ["NAUČIT SE PRODÁVAT", "OTESTOVAT SVŮJ NÁPAD", "NAJÍT PRVNÍHO KLIENTA", "POSTAVIT SI KONTAKTY"]},
+    {"type": "progress", "dur": 135, "title": "BYZNYS PŘI ŠKOLE", "sub": "KROK ZA KROKEM", "steps": ["NÁPAD", "1. KLIENT", "10 KLIENTŮ", "BYZNYS"], "goal": "PO ŠKOLE NAPLNO", "caption": "PO ŠKOLE NEZAČÍNÁŠ OD NULY"},
+    {"type": "arrows", "dur": 100, "kicker": "ZATÍMCO OSTATNÍ ČEKAJÍ", "label": "TY UŽ JDEŠ"},
+    {"type": "slam", "dur": 85, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 84}, {"t": "JÁ JEDNU CESTU MÁM.", "size": 84, "tone": "muted"}]},
+    {"type": "cta", "dur": 150, "pre": "CHCEŠ VĚDĚT JAKOU?", "word": "START", "sub": "POŠLU TI, JAK TO FUNGUJE.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}
