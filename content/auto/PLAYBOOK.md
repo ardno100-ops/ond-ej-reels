@@ -24,6 +24,14 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
   a pak CTA „CHCEŠ VĚDĚT JAKOU? → napiš START“.
 - Popisek stejně: nejdřív myšlenka a tipy, nabídka 1 větou na konci.
 
+## 📚 Ponaučení ze 17. 11. (zpětná vazba majitele)
+1. **BOOM háček** – náraz, rázová vlna, údery na řádky, basový úder; max 2 s; nikdy statický text > 1 s.
+2. **Hodnota napřed, nabídka nenápadně na konci** („Nevíš, kde začít? Ukážu ti jednu cestu.“).
+3. **Zelený styl značky + logo** (rozhodnutí majitele), piktogramové scény z mono stylu jsou v pořádku.
+4. **Střih do rytmu písničky** (BPM → délky scén v násobcích úderu, START na drop). IG hudbu přidává majitel ručně.
+5. **Bezpečná zóna Reels** – nic pod popiskem, profilovkou ani pod ikonami vpravo.
+6. **Lepší čeština** – script jako souvislý příběh, scény jako celé věty, správný slovosled.
+
 ## Co funguje ✅ (dělej víc)
 1. **Háček viditelný na 1. snímku a s BOOMem** – šablona dělá u 1. scény náraz, rázovou vlnu, záblesky a údery na každý řádek + hluboký basový úder. Háček max **60–65 snímků (2 s)**, max 3 řádky. Nikdy statický text > 1 s.
 2. **Otázka/tvrzení o životě diváka s konkrétním číslem**: „Kolik vyděláš firmě?“, „Takhle vypadá 40 let tvého života“, „168 hodin týdně“. Oslovení „ty/tvůj“.

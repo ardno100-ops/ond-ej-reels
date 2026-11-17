@@ -26,6 +26,10 @@ export const T = {
 	slamEvery: 8,
 };
 
+/** Reels/TikTok safe zone (1080×1920): IG/TT UI covers top ~250 px, bottom ~550 px (caption, profile, audio)
+ *  and the right ~130 px from y≈1000 (like/comment/share). Keep text and key visuals inside. */
+export const SAFE = {top: 270, bottom: 1360, right: 950, titleTop: 400, footBottom: 580, logoTop: 280, logoRight: 70};
+
 type Tone = 'white' | 'accent' | 'red' | 'muted';
 type Line = {t: string; size?: number; tone?: Tone};
 export type AutoScene =
@@ -43,7 +47,7 @@ export type AutoScene =
 	| ProgressScene;
 
 /** style: 'glow' = zelený glow (default), 'mono' = černobílý minimalistický styl. */
-export type AutoSpec = {id: string; audio: string; style?: 'glow' | 'mono'; brand?: boolean; scenes: AutoScene[]};
+export type AutoSpec = {id: string; audio: string; style?: 'glow' | 'mono'; brand?: boolean; debugSafe?: boolean; scenes: AutoScene[]};
 
 const RED = '#ff8a7a';
 const toneColor = (t?: Tone) => (t === 'accent' ? C.accent : t === 'red' ? RED : t === 'muted' ? C.muted : C.white);
@@ -82,7 +86,7 @@ const SlamScene: React.FC<{s: Extract<AutoScene, {type: 'slam'}>; instant?: bool
 							<circle cx={540} cy={s.emoji ? 900 : 860} r={40 + wave * 600} fill="none" stroke={C.accent} strokeWidth={8 * (1 - wave)} opacity={0.4 * (1 - wave)} />
 						</svg>
 						{s.emoji ? (
-							<div style={{position: 'absolute', top: 300, left: 0, right: 0, textAlign: 'center', fontSize: 300, transform: `rotate(${Math.sin(f / 3) * 6}deg) scale(${1 + 0.05 * Math.sin(f / 2.5)})`}}>{s.emoji}</div>
+							<div style={{position: 'absolute', top: 340, left: 0, right: 0, textAlign: 'center', fontSize: 280, transform: `rotate(${Math.sin(f / 3) * 6}deg) scale(${1 + 0.05 * Math.sin(f / 2.5)})`}}>{s.emoji}</div>
 						) : null}
 						<div style={{position: 'absolute', top: s.emoji ? 820 : 720, left: 40, right: 40, textAlign: 'center'}}>
 							{s.lines.map((l, i) => {
@@ -100,7 +104,7 @@ const SlamScene: React.FC<{s: Extract<AutoScene, {type: 'slam'}>; instant?: bool
 								);
 							})}
 						</div>
-						{s.foot ? <Footnote bottom={150} o={prog(f, 20, 10)}>{s.foot}</Footnote> : null}
+						{s.foot ? <Footnote bottom={SAFE.footBottom} o={prog(f, 20, 10)}>{s.foot}</Footnote> : null}
 					</AbsoluteFill>
 					<AbsoluteFill style={{backgroundColor: '#fff', opacity: flash, pointerEvents: 'none'}} />
 					<Flash at={hookHits.slice(1)} />
@@ -112,10 +116,10 @@ const SlamScene: React.FC<{s: Extract<AutoScene, {type: 'slam'}>; instant?: bool
 		<Shake hits={[0]}>
 			<AbsoluteFill>
 				{s.emoji ? (
-					<div style={{position: 'absolute', top: 300, left: 0, right: 0, textAlign: 'center', fontSize: 300, transform: `scale(${interpolate(f, [0, 6], [1.4, 1], clamp)}) rotate(${Math.sin(f / 4) * 4}deg)`}}>{s.emoji}</div>
+					<div style={{position: 'absolute', top: 340, left: 0, right: 0, textAlign: 'center', fontSize: 280, transform: `scale(${interpolate(f, [0, 6], [1.4, 1], clamp)}) rotate(${Math.sin(f / 4) * 4}deg)`}}>{s.emoji}</div>
 				) : null}
 				<Lines lines={s.lines} start={0} top={s.emoji ? 820 : 560} />
-				{s.foot ? <Footnote bottom={150} o={prog(f, 20, 10)}>{s.foot}</Footnote> : null}
+				{s.foot ? <Footnote bottom={SAFE.footBottom} o={prog(f, 20, 10)}>{s.foot}</Footnote> : null}
 			</AbsoluteFill>
 			<Flash at={hits.slice(1, 2)} />
 		</Shake>
@@ -132,7 +136,7 @@ const CounterScene: React.FC<{s: Extract<AutoScene, {type: 'counter'}>}> = ({s})
 		<Shake hits={[T.afterCounter]}>
 			<AbsoluteFill style={{textAlign: 'center'}}>
 				{s.kicker ? (
-					<div style={{position: 'absolute', top: 300, left: 50, right: 50}}>
+					<div style={{position: 'absolute', top: SAFE.titleTop, left: 50, right: 50}}>
 						<Slam at={0} size={60}>
 							{s.kicker}
 						</Slam>
@@ -147,7 +151,7 @@ const CounterScene: React.FC<{s: Extract<AutoScene, {type: 'counter'}>}> = ({s})
 					<div style={{fontSize: 38, fontWeight: 800, letterSpacing: 3, color: C.white, marginTop: 20, padding: '0 70px', lineHeight: 1.3}}>{s.label}</div>
 				</div>
 				{s.after ? <Lines lines={s.after} start={T.afterCounter} top={1150} /> : null}
-				{s.foot ? <Footnote bottom={150} o={prog(f, T.counterStart + 10, 10)}>{s.foot}</Footnote> : null}
+				{s.foot ? <Footnote bottom={SAFE.footBottom} o={prog(f, T.counterStart + 10, 10)}>{s.foot}</Footnote> : null}
 			</AbsoluteFill>
 			<Flash at={s.after ? [T.afterCounter] : []} />
 		</Shake>
@@ -172,7 +176,7 @@ const ListScene: React.FC<{s: Extract<AutoScene, {type: 'list'}>}> = ({s}) => {
 	const x = s.mark === 'x';
 	return (
 		<AbsoluteFill>
-			<div style={{position: 'absolute', top: 250, left: 40, right: 40, textAlign: 'center'}}>
+			<div style={{position: 'absolute', top: SAFE.titleTop, left: 40, right: 40, textAlign: 'center'}}>
 				<Slam at={0} size={s.title2 ? 60 : 96} color={s.title2 ? C.white : C.accent}>
 					{s.title}
 				</Slam>
@@ -182,7 +186,7 @@ const ListScene: React.FC<{s: Extract<AutoScene, {type: 'list'}>}> = ({s}) => {
 					</Slam>
 				) : null}
 			</div>
-			<div style={{position: 'absolute', top: 650, left: 80, right: 60}}>
+			<div style={{position: 'absolute', top: 680, left: 80, right: 90}}>
 				{s.items.map((t, i) => {
 					const p = prog(f, T.itemFirst + i * T.itemEvery, 7, Easing.out(Easing.back(2)));
 					if (p <= 0) return null;
@@ -195,7 +199,7 @@ const ListScene: React.FC<{s: Extract<AutoScene, {type: 'list'}>}> = ({s}) => {
 					);
 				})}
 			</div>
-			{s.foot ? <Footnote bottom={150} o={prog(f, T.itemFirst + s.items.length * T.itemEvery, 10)}>{s.foot}</Footnote> : null}
+			{s.foot ? <Footnote bottom={SAFE.footBottom} o={prog(f, T.itemFirst + s.items.length * T.itemEvery, 10)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -223,17 +227,17 @@ const CompareScene: React.FC<{s: Extract<AutoScene, {type: 'compare'}>}> = ({s})
 	};
 	return (
 		<AbsoluteFill>
-			<div style={{position: 'absolute', top: 260, left: 40, right: 40, textAlign: 'center'}}>
+			<div style={{position: 'absolute', top: SAFE.titleTop, left: 40, right: 40, textAlign: 'center'}}>
 				<Slam at={0} size={84} color={C.accent}>
 					{s.title}
 				</Slam>
 			</div>
-			<div style={{position: 'absolute', top: 640, left: 40, right: 40, display: 'flex'}}>
+			<div style={{position: 'absolute', top: 660, left: 50, right: 90, display: 'flex'}}>
 				{col('left')}
 				<div style={{width: 3, background: C.faint, alignSelf: 'stretch'}} />
 				{col('right')}
 			</div>
-			{s.foot ? <Footnote bottom={150} o={prog(f, 40, 10)}>{s.foot}</Footnote> : null}
+			{s.foot ? <Footnote bottom={SAFE.footBottom} o={prog(f, 40, 10)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -245,33 +249,33 @@ const BarsScene: React.FC<{s: Extract<AutoScene, {type: 'bars'}>}> = ({s}) => {
 	const w = Math.min(220, 760 / n - 30);
 	return (
 		<AbsoluteFill>
-			<div style={{position: 'absolute', top: 260, left: 40, right: 40, textAlign: 'center'}}>
+			<div style={{position: 'absolute', top: SAFE.titleTop, left: 40, right: 40, textAlign: 'center'}}>
 				<Slam at={0} size={80} color={C.accent}>
 					{s.title}
 				</Slam>
 			</div>
 			<svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{position: 'absolute', inset: 0}}>
-				<line x1={120} y1={1480} x2={960} y2={1480} stroke={C.white} strokeOpacity={0.5} strokeWidth={4} />
+				<line x1={120} y1={1260} x2={930} y2={1260} stroke={C.white} strokeOpacity={0.5} strokeWidth={4} />
 				{s.bars.map((b, i) => {
 					const p = prog(f, T.itemFirst + i * T.itemEvery, 26, Easing.out(Easing.cubic));
-					const h = (b.value / max) * 640 * p;
-					const cx = 120 + (840 / n) * (i + 0.5);
+					const h = (b.value / max) * 520 * p;
+					const cx = 120 + (810 / n) * (i + 0.5);
 					const last = i === n - 1;
 					const color = last ? C.accent : i === 0 ? C.gray : C.white;
 					return (
 						<g key={b.label}>
-							<rect x={cx - w / 2} y={1480 - h} width={w} height={h} rx={14} fill={color} style={last ? {filter: `drop-shadow(0 0 18px ${C.accent})`} : {}} />
-							<text x={cx} y={1480 - h - 24} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={40} fill={color} opacity={p}>
+							<rect x={cx - w / 2} y={1260 - h} width={w} height={h} rx={14} fill={color} style={last ? {filter: `drop-shadow(0 0 18px ${C.accent})`} : {}} />
+							<text x={cx} y={1260 - h - 24} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={40} fill={color} opacity={p}>
 								{b.display}
 							</text>
-							<text x={cx} y={1530} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={28} letterSpacing={2} fill={C.muted}>
+							<text x={cx} y={1310} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={28} letterSpacing={2} fill={C.muted}>
 								{b.label}
 							</text>
 						</g>
 					);
 				})}
 			</svg>
-			{s.foot ? <Footnote bottom={150} o={prog(f, 40, 10)}>{s.foot}</Footnote> : null}
+			{s.foot ? <Footnote bottom={SAFE.footBottom} o={prog(f, 40, 10)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -285,7 +289,7 @@ const CtaScene: React.FC<{s: Extract<AutoScene, {type: 'cta'}>}> = ({s}) => {
 	return (
 		<Shake hits={[T.ctaWord]}>
 			<AbsoluteFill style={{textAlign: 'center'}}>
-				<div style={{position: 'absolute', top: 230, left: 40, right: 40}}>
+				<div style={{position: 'absolute', top: SAFE.titleTop, left: 40, right: 40}}>
 					<Slam at={0} size={s.pre.length > 22 ? 46 : 54}>
 						{s.pre}
 					</Slam>
@@ -296,7 +300,7 @@ const CtaScene: React.FC<{s: Extract<AutoScene, {type: 'cta'}>}> = ({s}) => {
 						{word}
 					</Slam>
 				</div>
-				<div style={{position: 'absolute', top: 960, left: 90, right: 90, transform: `scale(${box})`, opacity: box > 0 ? 1 : 0}}>
+				<div style={{position: 'absolute', top: 990, left: 90, right: 110, transform: `scale(${box})`, opacity: box > 0 ? 1 : 0}}>
 					<div style={{display: 'flex', alignItems: 'center', gap: 22, padding: '26px 30px', borderRadius: 999, border: `3px solid ${sent ? C.accent : C.faint}`, background: 'rgba(241,247,236,0.05)', boxShadow: sent ? `0 0 30px ${C.accent}66` : 'none'}}>
 						<div style={{width: 64, height: 64, borderRadius: 32, background: `conic-gradient(${C.accent}, #f5d36b, #ff7a7a, ${C.accent})`, flexShrink: 0}} />
 						<div style={{flex: 1, textAlign: 'left', fontFamily: FONT, fontWeight: 800, fontSize: 46, color: f >= T.ctaType ? C.white : C.muted}}>
@@ -305,11 +309,9 @@ const CtaScene: React.FC<{s: Extract<AutoScene, {type: 'cta'}>}> = ({s}) => {
 						<div style={{fontFamily: FONT, fontWeight: 900, fontSize: 34, color: C.accent}}>{sent ? '✓' : 'ODESLAT'}</div>
 					</div>
 				</div>
-				<div style={{position: 'absolute', top: 1180, left: 80, right: 80, opacity: prog(f, T.ctaSend + 8, 10), fontFamily: FONT, fontWeight: 800, fontSize: 38, lineHeight: 1.4, color: C.white}}>{s.sub}</div>
-				{s.foot ? <Footnote bottom={230} o={prog(f, T.ctaSend + 16, 12)}>{s.foot}</Footnote> : null}
-				<div style={{position: 'absolute', bottom: 150, left: 0, right: 0, fontFamily: FONT, fontWeight: 800, fontSize: 24, letterSpacing: 4, color: C.white, opacity: prog(f, T.ctaSend + 16, 12)}}>
-					ONDŘEJ ZEMÁNEK · FINANCE &amp; KARIÉRA
-				</div>
+				<div style={{position: 'absolute', top: 1170, left: 80, right: 110, opacity: prog(f, T.ctaSend + 8, 10), fontFamily: FONT, fontWeight: 800, fontSize: 38, lineHeight: 1.4, color: C.white}}>{s.sub}</div>
+				{s.foot ? <Footnote bottom={SAFE.footBottom} o={prog(f, T.ctaSend + 16, 12)}>{s.foot}</Footnote> : null}
+				
 			</AbsoluteFill>
 			<Flash at={[T.ctaWord]} />
 		</Shake>
@@ -347,7 +349,7 @@ const SceneSwitch: React.FC<{s: AutoScene; first?: boolean}> = ({s, first}) => {
 	}
 };
 
-export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style, brand}) => {
+export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style, brand, debugSafe}) => {
 	const mono = style === 'mono';
 	let from = 0;
 	return (
@@ -374,13 +376,23 @@ export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style, brand}) => {
 					})}
 				</AbsoluteFill>
 				{!mono && brand !== false ? (
-					<Img src={staticFile('brand/logo.png')} style={{position: 'absolute', top: 120, right: 70, width: 130, height: 130, borderRadius: 65, boxShadow: `0 0 26px ${C.accent}55`}} />
+					<Img src={staticFile('brand/logo.png')} style={{position: 'absolute', top: SAFE.logoTop, right: SAFE.logoRight, width: 96, height: 96, borderRadius: 48, boxShadow: `0 0 26px ${C.accent}55`}} />
 				) : null}
+				{debugSafe ? <SafeOverlay /> : null}
 				{audio ? <Audio src={staticFile(audio)} /> : null}
 			</AbsoluteFill>
 		</MonoCtx.Provider>
 	);
 };
+
+/** Debug: mock of Instagram Reels UI to check nothing important is covered. */
+const SafeOverlay: React.FC = () => (
+	<AbsoluteFill style={{pointerEvents: 'none'}}>
+		<div style={{position: 'absolute', top: 0, left: 0, right: 0, height: 250, background: 'rgba(255,0,80,0.28)'}} />
+		<div style={{position: 'absolute', bottom: 0, left: 0, right: 0, height: 560, background: 'rgba(255,0,80,0.28)'}} />
+		<div style={{position: 'absolute', top: 1000, right: 0, width: 130, bottom: 560, background: 'rgba(255,0,80,0.28)'}} />
+	</AbsoluteFill>
+);
 
 export const calcAutoMeta: CalculateMetadataFunction<AutoSpec> = ({props}) => ({
 	durationInFrames: Math.max(30, props.scenes.reduce((a, s) => a + s.dur, 0)),

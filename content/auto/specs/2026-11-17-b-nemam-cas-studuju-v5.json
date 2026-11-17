@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-17-b-nemam-cas-studuju-v5",
+  "audio": "auto/2026-11-17-b-nemam-cas-studuju-v5.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Nemám čas, studuju – znáš to? Samé výmluvy: až po škole, zkoušky, příští rok, nejsem ready. Jenže týden má 168 hodin a tobě stačí pár z nich. Za 5 hodin týdně zvládneš naučit se prodávat, otestovat svůj nápad, získat prvního klienta a budovat si kontakty. Byznys při škole roste krok za krokem – nápad, první klient, deset klientů, byznys – a po škole už nezačínáš od nuly. Zatímco ostatní čekají, ty už jdeš. Kdy začneš, rozhoduješ ty – ne škola, ne šéf. Nevíš, kde začít? Ukážu ti jednu cestu. Chceš ji vidět? Napiš START.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "NEMÁM ČAS.", "size": 120}, {"t": "STUDUJU.", "size": 110, "tone": "accent"}, {"t": "ZNÁŠ TO?", "size": 56, "tone": "muted"}]},
+    {"type": "bubbles", "dur": 90, "kicker": "CO SI ŘÍKÁŠ?", "words": ["AŽ PO ŠKOLE", "ZKOUŠKY", "PŘÍŠTÍ ROK", "NEJSEM READY"], "mute": true, "caption": "SAMÉ VÝMLUVY"},
+    {"type": "countdown", "dur": 108, "kicker": "TÝDEN MÁ", "head": "HODIN", "from": 0, "to": 168, "caption": "TOBĚ STAČÍ PÁR Z NICH"},
+    {"type": "list", "dur": 108, "title": "ZA 5 HODIN TÝDNĚ", "title2": "ZVLÁDNEŠ:", "items": ["NAUČIT SE PRODÁVAT", "OTESTOVAT SVŮJ NÁPAD", "ZÍSKAT PRVNÍHO KLIENTA", "BUDOVAT SI KONTAKTY"]},
+    {"type": "progress", "dur": 126, "title": "BYZNYS PŘI ŠKOLE", "sub": "KROK ZA KROKEM", "steps": ["NÁPAD", "1. KLIENT", "10 KLIENTŮ", "BYZNYS"], "goal": "PO ŠKOLE NAPLNO", "caption": "PO ŠKOLE UŽ NEZAČÍNÁŠ OD NULY"},
+    {"type": "arrows", "dur": 90, "kicker": "ZATÍMCO OSTATNÍ ČEKAJÍ,", "label": "TY UŽ JDEŠ."},
+    {"type": "spotlight", "dur": 108, "title": "KDY ZAČNEŠ,", "sub": "ROZHODUJEŠ TY", "caption": "NE ŠKOLA. NE ŠÉF. TY."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 84}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 76, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "START", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}

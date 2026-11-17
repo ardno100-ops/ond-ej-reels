@@ -27,7 +27,7 @@ const Svg: React.FC<{children: React.ReactNode}> = ({children}) => (
 	</svg>
 );
 
-const Kicker: React.FC<{text?: string; top?: number}> = ({text, top = 560}) => {
+const Kicker: React.FC<{text?: string; top?: number}> = ({text, top = 620}) => {
 	const f = useCurrentFrame();
 	if (!text) return null;
 	const p = prog(f, MT.kicker, 12);
@@ -92,8 +92,8 @@ export const Bubbles: React.FC<{s: BubblesScene}> = ({s}) => {
 	const muted = s.mute ? prog(f, muteAt, 14) : 0;
 	return (
 		<AbsoluteFill>
-			<Title text={s.title} top={330} size={84} />
-			<Kicker text={s.kicker} top={s.title ? 560 : 600} />
+			<Title text={s.title} top={400} size={84} />
+			<Kicker text={s.kicker} top={s.title ? 620 : 620} />
 			<Svg>
 				{SPOTS.slice(0, n).map((p, i) => {
 					const o = prog(f, MT.itemFirst + i * MT.itemEvery, 10);
@@ -118,7 +118,7 @@ export const Bubbles: React.FC<{s: BubblesScene}> = ({s}) => {
 				</text>
 			</Svg>
 			{caption(s.caption, s.mute ? muteAt + 6 : MT.itemFirst + n * MT.itemEvery + 6, 1270, f)}
-			{s.foot ? <Footnote bottom={150} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
+			{s.foot ? <Footnote bottom={580} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -130,7 +130,7 @@ export const Spotlight: React.FC<{s: SpotlightScene}> = ({s}) => {
 	const cone = prog(f, 12, 20);
 	return (
 		<AbsoluteFill>
-			<Title text={s.title} sub={s.sub} top={420} size={92} />
+			<Title text={s.title} sub={s.sub} top={430} size={92} />
 			<Svg>
 				<defs>
 					<linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
@@ -154,7 +154,7 @@ export const Spotlight: React.FC<{s: SpotlightScene}> = ({s}) => {
 				<Person x={540} y={1205} s={1.5} color="#ffffff" glowOn={cone > 0.5} />
 			</Svg>
 			{caption(s.caption, 34, 1290, f)}
-			{s.foot ? <Footnote bottom={150} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
+			{s.foot ? <Footnote bottom={580} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -185,8 +185,8 @@ export const Shield: React.FC<{s: ShieldScene}> = ({s}) => {
 					return <Bubble key={i} x={cx + Math.cos(a) * r} y={cy + Math.sin(a) * r * 0.85} text={w} o={o} s={0.9} />;
 				})}
 			</Svg>
-			{caption(s.caption, MT.itemFirst + s.words.length * MT.itemEvery + 10, 1340, f)}
-			{s.foot ? <Footnote bottom={150} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
+			{caption(s.caption, MT.itemFirst + s.words.length * MT.itemEvery + 10, 1310, f)}
+			{s.foot ? <Footnote bottom={580} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -221,7 +221,7 @@ export const Arrows: React.FC<{s: ArrowsScene}> = ({s}) => {
 				</text>
 			</Svg>
 			{caption(s.caption, MT.mainArrow + 26, 1290, f)}
-			{s.foot ? <Footnote bottom={150} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
+			{s.foot ? <Footnote bottom={580} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -263,7 +263,7 @@ export const Countdown: React.FC<{s: CountdownScene}> = ({s}) => {
 				</g>
 			</Svg>
 			{caption(s.caption, s.dur - 30, 1290, f)}
-			{s.foot ? <Footnote bottom={150} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
+			{s.foot ? <Footnote bottom={580} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };
@@ -276,23 +276,23 @@ export const Progress: React.FC<{s: ProgressScene}> = ({s}) => {
 	const end = s.dur - 30;
 	const p = interpolate(f, [MT.progressStart, end], [0, 1], {...clamp, easing: Easing.inOut(Easing.sin)});
 	const x0 = 150;
-	const x1 = 860;
+	const x1 = 800;
 	const px = x0 + (x1 - x0) * p;
 	const reached = p >= 0.999;
 	const bw = (x1 - x0 + 70) / n - 14;
 	return (
 		<AbsoluteFill>
-			<Title text={s.title} sub={s.sub} top={420} size={88} />
+			<Title text={s.title} sub={s.sub} top={430} size={88} />
 			<Svg>
 				<line x1={x0 - 30} y1={1150} x2={960} y2={1150} stroke="#ffffff" strokeOpacity={0.4} strokeWidth={3} />
 				{[0, 1, 2].map((k) => (
 					<line key={k} x1={px - 70 - k * 18} y1={1100 + k * 14} x2={px - 30 - k * 18} y2={1100 + k * 14} stroke="#ffffff" strokeOpacity={0.35 * (p > 0 && !reached ? 1 : 0)} strokeWidth={3} />
 				))}
 				<Person x={px} y={1150} s={1.05} color="#ffffff" />
-				<g transform={`translate(940 1040) scale(${reached ? 1 + 0.15 * Math.exp(-(f - end) / 6) : 0.9}) rotate(${f * 0.6})`} opacity={reached ? 1 : 0.55}>
+				<g transform={`translate(890 1010) scale(${reached ? 1 + 0.15 * Math.exp(-(f - end) / 6) : 0.9}) rotate(${f * 0.6})`} opacity={reached ? 1 : 0.55}>
 					<path d="M 0 -50 L 14 -16 L 50 -14 L 22 9 L 31 45 L 0 25 L -31 45 L -22 9 L -50 -14 L -14 -16 Z" fill="#ffffff" style={reached ? {filter: 'drop-shadow(0 0 18px #ffffff)'} : {}} />
 				</g>
-				<text x={930} y={968} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={22} letterSpacing={4} fill="#ffffff" opacity={0.85}>
+				<text x={880} y={940} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={22} letterSpacing={4} fill="#ffffff" opacity={0.85}>
 					{s.goal}
 				</text>
 				{s.steps.map((st, i) => {
@@ -309,8 +309,8 @@ export const Progress: React.FC<{s: ProgressScene}> = ({s}) => {
 					);
 				})}
 			</Svg>
-			{caption(s.caption, end + 4, 1330, f)}
-			{s.foot ? <Footnote bottom={150} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
+			{caption(s.caption, end + 4, 1310, f)}
+			{s.foot ? <Footnote bottom={580} o={prog(f, 30, 12)}>{s.foot}</Footnote> : null}
 		</AbsoluteFill>
 	);
 };

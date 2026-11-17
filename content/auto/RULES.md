@@ -88,3 +88,20 @@ Po naplánování připiš do `log.md`: datum, čas, id, téma, klíčové slovo
   vybere úsek písničky tak, aby začátek písničky = začátek videa.
 - Default, když BPM nelze zjistit: 100 BPM (18 snímků/úder).
 - Hudbu do videa NIKDY nevkládej – jen zvukové efekty, které jsou do rytmu.
+
+## Formát Reels – bezpečná zóna (od 17. 11.)
+- IG/TikTok UI zakrývá **horních ~250 px**, **dolních ~550 px** (popisek, profilovka, písnička) a **pravých ~130 px od y≈1000**
+  (lajky, komentáře, sdílení). Šablona má konstanty `SAFE` a vše už umisťuje dovnitř (titulky od y 400, poznámky ~y 1300,
+  logo vpravo nahoře pod lištou, žádný podpis dole).
+- Nikdy nepřidávej vlastní text/prvky pod y 1360 ani vpravo za x 950 (pod y 1000).
+- Kontrola: render stillů se `"debugSafe": true` (červeně zakryté zóny) – nic důležitého nesmí být v červené.
+
+## Texty – čeština a příběh (od 17. 11.)
+- Do specu vždy napiš pole `"script"`: celý příběh videa jako **souvislé věty mluvené češtiny** (tak, jak bys to řekl kamarádovi).
+  Teprve z něj vytvoř texty scén. Přečti script nahlas v duchu: musí dávat smysl bez obrazu.
+- Struktura příběhu: **háček (bolest/situace diváka) → proč to tak je → co s tím (konkrétní tipy) → kam to vede → nenápadná nabídka → CTA.**
+- Každá scéna = jedna celá myšlenka. Kicker + číslo/hlavní text musí dohromady tvořit **správnou českou větu**
+  (např. „TÝDEN MÁ / 168 / HODIN“, ne „KAŽDÝ TÝDEN MÁŠ / HODIN / 168“).
+- Správný slovosled, pády a interpunkce (otazník u otázek, čárky). Krátká, přirozená slova; žádné doslovné překlady z angličtiny.
+- Navazující scény na sebe musí jazykově navazovat (např. „UKÁŽU TI JEDNU CESTU.“ → CTA „CHCEŠ JI VIDĚT?“).
+- Popisek opakuje stejný příběh (stejné formulace jako ve videu), nabídka jen 1 větou na konci.
