@@ -60,16 +60,17 @@ const Lines: React.FC<{lines: Line[]; start: number; top: number}> = ({lines, st
 );
 
 /* ---------- scene renderers ---------- */
-const SlamScene: React.FC<{s: Extract<AutoScene, {type: 'slam'}>}> = ({s}) => {
+/** `instant`: hook scene – full text visible already on frame 0 (strong first frame / cover, lower skip rate). */
+const SlamScene: React.FC<{s: Extract<AutoScene, {type: 'slam'}>; instant?: boolean}> = ({s, instant}) => {
 	const f = useCurrentFrame();
 	const hits = s.lines.map((_, i) => i * T.slamEvery);
 	return (
 		<Shake hits={[0]}>
 			<AbsoluteFill>
 				{s.emoji ? (
-					<div style={{position: 'absolute', top: 300, left: 0, right: 0, textAlign: 'center', fontSize: 300, transform: `scale(${interpolate(f, [0, 6], [1.4, 1], clamp)}) rotate(${Math.sin(f / 4) * 4}deg)`}}>{s.emoji}</div>
+					<div style={{position: 'absolute', top: 300, left: 0, right: 0, textAlign: 'center', fontSize: 300, transform: `scale(${instant ? 1 + 0.04 * Math.sin(f / 3) : interpolate(f, [0, 6], [1.4, 1], clamp)}) rotate(${Math.sin(f / 4) * 4}deg)`}}>{s.emoji}</div>
 				) : null}
-				<Lines lines={s.lines} start={0} top={s.emoji ? 820 : 560} />
+				<Lines lines={s.lines} start={instant ? -40 : 0} top={s.emoji ? 820 : 560} />
 				{s.foot ? <Footnote bottom={150} o={prog(f, 20, 10)}>{s.foot}</Footnote> : null}
 			</AbsoluteFill>
 			<Flash at={hits.slice(1, 2)} />
@@ -271,10 +272,10 @@ const CtaScene: React.FC<{s: Extract<AutoScene, {type: 'cta'}>}> = ({s}) => {
 	);
 };
 
-const SceneSwitch: React.FC<{s: AutoScene}> = ({s}) => {
+const SceneSwitch: React.FC<{s: AutoScene; first?: boolean}> = ({s, first}) => {
 	switch (s.type) {
 		case 'slam':
-			return <SlamScene s={s} />;
+			return <SlamScene s={s} instant={first} />;
 		case 'counter':
 			return <CounterScene s={s} />;
 		case 'list':
@@ -315,10 +316,10 @@ export const AutoReel: React.FC<AutoSpec> = ({scenes, audio, style}) => {
 							<Sequence key={i} name={`${i + 1}. ${s.type}`} from={from} durationInFrames={s.dur}>
 								<SceneFade dur={s.dur} inF={i === 0 ? 0 : mono ? 8 : 4} outF={i === scenes.length - 1 ? 14 : mono ? 8 : 4}>
 									{mono ? (
-										<SceneSwitch s={s} />
+										<SceneSwitch s={s} first={i === 0} />
 									) : (
 										<PunchIn>
-											<SceneSwitch s={s} />
+											<SceneSwitch s={s} first={i === 0} />
 										</PunchIn>
 									)}
 								</SceneFade>
