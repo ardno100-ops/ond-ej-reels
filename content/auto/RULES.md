@@ -1,5 +1,7 @@
 # Automatické zkušební reely – pravidla
 
+> **Nejdřív si přečti `content/auto/PLAYBOOK.md`** – data z minulých videí mají přednost před tímto souborem.
+
 Účet: Instagram @ondrej_zemanek_finance (Metricool brand id **8031800**, timezone Europe/Prague).
 Cílovka: 20–25 let, téma kariéra / podnikání / finance. Cíl: leady pro nábor (komentář s klíčovým slovem).
 
@@ -9,10 +11,10 @@ Cílovka: 20–25 let, téma kariéra / podnikání / finance. Cíl: leady pro n
 - Témata vybírej z `TOPICS.md`, nikdy neopakuj téma z posledních 14 dní (`log.md`).
 - Jeden reel kariéra/mindset, druhý finance v číslech s kariérním úhlem (střídej).
 
-## Vizuální styl – VÝCHOZÍ: `"style": "mono"`
+## Vizuální styl – A/B test (viz PLAYBOOK): 09:30 = `"glow"`, 18:00 = `"mono"` (lichý den v měsíci), sudý den naopak
 Inspirace: černobílé minimalistické piktogramové explainery (čisté černé pozadí, bílá + šedá s jemnou září,
 široce prostrkané verzálky, malé bílé štítky, jedna myšlenka na scénu, klidné plynulé animace bez třesení).
-- Každý spec má `"style": "mono"`. Zelený `glow` styl jen výjimečně (max 1× týdně pro pestrost).
+- Styl podle A/B rozpisu výše, dokud PLAYBOOK nevyhlásí vítěze.
 - Preferuj piktogramové scény: `bubbles` (ty vs. řeči ostatních, `mute: true` = umlčení), `spotlight` (jen ty),
   `shield` (názory se odrazí od kruhu), `arrows` (všichni radí, ty jdeš svou cestou), `countdown` (přesýpací hodiny + kalendář),
   `progress` (cesta k cíli se segmenty a hvězdou). Kombinuj s `slam`, `counter`, `list`, `cta`.
@@ -25,8 +27,8 @@ Inspirace: černobílé minimalistické piktogramové explainery (čisté čern�
 
 ## Formát videa (AutoReel)
 - Spec v `content/auto/specs/YYYY-MM-DD-<a|b>-<slug>.json`, `audio`: `auto/<id>.wav`.
-- 5–8 scén, celkem **20–35 s** (600–1050 snímků při 30 fps).
-- 1. scéna = háček typu `slam` nebo `counter`, max ~8 slov, okamžitě čitelný (žádné pomalé intro).
+- **7–10 scén, celkem 30–40 s** (900–1200 snímků při 30 fps) – podle dat vítězů.
+- 1. scéna = háček typu `slam` (ideálně s `emoji`), max 6–8 slov, oslovení „ty“, číslo ze života diváka. Šablona ho zobrazí celý už na 1. snímku.
 - Poslední scéna = `cta` s klíčovým slovem v komentáři (START, NÁPAD, TÝM, PLÁN, KARIÉRA, INFO – střídej).
 - Texty VERZÁLKAMI, česky s diakritikou. Řádek v `slam` max ~16 znaků při size 100, ~24 znaků při size 70.
 - `list`: 3–5 položek, každá max ~32 znaků. `compare`: 3–4 položky na stranu, max ~22 znaků.
