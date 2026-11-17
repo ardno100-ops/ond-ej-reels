@@ -3,7 +3,7 @@
   "audio": "auto/2026-11-17-b-nemam-cas-studuju-v3.wav",
   "style": "mono",
   "scenes": [
-    {"type": "slam", "dur": 80, "lines": [{"t": "NEMÁM ČAS.", "size": 120}, {"t": "STUDUJU.", "size": 110}, {"t": "ZNÁŠ TO?", "size": 56, "tone": "muted"}]},
+    {"type": "slam", "dur": 62, "lines": [{"t": "NEMÁM ČAS.", "size": 120}, {"t": "STUDUJU.", "size": 110}, {"t": "ZNÁŠ TO?", "size": 56, "tone": "muted"}]},
     {"type": "bubbles", "dur": 125, "kicker": "CO SI ŘÍKÁŠ", "words": ["NEMÁM ČAS", "AŽ PO ŠKOLE", "ZKOUŠKY", "PŘÍŠTÍ ROK", "NEJSEM READY", "POZDĚJI"], "mute": true, "caption": "VÝMLUVY"},
     {"type": "countdown", "dur": 115, "kicker": "KAŽDÝ TÝDEN MÁŠ", "head": "HODIN", "from": 0, "to": 168, "caption": "STAČÍ TI Z NICH PÁR"},
     {"type": "list", "dur": 110, "title": "ZA 5 HODIN TÝDNĚ", "title2": "ZVLÁDNEŠ:", "items": ["NAUČIT SE PRODÁVAT", "OTESTOVAT SVŮJ NÁPAD", "NAJÍT PRVNÍHO KLIENTA", "POSTAVIT SI KONTAKTY"]},

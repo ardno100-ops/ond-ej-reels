@@ -25,7 +25,7 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 - Popisek stejně: nejdřív myšlenka a tipy, nabídka 1 větou na konci.
 
 ## Co funguje ✅ (dělej víc)
-1. **Háček viditelný na 1. snímku** – celý text + pohyb hned od frame 0 (budík zvoní, mince letí). Nikdy prázdný/naskakující 1. snímek.
+1. **Háček viditelný na 1. snímku a s BOOMem** – šablona dělá u 1. scény náraz, rázovou vlnu, záblesky a údery na každý řádek + hluboký basový úder. Háček max **60–65 snímků (2 s)**, max 3 řádky. Nikdy statický text > 1 s.
 2. **Otázka/tvrzení o životě diváka s konkrétním číslem**: „Kolik vyděláš firmě?“, „Takhle vypadá 40 let tvého života“, „168 hodin týdně“. Oslovení „ty/tvůj“.
 3. **Peníze a čas diváka**, ne produkty: výplata, strop, čas v práci, důchod jako důsledek – vždy s kariérním vyústěním.
 4. **Rychlé tempo, 35–45 s, hodně krátkých scén** (vítězové mají 8–10 scén, každá 2–5 s) – sledování ~11 s.

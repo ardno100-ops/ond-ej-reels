@@ -17,6 +17,8 @@ T = dict(itemFirst=16, itemEvery=16, counterStart=18, counterLen=40, afterCounte
 
 spec = json.loads(Path(sys.argv[1]).read_text(encoding='utf-8'))
 MONO = spec.get('style') == 'mono'
+HARD_IMPACT, HARD_BOOM = impact, sub_boom  # hook always hits hard, even in mono
+HOOK_HITS = [0, 9, 18]
 if MONO:
     # calmer palette: no hard impacts / sub booms
     _soft_hit = lambda: whoosh(0.5, True, 0.5)  # noqa: E731
@@ -32,11 +34,15 @@ for i, s in enumerate(spec['scenes']):
     t0 = start
     if i > 0:
         add(sfx, fr(t0), whoosh(0.35, True, 0.7), 1)
-    if st == 'slam':
+    if st == 'slam' and i == 0:
+        # BOOM intro
+        add(sfx, 0, HARD_BOOM(), 1.0)
+        for k, _ in enumerate(s['lines'][:3]):
+            add(sfx, fr(t0 + HOOK_HITS[k]), HARD_IMPACT(), 1.0 if k == 0 else 0.75)
+        add(sfx, 0.02, whoosh(0.5, False, 0.8), 1)
+    elif st == 'slam':
         for k, _ in enumerate(s['lines']):
             add(sfx, fr(t0 + k * T['slamEvery']), impact() if k == 0 else pop(), 1.0 if k == 0 else 0.8)
-        if i == 0:
-            add(sfx, fr(t0), sub_boom(), 0.8)
     elif st == 'counter':
         if s.get('kicker'):
             add(sfx, fr(t0), impact(), 0.7)

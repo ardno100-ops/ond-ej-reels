@@ -60,17 +60,60 @@ const Lines: React.FC<{lines: Line[]; start: number; top: number}> = ({lines, st
 );
 
 /* ---------- scene renderers ---------- */
-/** `instant`: hook scene – full text visible already on frame 0 (strong first frame / cover, lower skip rate). */
+/** `instant`: hook scene – BOOM intro: first line visible on frame 0 with impact punch, shockwave, flash,
+ *  following lines slam in on beats, slow push-in so nothing stands still. Always uses the punchy FX (also in mono). */
+export const HOOK_HITS = [0, 9, 18];
 const SlamScene: React.FC<{s: Extract<AutoScene, {type: 'slam'}>; instant?: boolean}> = ({s, instant}) => {
 	const f = useCurrentFrame();
 	const hits = s.lines.map((_, i) => i * T.slamEvery);
+	if (instant) {
+		const punch = interpolate(f, [0, 7], [1.22, 1], {...clamp, easing: Easing.out(Easing.back(2))});
+		const push = 1 + 0.06 * (f / Math.max(1, s.dur));
+		const wave = interpolate(f, [0, 20], [0, 1], clamp);
+		const flash = interpolate(f, [0, 1, 5], [0.12, 0.28, 0], clamp);
+		const hookHits = HOOK_HITS.slice(0, s.lines.length);
+		return (
+			<MonoCtx.Provider value={false}>
+				<Shake hits={hookHits}>
+					<AbsoluteFill style={{transform: `scale(${punch * push})`}}>
+						<svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{position: 'absolute', inset: 0}}>
+							<circle cx={540} cy={s.emoji ? 900 : 860} r={80 + wave * 900} fill="none" stroke={C.white} strokeWidth={14 * (1 - wave)} opacity={0.5 * (1 - wave)} />
+							<circle cx={540} cy={s.emoji ? 900 : 860} r={40 + wave * 600} fill="none" stroke={C.accent} strokeWidth={8 * (1 - wave)} opacity={0.4 * (1 - wave)} />
+						</svg>
+						{s.emoji ? (
+							<div style={{position: 'absolute', top: 300, left: 0, right: 0, textAlign: 'center', fontSize: 300, transform: `rotate(${Math.sin(f / 3) * 6}deg) scale(${1 + 0.05 * Math.sin(f / 2.5)})`}}>{s.emoji}</div>
+						) : null}
+						<div style={{position: 'absolute', top: s.emoji ? 820 : 720, left: 40, right: 40, textAlign: 'center'}}>
+							{s.lines.map((l, i) => {
+								const at = hookHits[i] ?? i * 9;
+								const k = f - at;
+								const visible = i === 0 || k >= 0;
+								if (!visible) return null;
+								const sc = i === 0 ? 1 : interpolate(k, [0, 5, 9], [1.7, 0.95, 1], clamp);
+								const o = i === 0 ? 1 : interpolate(k, [0, 3], [0, 1], clamp);
+								const col = toneColor(l.tone);
+								return (
+									<div key={i} style={{fontFamily: FONT, fontWeight: 900, fontSize: (l.size ?? 100) * 1.08, lineHeight: 1.04, letterSpacing: '0.02em', color: col, textShadow: glow(col, 36), transform: `scale(${sc})`, opacity: o}}>
+										{l.t}
+									</div>
+								);
+							})}
+						</div>
+						{s.foot ? <Footnote bottom={150} o={prog(f, 20, 10)}>{s.foot}</Footnote> : null}
+					</AbsoluteFill>
+					<AbsoluteFill style={{backgroundColor: '#fff', opacity: flash, pointerEvents: 'none'}} />
+					<Flash at={hookHits.slice(1)} />
+				</Shake>
+			</MonoCtx.Provider>
+		);
+	}
 	return (
 		<Shake hits={[0]}>
 			<AbsoluteFill>
 				{s.emoji ? (
-					<div style={{position: 'absolute', top: 300, left: 0, right: 0, textAlign: 'center', fontSize: 300, transform: `scale(${instant ? 1 + 0.04 * Math.sin(f / 3) : interpolate(f, [0, 6], [1.4, 1], clamp)}) rotate(${Math.sin(f / 4) * 4}deg)`}}>{s.emoji}</div>
+					<div style={{position: 'absolute', top: 300, left: 0, right: 0, textAlign: 'center', fontSize: 300, transform: `scale(${interpolate(f, [0, 6], [1.4, 1], clamp)}) rotate(${Math.sin(f / 4) * 4}deg)`}}>{s.emoji}</div>
 				) : null}
-				<Lines lines={s.lines} start={instant ? -40 : 0} top={s.emoji ? 820 : 560} />
+				<Lines lines={s.lines} start={0} top={s.emoji ? 820 : 560} />
 				{s.foot ? <Footnote bottom={150} o={prog(f, 20, 10)}>{s.foot}</Footnote> : null}
 			</AbsoluteFill>
 			<Flash at={hits.slice(1, 2)} />
