@@ -6,7 +6,11 @@
 Cílovka: 20–25 let, téma kariéra / podnikání / finance. Cíl: leady pro nábor (komentář s klíčovým slovem).
 
 ## Každý den
-- **2 reely denně**: 09:30 a 18:00 (Europe/Prague), `autoPublish: true`, **jedním příspěvkem na Instagram (TRIAL_REEL) i TikTok** (@ondrej.zemanek_finance, veřejně).
+- **2 reely denně**: 09:30 a 18:00 (Europe/Prague).
+  - **TikTok** (@ondrej.zemanek_finance): automaticky přes Metricool, `autoPublish: true`, providers jen `tiktok`.
+  - **Instagram: RUČNĚ (od 17. 11.)** – majitel postuje sám, aby mohl přidat trendující písničku. Přes Metricool na IG NIC neplánuj.
+    Ke každému videu ulož popisek do `content/auto/captions/<id>.md` (popisek + 5 hashtagů + doporučená trendující písnička pro IG i TT).
+    V 9:25 a 17:55 se spouští úloha, která majiteli pošle video (SendUserFile) + popisek ke zkopírování + upozornění.
 - **Bez štítku AI** (`isAiGenerated: false`) – výslovné přání majitele účtu.
 - Témata vybírej z `TOPICS.md`, nikdy neopakuj téma z posledních 14 dní (`log.md`).
 - Jeden reel kariéra/mindset, druhý finance v číslech s kariérním úhlem (střídej).
@@ -53,9 +57,8 @@ CTA: „Napiš do komentáře <SLOVO> 👇“. Poté případný disclaimer/zdro
 ```json
 {"autoPublish": true, "draft": false, "text": "<caption>", "firstCommentText": "",
  "media": ["https://raw.githubusercontent.com/ardno100-ops/ond-ej-reels/main/published/auto/<id>.mp4"],
- "providers": [{"network": "instagram"}, {"network": "tiktok"}],
+ "providers": [{"network": "tiktok"}],
  "publicationDate": {"dateTime": "YYYY-MM-DDT09:30:00", "timezone": "Europe/Prague"},
- "instagramData": {"type": "TRIAL_REEL", "showReelOnFeed": true, "isAiGenerated": false},
  "tiktokData": {"title": "<háček, max ~80 znaků + 1 emoji>", "disableComment": false, "disableDuet": false, "disableStitch": false,
    "privacyOption": "PUBLIC_TO_EVERYONE", "commercialContentThirdParty": false, "commercialContentOwnBrand": true, "autoAddMusic": false, "isAigc": false},
  "shortener": false, "smartLinkData": {"ids": []}, "descendants": [], "hasNotReadNotes": false, "mediaAltText": []}
@@ -68,8 +71,9 @@ Po naplánování připiš do `log.md`: datum, čas, id, téma, klíčové slovo
 
 ## Hudba (trendující písničky)
 - Ke každému videu vyber přes WebSearch aktuálně trendující skladbu (TikTok/Reels, posledních 14 dní) vhodnou pro motivaci / byznys / kariéru mladých (20–25). Vyhni se vánočním a nesouvisejícím trendům.
-- **Instagram:** do `instagramData.audioConfiguration` dej `{"audioId": "<název písně + interpret>", "audioVolume": 30, "videoVolume": 100}` (efekty videa musí být slyšet přes hudbu).
+- **Instagram (pozastaveno – IG se postuje ručně):** do `instagramData.audioConfiguration` dej `{"audioId": "<název písně + interpret>", "audioVolume": 30, "videoVolume": 100}` (efekty videa musí být slyšet přes hudbu).
   Pokud Metricool vrátí 403 „audio catalog is not available“ (účet zatím není Business + FB stránka), naplánuj stejný příspěvek **bez** `audioConfiguration` a v reportu napiš „hudba na IG zatím nejde – chybí Business účet“.
   Pokud vrátí seznam kandidátů, vyber numerické `audioId` toho správného a zkus znovu.
-- **TikTok:** API neumožňuje vybrat zvuk k videu. Do ranního reportu vždy napiš doporučenou písničku pro TikTok. (Režim podle volby majitele – zatím plně automaticky bez hudby.)
+- **TikTok:** API neumožňuje vybrat zvuk k videu → TikTok jde automaticky bez hudby.
+- Doporučenou písničku pro IG zapiš do `content/auto/captions/<id>.md` (název + interpret + proč sedí).
 - Do `log.md` zapiš zvolenou písničku.
