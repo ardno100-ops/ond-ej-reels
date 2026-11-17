@@ -290,7 +290,7 @@ export const Progress: React.FC<{s: ProgressScene}> = ({s}) => {
 				<g transform={`translate(940 1040) scale(${reached ? 1 + 0.15 * Math.exp(-(f - end) / 6) : 0.9}) rotate(${f * 0.6})`} opacity={reached ? 1 : 0.55}>
 					<path d="M 0 -50 L 14 -16 L 50 -14 L 22 9 L 31 45 L 0 25 L -31 45 L -22 9 L -50 -14 L -14 -16 Z" fill="#ffffff" style={reached ? {filter: 'drop-shadow(0 0 18px #ffffff)'} : {}} />
 				</g>
-				<text x={940} y={1130} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={22} letterSpacing={4} fill="#ffffff" opacity={0.85}>
+				<text x={930} y={968} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={22} letterSpacing={4} fill="#ffffff" opacity={0.85}>
 					{s.goal}
 				</text>
 				{s.steps.map((st, i) => {
