@@ -18,6 +18,12 @@
 | Know-how | 20 let prověřené know-how | karierajinak.cz |
 | Kariérní žebříček | 9 stupňů (C → D3 Partner), na vrchol nejrychleji ~5 let | kariérní plán (bez sazeb!) |
 
+## ⭐ PRIORITA (z reportu 17. 11.)
+Nejnižší skip rate mají háčky typu **„Kolik …?“ s konkrétním číslem z tvého života (čas/peníze)**:
+„Kolik vyděláš firmě?“ (skip 47,5 %, 1 485 zhlédnutí) a „Takhle vypadá 40 let tvého života“ (skip 44,9 %, prům. sledování 11,7 s).
+Produktové finance (penzijko, DPS) mají skip 77–83 % → v automatu jen výjimečně a vždy s kariérním úhlem.
+Další náměty v tomto duchu: „Kolik hodin týdně pracuješ na cizí sen?“, „Kolik stojí tvůj rok čekání?“, „Kolik let ti zbývá do důchodu – a co budeš mít?“
+
 ## Témata (vyber, kombinuj, střídej)
 **Kariéra / mindset**
 1. 1 % lepší každý den = 37× za rok
