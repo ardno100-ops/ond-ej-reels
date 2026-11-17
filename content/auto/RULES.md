@@ -65,3 +65,11 @@ Video musí být **pushnuté na `main` dřív**, než se plánuje (Metricool si 
 
 ## Log
 Po naplánování připiš do `log.md`: datum, čas, id, téma, klíčové slovo, plannerUrl. Commit + push na `main`.
+
+## Hudba (trendující písničky)
+- Ke každému videu vyber přes WebSearch aktuálně trendující skladbu (TikTok/Reels, posledních 14 dní) vhodnou pro motivaci / byznys / kariéru mladých (20–25). Vyhni se vánočním a nesouvisejícím trendům.
+- **Instagram:** do `instagramData.audioConfiguration` dej `{"audioId": "<název písně + interpret>", "audioVolume": 30, "videoVolume": 100}` (efekty videa musí být slyšet přes hudbu).
+  Pokud Metricool vrátí 403 „audio catalog is not available“ (účet zatím není Business + FB stránka), naplánuj stejný příspěvek **bez** `audioConfiguration` a v reportu napiš „hudba na IG zatím nejde – chybí Business účet“.
+  Pokud vrátí seznam kandidátů, vyber numerické `audioId` toho správného a zkus znovu.
+- **TikTok:** API neumožňuje vybrat zvuk k videu. Do ranního reportu vždy napiš doporučenou písničku pro TikTok. (Režim podle volby majitele – zatím plně automaticky bez hudby.)
+- Do `log.md` zapiš zvolenou písničku.
