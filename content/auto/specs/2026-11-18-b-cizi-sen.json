@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-18-b-cizi-sen",
+  "audio": "auto/2026-11-18-b-cizi-sen.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Kolik hodin týdně dáváš cizímu snu – a kolik tomu svému? Tvůj týden: 40 hodin práce, cesta, únava, víkend na dospání. Týden má 168 hodin a přes 40 z nich stavíš sen někoho jiného. Přitom stačí 5 hodin týdně pro sebe – to je 260 hodin za rok. Za ně se naučíš prodávat, otestuješ nápad, získáš první klienty a poznáš správné lidi. Tvůj sen roste hodinu po hodině: první hodina, první klient, deset klientů, vlastní věc. Zatímco stavíš cizí sen, tvůj čeká. Cizí sen ti dá výplatu, ten tvůj si ale postavíš jen ty. Nevíš, kde začít? Ukážu ti jednu cestu. Chceš ji vidět? Napiš SEN.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "KOLIK HODIN", "size": 118}, {"t": "DÁVÁŠ CIZÍMU SNU?", "size": 74, "tone": "accent"}, {"t": "A KOLIK TVÉMU?", "size": 56, "tone": "muted"}]},
+    {"type": "bubbles", "dur": 90, "kicker": "TVŮJ TÝDEN:", "words": ["40 H PRÁCE", "CESTA", "ÚNAVA", "VÍKEND NA DOSPÁNÍ"], "mute": true, "caption": "NA TVŮJ SEN NEZBYDE NIC"},
+    {"type": "countdown", "dur": 108, "kicker": "TÝDEN MÁ", "head": "HODIN", "from": 0, "to": 168, "caption": "PŘES 40 Z NICH DÁVÁŠ CIZÍMU SNU"},
+    {"type": "list", "dur": 108, "title": "5 H TÝDNĚ PRO SEBE", "title2": "= 260 H ROČNĚ:", "items": ["NAUČÍŠ SE PRODÁVAT", "OTESTUJEŠ SVŮJ NÁPAD", "ZÍSKÁŠ PRVNÍ KLIENTY", "POZNÁŠ SPRÁVNÉ LIDI"]},
+    {"type": "progress", "dur": 126, "title": "TVŮJ SEN ROSTE", "sub": "HODINU PO HODINĚ", "steps": ["1. HODINA", "1. KLIENT", "10 KLIENTŮ", "VLASTNÍ VĚC"], "goal": "TVŮJ SEN", "caption": "KAŽDÁ HODINA SE SČÍTÁ"},
+    {"type": "arrows", "dur": 90, "kicker": "ZATÍMCO STAVÍŠ CIZÍ SEN,", "label": "TVŮJ ČEKÁ."},
+    {"type": "spotlight", "dur": 108, "title": "CIZÍ SEN", "sub": "TI DÁ VÝPLATU", "caption": "TEN TVŮJ SI POSTAVÍŠ JEN TY."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 84}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 76, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "SEN", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}
