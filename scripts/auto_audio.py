@@ -9,8 +9,9 @@ from pathlib import Path
 
 import numpy as np
 
-from audiolib import SR, add, chime, fr, impact, kaching, ping, pop, riser, sub_boom, t2i, thud, tick, whoosh, write_wav
+from audiolib import SR, add, chime, coin_clink, fail_tone, fr, impact, kaching, ping, pop, riser, sub_boom, t2i, thud, tick, whoosh, write_wav
 
+MS = dict(crashHits=[36, 72, 90], mixSeg=[18, 36, 54], mixCaption=90, raceStart=12, raceEnd=84, raceBadge=90)
 MT = dict(kicker=2, itemFirst=18, itemEvery=9, muteAfter=18, shieldFly=16, arrowsLen=30, mainArrow=40, progressStart=16)
 T = dict(itemFirst=18, itemEvery=18, counterStart=18, counterLen=40, afterCounter=66, ctaWord=18, ctaBox=28,
          ctaType=40, ctaTypeEvery=5, ctaSend=72, slamEvery=8)
@@ -96,6 +97,29 @@ for i, s in enumerate(spec['scenes']):
         for k in range(1, n_steps + 1):
             add(sfx, fr(t0 + MT['progressStart'] + (end - MT['progressStart']) * k / n_steps), ping(660 * 2 ** (k * 2 / 12), 0.25), 0.6)
         add(sfx, fr(t0 + end), chime([1046.5, 1318.5, 1568.0, 2093.0], 1.4), 0.8)
+    elif st == 'crash':
+        add(sfx, fr(t0), impact(), 0.8)
+        for k, h in enumerate(MS['crashHits'][:len(s['drops'])]):
+            add(sfx, fr(t0 + h) - 0.35, whoosh(0.35, False, 0.9), 1)
+            add(sfx, fr(t0 + h), impact(), 1.0)
+            add(sfx, fr(t0 + h), sub_boom(0.9), 0.8)
+            add(sfx, fr(t0 + h), fail_tone(), 0.35)
+    elif st == 'mix':
+        add(sfx, fr(t0), whoosh(0.6, True, 0.8), 1)
+        for k, h in enumerate(MS['mixSeg'][:len(s['parts'])]):
+            add(sfx, fr(t0 + h), impact(), 0.8)
+            add(sfx, fr(t0 + h), ping(880 * 2 ** (k * 4 / 12), 0.3), 0.7)
+        if s.get('caption'):
+            add(sfx, fr(t0 + MS['mixCaption']), impact(), 1.0)
+    elif st == 'race':
+        add(sfx, fr(t0 + MS['raceStart']), riser((MS['raceEnd'] - MS['raceStart']) / 30), 0.6)
+        for k in range((MS['raceEnd'] - MS['raceStart']) // 4):
+            add(sfx, fr(t0 + MS['raceStart'] + k * 4), tick(1800 + k * 50), 0.35)
+        add(sfx, fr(t0 + MS['raceBadge']), impact(), 1.1)
+        add(sfx, fr(t0 + MS['raceBadge']), sub_boom(), 0.8)
+        add(sfx, fr(t0 + MS['raceBadge']) + 0.05, kaching(), 1.0)
+        for k in range(5):
+            add(sfx, fr(t0 + MS['raceBadge']) + 0.3 + k * 0.18, coin_clink(k), 0.5)
     elif st == 'cta':
         add(sfx, fr(t0) - 0.8, riser(0.8), 0.7)
         add(sfx, fr(t0 + T['ctaWord']), impact(), 1.1)

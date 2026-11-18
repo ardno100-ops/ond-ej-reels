@@ -5,6 +5,7 @@ import {Flash, Shake, Slam} from '../nabor/reel';
 import {PunchIn} from '../pecka/scenes';
 import {C, FONT, fmt, glow, prog} from '../theme';
 import {MonoCtx} from '../style';
+import {Crash, CrashScene, Mix, MixScene, Race, RaceScene} from './moneyScenes';
 import {Arrows, ArrowsScene, Bubbles, BubblesScene, Countdown, CountdownScene, Progress, ProgressScene, Shield, ShieldScene, Spotlight, SpotlightScene} from './monoScenes';
 
 /* =====================================================================
@@ -44,7 +45,10 @@ export type AutoScene =
 	| ShieldScene
 	| ArrowsScene
 	| CountdownScene
-	| ProgressScene;
+	| ProgressScene
+	| CrashScene
+	| MixScene
+	| RaceScene;
 
 /** style: 'glow' = zelený glow (default), 'mono' = černobílý minimalistický styl. */
 export type AutoSpec = {id: string; audio: string; style?: 'glow' | 'mono'; brand?: boolean; debugSafe?: boolean; scenes: AutoScene[]};
@@ -344,6 +348,12 @@ const SceneSwitch: React.FC<{s: AutoScene; first?: boolean}> = ({s, first}) => {
 			return <Countdown s={s} />;
 		case 'progress':
 			return <Progress s={s} />;
+		case 'crash':
+			return <Crash s={s} />;
+		case 'mix':
+			return <Mix s={s} />;
+		case 'race':
+			return <Race s={s} />;
 		default:
 			return null;
 	}

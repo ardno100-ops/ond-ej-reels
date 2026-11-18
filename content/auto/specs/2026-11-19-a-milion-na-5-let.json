@@ -1,0 +1,17 @@
+{
+  "id": "2026-11-19-a-milion-na-5-let",
+  "audio": "auto/2026-11-19-a-milion-na-5-let.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Máš milion na 5 let. Kam s ním? Tyhle 2 chyby dělá skoro každý. Chyba č. 1: všechno do akcií. Světové akcie spadly o 40 % v letech 2000–02, o 40 % v roce 2008 a o 18 % v roce 2022. Na 5 let nemusíš mít čas čekat, až se vrátí. Chyba č. 2: všechno na spořáku. Vysoký úrok bývá jen do limitu, banka ho může kdykoli snížit a v roce 2022 byla inflace 15 %, zatímco spořáky dávaly kolem 6 %. Na 5 let se nehodí ani penzijko (peníze až v 60), krypto (čistá spekulace) nebo dluhopisy s 10% úrokem (vysoké riziko). Chytřejší je mix ze 3 košů: dluhopisové fondy, nemovitostní fondy a menší část globálních akcií. Modelově: milion za 5 let při 3 % = 1,16 mil., při 6 % = 1,34 mil., při 7 % = 1,40 mil. To je o 180–240 tisíc víc než spořák. Nevíš, kam s penězi? Projdu to s tebou. Chceš svůj mix? Napiš MIX.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "1 000 000 KČ", "size": 124, "tone": "accent"}, {"t": "NA 5 LET. KAM S NÍM?", "size": 72}, {"t": "2 CHYBY, KTERÉ DĚLÁ SKORO KAŽDÝ", "size": 42, "tone": "muted"}]},
+    {"type": "crash", "dur": 126, "kicker": "CHYBA Č. 1", "title": "VŠECHNO DO AKCIÍ", "drops": [{"pct": "−40 %", "label": "2000–02"}, {"pct": "−40 %", "label": "2008"}, {"pct": "−18 %", "label": "2022"}], "caption": "NA 5 LET NEMUSÍŠ MÍT ČAS ČEKAT.", "foot": "Propady světových akcií (MSCI World). Minulý vývoj nezaručuje budoucí."},
+    {"type": "list", "dur": 108, "title": "CHYBA Č. 2:", "title2": "VŠE NA SPOŘÁKU", "mark": "x", "items": ["VYSOKÝ ÚROK JEN DO LIMITU", "BANKA SAZBU KDYKOLI SNÍŽÍ", "2022: INFLACE 15 %, ÚROK ~6 %"], "foot": "Na rezervu je spořák ideální. Na 5 let ale sázíš na to, že sazby vydrží."},
+    {"type": "list", "dur": 108, "title": "NA 5 LET", "title2": "SE NEHODÍ:", "mark": "x", "items": ["PENZIJKO – PENÍZE AŽ V 60", "KRYPTO – ČISTÁ SPEKULACE", "DLUHOPISY S 10% ÚROKEM"], "foot": "Dobré produkty, jen na jiný horizont."},
+    {"type": "mix", "dur": 144, "title": "CHYTŘEJŠÍ: 3 KOŠE", "center": "MIX", "parts": [{"label": "DLUHOPISOVÉ FONDY", "pct": 35, "tag": "STABILITA"}, {"label": "NEMOVITOSTNÍ FONDY", "pct": 30, "tag": "KLIDNÝ RŮST"}, {"label": "GLOBÁLNÍ AKCIE", "pct": 35, "tag": "RŮST"}], "caption": "65 % STABILITA · 35 % RŮST", "foot": "Modelový příklad, ne investiční doporučení. I fondy mají svá rizika."},
+    {"type": "race", "dur": 144, "title": "1 MILION ZA 5 LET", "years": 5, "base": 1000000, "lines": [{"label": "MIX 7 %", "rate": 0.07}, {"label": "MIX 6 %", "rate": 0.06}, {"label": "SPOŘÁK 3 %", "rate": 0.03}], "badge": "+180–240 TIS.", "badgeSub": "NAVÍC OPROTI SPOŘÁKU", "foot": "Modelový výpočet: pevné roční zhodnocení, bez poplatků a daní. Výnos není zaručen."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KAM S PENĚZI?", "size": 80}, {"t": "PROJDU TO S TEBOU.", "size": 80, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ SVŮJ MIX?", "word": "MIX", "sub": "POŠLU TI POSTUP DO ZPRÁV.", "foot": "Informativní obsah, ne investiční doporučení. Výnos není zaručen."}
+  ]
+}
