@@ -7,7 +7,8 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 | Datum | Video | Typ háčku | Styl | Délka | Zhlédnutí | Skip 3 s | Prům. sledování | Sdílení | Uložení | Koment. |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 15. 11. | Kolik vyděláš firmě? | otázka „Kolik…?“ na peníze diváka | zelený glow, akce od 1. s (mince) | 45 s | **1 485** | **47,5 %** | 11,2 s | 4 | 9 | 0 |
-| 17. 11. | Takhle vypadá 40 let tvého života (Smyčka) | „Takhle vypadá…“ + číslo ze života | zelený glow, budík zvoní od 1. s, rychlé střihy | 40 s | 139 (pár hodin) | **44,9 %** | **11,7 s** | 0 | 0 | 0 |
+| 17. 11. | Takhle vypadá 40 let tvého života (Smyčka) | „Takhle vypadá…“ + číslo ze života | zelený glow, budík zvoní od 1. s, rychlé střihy | 40 s | 139 (stagnuje, 18. 11.) | **44,9 %** | **11,7 s** | 0 | 0 | 0 |
+| 17. 11. | Zaměstnání vs. podnikání (automat 9:30) | otázka „…nebo…?“ | zelený glow | ~30 s | IG: 0 (šlo jako **Trial Reel**) / TT 244 | – | – | 0 | 0 | 0 |
 | 16. 11. | Kde budeš za 5 let? (Prostředí) | otázka, text pomalu naskakuje | zelený glow, malý text v 1. s | 44 s | 376 | 75,1 % | 4,6 s | 1 | 1 | 0 |
 | 16. 11. | 1 % lepší každý den (trial) | číslo, abstraktní | zelený glow, 1. snímek prázdný | 19 s | 96 | 62,1 % | 4,7 s | 0 | 1 | 0 |
 | 14. 11. | Byt v Praze za 10 mil. | otázka na čísla | – | – | 456 | 77,4 % | 7,2 s | 0 | 0 | 0 |
@@ -44,6 +45,11 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 - Produktové finance (penzijko, DPS, ETF zprávy) jako hlavní téma → skip 70–83 %. Max 1× týdně a jen s kariérním úhlem.
 - Pomalý nájezd textu, malý text v 1. vteřině, abstraktní háček bez „ty“ (1 %, prostředí) → skip 62–75 %.
 - Příliš krátká videa (< 20 s) s abstraktním obsahem.
+
+## 📊 Zjištění z 18. 11. (TikTok)
+- TikTok drží **plochý základ 245–300 zhlédnutí na video** bez ohledu na téma (14 dní, 15 videí). Žádné video zatím neprorazilo; výjimka 10. 11. (1 396). Háček zatím TT distribuci viditelně nemění → na TT sledovat hlavně dodívanost, ne zhlédnutí.
+- Sledující: IG 485 → 491 (+6/týden), TT 1 340 → 1 339 (stagnace). Žádný komentář s klíčovým slovem za týden → CTA otázka/emoji test je teď priorita.
+- Instagram post 17. 11. 9:30 odešel přes Metricool jako **TRIAL_REEL** (jen pro nesledující) → nulová čísla. IG teď postuje majitel ručně jako normální Reel – to je správně.
 
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
