@@ -6,8 +6,10 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 ## Scoreboard (Instagram, ručně + automat)
 | Datum | Video | Typ háčku | Styl | Délka | Zhlédnutí | Skip 3 s | Prům. sledování | Sdílení | Uložení | Koment. |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 15. 11. | Kolik vyděláš firmě? | otázka „Kolik…?“ na peníze diváka | zelený glow, akce od 1. s (mince) | 45 s | **1 485** | **47,5 %** | 11,2 s | 4 | 9 | 0 |
-| 17. 11. | Takhle vypadá 40 let tvého života (Smyčka) | „Takhle vypadá…“ + číslo ze života | zelený glow, budík zvoní od 1. s, rychlé střihy | 40 s | 139 (stagnuje, 18. 11.) | **44,9 %** | **11,7 s** | 0 | 0 | 0 |
+| 15. 11. | Kolik vyděláš firmě? | otázka „Kolik…?“ na peníze diváka | zelený glow, akce od 1. s (mince) | 45 s | **1 511** | **47,9 %** | 11,2 s | 4 | 9 | 0 |
+| 17. 11. | Takhle vypadá 40 let tvého života (Smyčka) | „Takhle vypadá…“ + číslo ze života | zelený glow, budík zvoní od 1. s, rychlé střihy | 40 s | 470 (19. 11.) | 60,2 % (při 139 zhl. 44,9 %) | 9,1 s | 0 | 0 | 0 |
+| 17. 11. | Nemám čas, studuju (v5, ručně 19:33) | „Nemám čas…“ – výmluva, čas | zelený glow, do rytmu | 30 s | 128 | ❌ 77,5 % | 4,5 s | 0 | 1 | 0 |
+| 18. 11. | Kolik hodin dáváš cizímu snu? | „Kolik…?“ na čas | glow | 30 s | IG jako Trial Reel → bez dat | – | – | – | – | – |
 | 17. 11. | Zaměstnání vs. podnikání (automat 9:30) | otázka „…nebo…?“ | zelený glow | ~30 s | IG: 0 (šlo jako **Trial Reel**) / TT 244 | – | – | 0 | 0 | 0 |
 | 16. 11. | Kde budeš za 5 let? (Prostředí) | otázka, text pomalu naskakuje | zelený glow, malý text v 1. s | 44 s | 376 | 75,1 % | 4,6 s | 1 | 1 | 0 |
 | 16. 11. | 1 % lepší každý den (trial) | číslo, abstraktní | zelený glow, 1. snímek prázdný | 19 s | 96 | 62,1 % | 4,7 s | 0 | 1 | 0 |
@@ -50,6 +52,14 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 - TikTok drží **plochý základ 245–300 zhlédnutí na video** bez ohledu na téma (14 dní, 15 videí). Žádné video zatím neprorazilo; výjimka 10. 11. (1 396). Háček zatím TT distribuci viditelně nemění → na TT sledovat hlavně dodívanost, ne zhlédnutí.
 - Sledující: IG 485 → 491 (+6/týden), TT 1 340 → 1 339 (stagnace). Žádný komentář s klíčovým slovem za týden → CTA otázka/emoji test je teď priorita.
 - Instagram post 17. 11. 9:30 odešel přes Metricool jako **TRIAL_REEL** (jen pro nesledující) → nulová čísla. IG teď postuje majitel ručně jako normální Reel – to je správně.
+
+## 📊 Zjištění z 19. 11. (8 videí, nový vzorec)
+- **Peníze diváka > čas diváka.** Háček na peníze v peněžence („Kolik vyděláš firmě?“ 47,9 %) drží jako jediný skip < 50 %.
+  Háčky na čas / výmluvy / mindset padají: „Nemám čas, studuju“ 77,5 %, „Prostředí“ 75,5 %, „1 %“ 65 %, Smyčka po rozšíření 60 %.
+  → Automat: 1. háček dne vždy o **penězích diváka s konkrétní částkou v Kč** (výplata, cena věci v hodinách, milion, kolik vyděláš firmě),
+  čas jen jako druhý úhel uvnitř videu. Mindset max 1× týdně.
+- Smyčka měla skvělý skip při prvních 139 zhlédnutích (sledující), u cizího publika 60 % → první 2 s musí fungovat i pro lidi, kteří tě neznají (číslo v Kč hned na 1. snímku).
+- IG Trial Reel = žádná data ani dosah u sledujících. Majitel má publikovat jako normální Reel.
 
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |

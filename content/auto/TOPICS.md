@@ -22,6 +22,7 @@
 Nejnižší skip rate mají háčky typu **„Kolik …?“ s konkrétním číslem z tvého života (čas/peníze)**:
 „Kolik vyděláš firmě?“ (skip 47,5 %, 1 485 zhlédnutí) a „Takhle vypadá 40 let tvého života“ (skip 44,9 %, prům. sledování 11,7 s).
 Produktové finance (penzijko, DPS) mají skip 77–83 % → v automatu jen výjimečně a vždy s kariérním úhlem.
+**Update 19. 11.: peníze diváka (částka v Kč na 1. snímku) > čas. Náměty:** „Kolik stojí tvoje výplata firmu – a kolik vidíš ty?“, „Kolik hodin stojí tvůj iPhone/dovolená?“, „Kolik ti za 10 let sežere inflace z 100 000 Kč?“, „Kolik musíš vydělávat na byt v Praze?“ (fungovalo 456 zhl.), „Kolik ztratíš, když začneš o 5 let později?“
 Další náměty v tomto duchu: „Kolik hodin týdně pracuješ na cizí sen?“, „Kolik stojí tvůj rok čekání?“, „Kolik let ti zbývá do důchodu – a co budeš mít?“
 
 ## Témata (vyber, kombinuj, střídej)
