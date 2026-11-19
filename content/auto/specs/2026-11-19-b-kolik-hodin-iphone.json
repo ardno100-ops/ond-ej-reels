@@ -1,0 +1,138 @@
+{
+ "id": "2026-11-19-b-kolik-hodin-iphone",
+ "audio": "auto/2026-11-19-b-kolik-hodin-iphone.wav",
+ "style": "glow",
+ "beat": {
+  "song": "Roncona (Hyper Slowed)",
+  "bpm": 100,
+  "firstBeatSec": 0.24,
+  "breakSec": [
+   24.4,
+   25.8
+  ],
+  "dropSec": 25.86
+ },
+ "script": "Kolik hodin práce stojí tvůj iPhone? Spočítej si to. iPhone za 30 000 Kč je při minimální mzdě 223 hodin – 28 pracovních dnů. Dovolená za 25 000 Kč stojí 186 hodin, auto za 300 000 Kč přes 2 200 hodin. Jenže den má jen 24 hodin a víc jich neprodáš. Kdo prodává jen čas, má strop. Cenu má to, co umíš: prodávat, řešit problémy lidí, budovat kontakty a stavět něco, co roste. Zatímco ostatní prodávají čas, ty stavíš hodnotu. Tvůj čas má strop, tvoje hodnota ne. Nevíš, kde začít? Ukážu ti jednu cestu. Chceš ji vidět? Napiš HODNOTA.",
+ "scenes": [
+  {
+   "type": "slam",
+   "dur": 79,
+   "hits": [
+    7,
+    25,
+    43
+   ],
+   "lines": [
+    {
+     "t": "KOLIK HODIN",
+     "size": 118
+    },
+    {
+     "t": "STOJÍ TVŮJ IPHONE?",
+     "size": 76,
+     "tone": "accent"
+    },
+    {
+     "t": "SPOČÍTEJ SI TO.",
+     "size": 56,
+     "tone": "muted"
+    }
+   ]
+  },
+  {
+   "type": "counter",
+   "dur": 90,
+   "kicker": "IPHONE ZA 30 000 KČ =",
+   "value": 223,
+   "suffix": " H",
+   "label": "PRÁCE ZA MINIMÁLNÍ MZDU",
+   "after": [
+    {
+     "t": "= 28 PRACOVNÍCH DNŮ",
+     "size": 64,
+     "tone": "red"
+    }
+   ],
+   "foot": "Minimální mzda 2026: 134,40 Kč/h hrubého (MPSV)."
+  },
+  {
+   "type": "bars",
+   "dur": 108,
+   "title": "KOLIK HODIN STOJÍ…",
+   "bars": [
+    {
+     "label": "DOVOLENÁ",
+     "value": 186,
+     "display": "186 H"
+    },
+    {
+     "label": "IPHONE",
+     "value": 223,
+     "display": "223 H"
+    },
+    {
+     "label": "AUTO",
+     "value": 2232,
+     "display": "2 232 H"
+    }
+   ]
+  },
+  {
+   "type": "countdown",
+   "dur": 108,
+   "kicker": "DEN MÁ JEN",
+   "head": "HODIN",
+   "from": 0,
+   "to": 24,
+   "caption": "VÍC HODIN NEPRODÁŠ"
+  },
+  {
+   "type": "list",
+   "dur": 126,
+   "title": "CENU MÁ,",
+   "title2": "CO UMÍŠ:",
+   "items": [
+    "UMĚT PRODÁVAT",
+    "ŘEŠIT PROBLÉMY LIDÍ",
+    "BUDOVAT KONTAKTY",
+    "STAVĚT NĚCO, CO ROSTE"
+   ]
+  },
+  {
+   "type": "arrows",
+   "dur": 90,
+   "kicker": "OSTATNÍ PRODÁVAJÍ ČAS,",
+   "label": "TY STAVÍŠ HODNOTU."
+  },
+  {
+   "type": "spotlight",
+   "dur": 108,
+   "title": "TVŮJ ČAS",
+   "sub": "MÁ STROP",
+   "caption": "TVOJE HODNOTA NE."
+  },
+  {
+   "type": "slam",
+   "dur": 49,
+   "lines": [
+    {
+     "t": "NEVÍŠ, KDE ZAČÍT?",
+     "size": 80
+    },
+    {
+     "t": "UKÁŽU TI JEDNU CESTU.",
+     "size": 70,
+     "tone": "accent"
+    }
+   ]
+  },
+  {
+   "type": "cta",
+   "dur": 142,
+   "pre": "CHCEŠ JI VIDĚT?",
+   "word": "HODNOTA",
+   "sub": "POŠLU TI JI DO ZPRÁV.",
+   "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."
+  }
+ ]
+}
