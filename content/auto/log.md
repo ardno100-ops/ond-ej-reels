@@ -9,3 +9,5 @@
 | 2026-11-18 | 18:00 | 2026-11-18-b-cizi-sen | Kolik hodin dáváš cizímu snu? (glow, Roncona 100 BPM) | SEN | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-2938207791832873142 |
 | 2026-11-19 | 09:30 | 2026-11-19-a-milion-na-5-let | Jak investovat 1 mil. na 5 let (přání majitele, nové scény crash/mix/race) | MIX | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-5959930305611216194 |
 | 2026-11-19 | 18:00 | 2026-11-19-b-kolik-hodin-iphone | Kolik hodin stojí tvůj iPhone? (glow, Roncona 100 BPM) | HODNOTA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=2416169983602540680 |
+| 2026-11-20 | 09:30 | 2026-11-20-a-inflace-100k | 100 000 Kč ztratilo čtvrtinu (inflace ČSÚ + příjem) | PŘÍJEM | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-6919844648513551419 |
+| 2026-11-20 | 18:00 | 2026-11-20-b-vyplata-40k | 40 000 hrubého: firma vs. stát vs. ty | VÝPLATA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=2735418498492287643 |
