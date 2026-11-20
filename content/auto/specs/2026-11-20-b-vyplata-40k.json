@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-20-b-vyplata-40k",
+  "audio": "auto/2026-11-20-b-vyplata-40k.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Máš 40 000 Kč hrubého. Kolik vidíš ty – a kolik za tebe platí firma? Firma za tebe zaplatí 53 520 Kč měsíčně. Z toho stát dostane 21 590 a ty 31 930. Z toho, co za tebe firma dá, dostaneš na účet asi 60 % – a firma na tobě musí vydělat ještě víc. Jak z toho ven? Znát svoji cenu, umět vyjednávat, mít příjem mimo výplatu a budovat vlastní věc. Zaměstnanec staví cizí firmu, ty můžeš stavět svoji. Tvoje práce, tvoje výsledky – a tvůj strop si určuješ ty. Nevíš, kde začít? Ukážu ti jednu cestu. Napiš VÝPLATA.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "40 000 KČ", "size": 128, "tone": "accent"}, {"t": "HRUBÉHO. KOLIK VIDÍŠ TY?", "size": 62}, {"t": "A KOLIK ZA TEBE PLATÍ FIRMA?", "size": 44, "tone": "muted"}]},
+    {"type": "counter", "dur": 90, "kicker": "FIRMA ZA TEBE ZAPLATÍ", "value": 53520, "suffix": " KČ", "label": "MĚSÍČNĚ – MZDA + ODVODY", "foot": "Odvody zaměstnavatele 33,8 % (sociální 24,8 % + zdravotní 9 %)."},
+    {"type": "bars", "dur": 108, "title": "KAM TO JDE?", "bars": [{"label": "FIRMA PLATÍ", "value": 53520, "display": "53 520"}, {"label": "STÁT", "value": 21590, "display": "21 590"}, {"label": "TY", "value": 31930, "display": "31 930"}]},
+    {"type": "counter", "dur": 108, "kicker": "Z TOHO, CO ZA TEBE FIRMA DÁ,", "value": 60, "suffix": " %", "label": "DOSTANEŠ NA ÚČET", "after": [{"t": "A FIRMA NA TOBĚ MUSÍ", "size": 52}, {"t": "VYDĚLAT JEŠTĚ VÍC.", "size": 52, "tone": "accent"}], "foot": "Hrubá mzda 40 000 Kč, jen sleva na poplatníka, orientační výpočet."},
+    {"type": "list", "dur": 126, "title": "JAK Z TOHO", "title2": "VEN?", "items": ["ZNÁT SVOJI CENU", "UMĚT VYJEDNÁVAT", "MÍT PŘÍJEM MIMO VÝPLATU", "BUDOVAT VLASTNÍ VĚC"]},
+    {"type": "arrows", "dur": 90, "kicker": "ZAMĚSTNANEC STAVÍ CIZÍ FIRMU,", "label": "TY MŮŽEŠ SVOJI."},
+    {"type": "spotlight", "dur": 108, "title": "TVOJE PRÁCE", "sub": "TVOJE VÝSLEDKY", "caption": "TVŮJ STROP SI URČUJEŠ TY."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "VÝPLATA", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}

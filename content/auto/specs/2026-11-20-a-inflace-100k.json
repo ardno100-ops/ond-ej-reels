@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-20-a-inflace-100k",
+  "audio": "auto/2026-11-20-a-inflace-100k.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "100 000 Kč za 3 roky ztratilo čtvrtinu hodnoty. Inflace v Česku: 2021 3,8 %, 2022 15,1 %, 2023 10,7 %. Ze 100 000 Kč na účtu zbyla skutečná hodnota asi 75 600 Kč – minus 24 400. Inflaci porazíš třemi kroky: nedržet všechno na účtu, nechat peníze pracovat a hlavně zvýšit svůj příjem. Modelově: 100 000 Kč za 10 let při 6 % je 179 tisíc, na spořáku při 3 % 134 tisíc, pod polštářem pořád 100. Jenže ve 20 máš na investice málo – největší páka je tvůj příjem. +5 000 Kč měsíčně je 60 000 ročně, to žádný spořák nedá. Nevíš, jak zvýšit příjem? Ukážu ti jednu cestu. Napiš PŘÍJEM.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "100 000 KČ", "size": 128, "tone": "accent"}, {"t": "ZA 3 ROKY ZTRATILO", "size": 74}, {"t": "ČTVRTINU HODNOTY.", "size": 60, "tone": "red"}]},
+    {"type": "bars", "dur": 90, "title": "INFLACE V ČR", "bars": [{"label": "2021", "value": 3.8, "display": "3,8 %"}, {"label": "2022", "value": 15.1, "display": "15,1 %"}, {"label": "2023", "value": 10.7, "display": "10,7 %"}]},
+    {"type": "counter", "dur": 108, "kicker": "ZE 100 000 KČ NA ÚČTU ZBYLO", "value": 75600, "suffix": " KČ", "label": "SKUTEČNÉ HODNOTY", "tone": "white", "after": [{"t": "−24 400 KČ", "size": 96, "tone": "red"}], "foot": "Kupní síla po inflaci 2021–2023 (ČSÚ, průměrná roční míra inflace)."},
+    {"type": "list", "dur": 108, "title": "INFLACI PORAZÍŠ", "title2": "TŘEMI KROKY:", "items": ["NEDRŽ VŠE NA ÚČTU", "NECH PENÍZE PRACOVAT", "ZVYŠ SVŮJ PŘÍJEM"]},
+    {"type": "race", "dur": 126, "title": "100 000 KČ ZA 10 LET", "years": 10, "base": 100000, "unit": "tis", "lines": [{"label": "INVESTICE 6 %", "rate": 0.06}, {"label": "SPOŘÁK 3 %", "rate": 0.03}, {"label": "POLŠTÁŘ 0 %", "rate": 0.0}], "badge": "+79 TIS. KČ", "badgeSub": "OPROTI POLŠTÁŘI", "foot": "Modelový výpočet, pevné roční zhodnocení, bez poplatků, daní a inflace. Výnos není zaručen."},
+    {"type": "arrows", "dur": 90, "kicker": "VE 20 JE NEJVĚTŠÍ PÁKA", "label": "TVŮJ PŘÍJEM."},
+    {"type": "spotlight", "dur": 108, "title": "+5 000 KČ", "sub": "MĚSÍČNĚ = 60 000 ROČNĚ", "caption": "TO ŽÁDNÝ SPOŘÁK NEDÁ."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "JAK ZVÝŠIT PŘÍJEM?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "PŘÍJEM", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Informativní obsah, ne investiční doporučení. Spolupráce na živnostenský list, příjem závisí na výkonu a není zaručen."}
+  ]
+}

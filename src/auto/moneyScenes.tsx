@@ -16,7 +16,7 @@ const SAFE_TITLE = 400;
 
 export type CrashScene = {type: 'crash'; dur: number; kicker: string; title: string; drops: {pct: string; label: string}[]; caption?: string; foot?: string};
 export type MixScene = {type: 'mix'; dur: number; title: string; center: string; parts: {label: string; pct: number; tag: string}[]; caption?: string; foot?: string};
-export type RaceScene = {type: 'race'; dur: number; title: string; years: number; base: number; lines: {label: string; rate: number}[]; badge: string; badgeSub: string; foot?: string};
+export type RaceScene = {type: 'race'; dur: number; title: string; years: number; base: number; lines: {label: string; rate: number}[]; badge: string; badgeSub: string; unit?: 'mil' | 'tis'; foot?: string};
 
 const Kicker: React.FC<{text: string; color: string; at?: number}> = ({text, color, at = 0}) => {
 	const f = useCurrentFrame();
@@ -237,7 +237,7 @@ export const Race: React.FC<{s: RaceScene}> = ({s}) => {
 	const vTop = maxV * 1.03;
 	const yOf = (v: number) => yB - ((v - s.base) / (vTop - s.base)) * 520;
 	const t = interpolate(f, [MS.raceStart, MS.raceEnd], [0, s.years], {...clamp, easing: Easing.inOut(Easing.cubic)});
-	const fmtM = (v: number) => (v / 1e6).toFixed(2).replace('.', ',') + ' MIL.';
+	const fmtM = (v: number) => (s.unit === 'tis' ? Math.round(v / 1000) + ' TIS.' : (v / 1e6).toFixed(2).replace('.', ',') + ' MIL.');
 	const badge = prog(f, MS.raceBadge, 8, Easing.out(Easing.back(2.2)));
 	return (
 		<Shake hits={[MS.raceBadge]}>
@@ -265,7 +265,7 @@ export const Race: React.FC<{s: RaceScene}> = ({s}) => {
 						const hx = x0 + ((x1 - x0) * t) / s.years;
 						const hy = yOf(v);
 						const col = RACE_COLORS[i % 3];
-						const dy = i === 0 ? -30 : i === 1 ? 26 : 0;
+						const dy = i === 0 ? -30 : i === 1 ? 26 : l.rate === 0 ? -44 : 0;
 						return (
 							<g key={l.label}>
 								<path d={pts.join(' ')} fill="none" stroke={col} strokeWidth={i === 0 ? 10 : 7} strokeDasharray={i === 2 ? '4 14' : undefined} strokeLinecap="round" style={{filter: i === 0 ? `drop-shadow(0 0 14px ${col})` : undefined}} />
