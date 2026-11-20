@@ -6,8 +6,9 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 ## Scoreboard (Instagram, ručně + automat)
 | Datum | Video | Typ háčku | Styl | Délka | Zhlédnutí | Skip 3 s | Prům. sledování | Sdílení | Uložení | Koment. |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 15. 11. | Kolik vyděláš firmě? | otázka „Kolik…?“ na peníze diváka | zelený glow, akce od 1. s (mince) | 45 s | **1 511** | **47,9 %** | 11,2 s | 4 | 9 | 0 |
+| 15. 11. | Kolik vyděláš firmě? | otázka „Kolik…?“ na peníze diváka | zelený glow, akce od 1. s (mince) | 45 s | **1 526** | **48,1 %** | 11,2 s | 4 | 9 | 0 |
 | 17. 11. | Takhle vypadá 40 let tvého života (Smyčka) | „Takhle vypadá…“ + číslo ze života | zelený glow, budík zvoní od 1. s, rychlé střihy | 40 s | 470 (19. 11.) | 60,2 % (při 139 zhl. 44,9 %) | 9,1 s | 0 | 0 | 0 |
+| 19. 11. | 1 000 000 Kč na 5 let (přání majitele) | částka v Kč + „2 chyby“ | glow + nové scény crash/mix/race | 30 s | 246 (den 1) | 63,9 % (start 55 %) | 6,4 s | 0 | 0 | 0 |
 | 17. 11. | Nemám čas, studuju (v5, ručně 19:33) | „Nemám čas…“ – výmluva, čas | zelený glow, do rytmu | 30 s | 128 | ❌ 77,5 % | 4,5 s | 0 | 1 | 0 |
 | 18. 11. | Kolik hodin dáváš cizímu snu? | „Kolik…?“ na čas | glow | 30 s | IG jako Trial Reel → bez dat | – | – | – | – | – |
 | 17. 11. | Zaměstnání vs. podnikání (automat 9:30) | otázka „…nebo…?“ | zelený glow | ~30 s | IG: 0 (šlo jako **Trial Reel**) / TT 244 | – | – | 0 | 0 | 0 |
@@ -60,6 +61,11 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
   čas jen jako druhý úhel uvnitř videu. Mindset max 1× týdně.
 - Smyčka měla skvělý skip při prvních 139 zhlédnutích (sledující), u cizího publika 60 % → první 2 s musí fungovat i pro lidi, kteří tě neznají (číslo v Kč hned na 1. snímku).
 - IG Trial Reel = žádná data ani dosah u sledujících. Majitel má publikovat jako normální Reel.
+
+## 📊 Zjištění z 20. 11.
+- IG dosah 19. 11. = **1 100** (18. 11.: 272) – táhl ho reel „Milion na 5 let“ (grafika crash/mix/race). Over-the-top grafika s čísly v Kč zvedá dosah.
+- Skip „Milion“ 63,9 % – lepší než háčky na čas (75–78 %), horší než „Kolik vyděláš firmě?“ (48 %). Rozdíl: „Kolik vyděláš firmě?“ = otázka přímo na **diváka** („ty“), „Milion“ = hypotetická situace, kterou 20letý nemá. → Částka musí být z **diváckého života** (výplata, iPhone, brigáda), ne milion, který nemá.
+- Nové scény crash/mix/race používat dál (1 money scéna na reel).
 
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
