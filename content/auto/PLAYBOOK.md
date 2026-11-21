@@ -67,6 +67,13 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 - Skip „Milion“ 63,9 % – lepší než háčky na čas (75–78 %), horší než „Kolik vyděláš firmě?“ (48 %). Rozdíl: „Kolik vyděláš firmě?“ = otázka přímo na **diváka** („ty“), „Milion“ = hypotetická situace, kterou 20letý nemá. → Částka musí být z **diváckého života** (výplata, iPhone, brigáda), ne milion, který nemá.
 - Nové scény crash/mix/race používat dál (1 money scéna na reel).
 
+## 📊 Zjištění z 21. 11. (TikTok – 20 videí)
+- TikTok drží **strop 230–280 zhlédnutí na KAŽDÉ video** (20 videí za 14 dní, ať je háček jakýkoli – i „Milion“, iPhone, výplata).
+  Sledující 1 340 → 1 337. Algoritmus video ukáže jen testovací skupině a dál ho nepouští.
+  Pravděpodobné příčiny: (1) video bez zvuku z TikTok knihovny (API neumí přidat trending sound), (2) žádná tvář/hlas, (3) text-only animace.
+  → Doporučení majiteli: 1–2× týdně nahrát na TT ručně s trending zvukem z TT knihovny, ideálně s tváří v prvních 2 s; porovnat.
+- Instagram: od 19. 11. nepostnuto (iPhone, inflace, výplata čekají). Jediný IG reel týdne („Milion“) zvedl dosah na 1 100 → **IG je teď hlavní páka**, ruční postování je klíčové.
+
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
 |---|---|---|
