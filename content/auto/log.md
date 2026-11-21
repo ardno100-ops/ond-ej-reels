@@ -11,3 +11,5 @@
 | 2026-11-19 | 18:00 | 2026-11-19-b-kolik-hodin-iphone | Kolik hodin stojí tvůj iPhone? (glow, Roncona 100 BPM) | HODNOTA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=2416169983602540680 |
 | 2026-11-20 | 09:30 | 2026-11-20-a-inflace-100k | 100 000 Kč ztratilo čtvrtinu (inflace ČSÚ + příjem) | PŘÍJEM | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-6919844648513551419 |
 | 2026-11-20 | 18:00 | 2026-11-20-b-vyplata-40k | 40 000 hrubého: firma vs. stát vs. ty | VÝPLATA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=2735418498492287643 |
+| 2026-11-21 | 10:15 | 2026-11-21-a-brigada-rok | Kolik vyděláš na brigádě za rok? (posunuto z 9:30 – neschválený požadavek) | NÁSKOK | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-602788438565630849 |
+| 2026-11-21 | 18:00 | 2026-11-21-b-5-let-cekani | 5 let čekání = 1,13 mil. (složené úročení + kariéra) | DNES | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-1133254342247363457 |
