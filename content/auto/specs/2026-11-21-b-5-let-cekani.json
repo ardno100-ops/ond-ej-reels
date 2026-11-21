@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-21-b-5-let-cekani",
+  "audio": "auto/2026-11-21-b-5-let-cekani.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "5 let čekání tě může stát přes milion korun. Spočítám ti to. 2 000 Kč měsíčně od 20 do 60 let je modelově při 6 % ročně skoro 4 miliony. Když začneš ve 25, máš 2,85 milionu. Navíc přitom vložíš jen 120 000 Kč – rozdíl je 1,13 milionu. Proč? Složené úročení: úroky z úroků, čas dělá většinu práce a nejdražší je začít pozdě. Totéž platí v kariéře: kdo začne dřív, vede. Nejlepší čas začít byl před 5 lety, druhý nejlepší je dnes. Nevíš, kde začít? Ukážu ti jednu cestu. Napiš DNES.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "1 130 000 KČ", "size": 120, "tone": "accent"}, {"t": "TĚ STOJÍ 5 LET ČEKÁNÍ.", "size": 66}, {"t": "SPOČÍTÁM TI TO.", "size": 56, "tone": "muted"}]},
+    {"type": "counter", "dur": 90, "kicker": "2 000 KČ/MĚS. OD 20 DO 60 =", "value": 3983000, "label": "KČ – MODELOVĚ PŘI 6 % ROČNĚ", "foot": "Modelový výpočet, měsíční úročení, bez poplatků a daní. Výnos není zaručen."},
+    {"type": "bars", "dur": 108, "title": "KDYŽ ZAČNEŠ VE…", "bars": [{"label": "25 LETECH", "value": 2849, "display": "2,85 MIL."}, {"label": "20 LETECH", "value": 3983, "display": "3,98 MIL."}]},
+    {"type": "counter", "dur": 108, "kicker": "NAVÍC PŘITOM VLOŽÍŠ JEN", "value": 120000, "suffix": " KČ", "label": "5 LET × 24 000 KČ", "after": [{"t": "ROZDÍL: 1,13 MIL.", "size": 84, "tone": "accent"}]},
+    {"type": "list", "dur": 126, "title": "PROČ?", "title2": "SLOŽENÉ ÚROČENÍ:", "items": ["ÚROKY Z ÚROKŮ", "ČAS DĚLÁ VĚTŠINU PRÁCE", "NEJDRAŽŠÍ JE ZAČÍT POZDĚ"]},
+    {"type": "arrows", "dur": 90, "kicker": "TOTÉŽ PLATÍ V KARIÉŘE:", "label": "KDO ZAČNE DŘÍV, VEDE."},
+    {"type": "spotlight", "dur": 108, "title": "NEJLEPŠÍ ČAS", "sub": "BYL PŘED 5 LETY", "caption": "DRUHÝ NEJLEPŠÍ JE DNES."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "DNES", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Informativní obsah, ne investiční doporučení. Spolupráce na živnostenský list, příjem závisí na výkonu a není zaručen."}
+  ]
+}

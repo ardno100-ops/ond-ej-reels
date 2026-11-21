@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-21-a-brigada-rok",
+  "audio": "auto/2026-11-21-a-brigada-rok.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Kolik vyděláš na brigádě za rok? 150 Kč na hodinu, 16 hodin každý víkend, 50 týdnů – 120 000 Kč. Super. Jenže příští rok začínáš zase od nuly. Brigáda znamená prodávat čas: strop jsou hodiny a každý rok jedeš od začátku. Vlastní věc znamená stavět hodnotu: dovednosti zůstávají a klienti se sčítají. Z vlastní věci ti zůstane, že umíš prodávat, máš klienty a máš kontakty. Je to sněhová koule: dovednost, první klient, doporučení, vlastní věc. Zatímco ostatní začínají od nuly, ty už jedeš. Brigáda ti dá výplatu, vlastní věc ti dá náskok. Nevíš, kde začít? Ukážu ti jednu cestu. Napiš NÁSKOK.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "KOLIK VYDĚLÁŠ", "size": 108}, {"t": "NA BRIGÁDĚ ZA ROK?", "size": 76, "tone": "accent"}, {"t": "SPOČÍTÁM TI TO.", "size": 56, "tone": "muted"}]},
+    {"type": "counter", "dur": 90, "kicker": "150 KČ/H × 16 H × 50 TÝDNŮ =", "value": 120000, "suffix": " KČ", "label": "ZA ROK VÍKENDOVÉ BRIGÁDY", "after": [{"t": "A PŘÍŠTÍ ROK ZASE OD NULY.", "size": 54, "tone": "red"}]},
+    {"type": "compare", "dur": 108, "title": "BRIGÁDA vs. BYZNYS", "left": {"head": "BRIGÁDA", "items": ["PRODÁVÁŠ ČAS", "STROP = HODINY", "KAŽDÝ ROK OD NULY"]}, "right": {"head": "VLASTNÍ VĚC", "items": ["STAVÍŠ HODNOTU", "DOVEDNOSTI ZŮSTÁVAJÍ", "KLIENTI SE SČÍTAJÍ"]}},
+    {"type": "list", "dur": 108, "title": "Z VLASTNÍ VĚCI", "title2": "TI ZŮSTANE:", "items": ["UMÍŠ PRODÁVAT", "MÁŠ KLIENTY", "MÁŠ KONTAKTY"]},
+    {"type": "progress", "dur": 126, "title": "SNĚHOVÁ KOULE", "sub": "ROK PO ROKU", "steps": ["DOVEDNOST", "1. KLIENT", "DOPORUČENÍ", "VLASTNÍ VĚC"], "goal": "NÁSKOK", "caption": "NIC NEZAČÍNÁ OD NULY"},
+    {"type": "arrows", "dur": 90, "kicker": "OSTATNÍ ZAČÍNAJÍ OD NULY,", "label": "TY UŽ JEDEŠ."},
+    {"type": "spotlight", "dur": 108, "title": "BRIGÁDA", "sub": "TI DÁ VÝPLATU", "caption": "VLASTNÍ VĚC TI DÁ NÁSKOK."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "NÁSKOK", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Modelový výpočet. Spolupráce na živnostenský list, příjem závisí na výkonu a není zaručen."}
+  ]
+}

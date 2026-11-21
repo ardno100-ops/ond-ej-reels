@@ -300,7 +300,7 @@ const CtaScene: React.FC<{s: Extract<AutoScene, {type: 'cta'}>}> = ({s}) => {
 					<Slam at={6} size={50} style={{marginTop: 22}} color={C.muted}>
 						NAPIŠ DO KOMENTÁŘE
 					</Slam>
-					<Slam at={T.ctaWord} size={word.length > 6 ? 170 : 230} color={C.accent} style={{marginTop: 36}}>
+					<Slam at={T.ctaWord} size={word.length > 5 ? 170 : 230} color={C.accent} style={{marginTop: 36}}>
 						{word}
 					</Slam>
 				</div>
