@@ -13,3 +13,5 @@
 | 2026-11-20 | 18:00 | 2026-11-20-b-vyplata-40k | 40 000 hrubého: firma vs. stát vs. ty | VÝPLATA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=2735418498492287643 |
 | 2026-11-21 | 10:15 | 2026-11-21-a-brigada-rok | Kolik vyděláš na brigádě za rok? (posunuto z 9:30 – neschválený požadavek) | NÁSKOK | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-602788438565630849 |
 | 2026-11-21 | 18:00 | 2026-11-21-b-5-let-cekani | 5 let čekání = 1,13 mil. (složené úročení + kariéra) | DNES | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-1133254342247363457 |
+| 2026-11-22 | – | 2026-11-22-a-kafe-20k + 2026-11-22-b-40-let-byt | Kafe 20k / 40 let = byt (GLOW) – TT nenaplánováno (schválení nedošlo), jen IG ručně | KAFE / STROP | – |
+| 2026-11-23 | 09:30 | 2026-11-23-a-fitko-vs-kariera | Fitko 4× týdně vs. kariéra (STORY-MONO, nový look) | TRÉNINK | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=1231816485766646207 |
