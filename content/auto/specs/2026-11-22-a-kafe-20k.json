@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-22-a-kafe-20k",
+  "audio": "auto/2026-11-22-a-kafe-20k.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Za kafe s sebou utratíš ročně 20 000 Kč. A to není ten problém. 80 Kč krát 250 pracovních dnů je 20 000 Kč za rok. Jenže: když budeš šetřit na kafi, ušetříš maximálně 20 tisíc a žiješ hůř. Když zvýšíš příjem o 5 000 měsíčně, máš 60 000 ročně a kafe si dáš dál. Jak zvýšit příjem? Nauč se prodávat, vezmi projekt navíc, zvyš svoji cenu nebo rozjeď vlastní věc. Zatímco ostatní škrtají kafe, ty zvedáš příjem. Problém není kafe, problém je strop příjmu. Nevíš, kde začít? Ukážu ti jednu cestu. Napiš KAFE.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "20 000 KČ", "size": 128, "tone": "accent"}, {"t": "ROČNĚ UTRATÍŠ ZA KAFE.", "size": 64}, {"t": "A TO NENÍ TEN PROBLÉM.", "size": 50, "tone": "muted"}]},
+    {"type": "counter", "dur": 90, "kicker": "80 KČ × 250 DNŮ V PRÁCI =", "value": 20000, "suffix": " KČ", "label": "ROČNĚ ZA KAFE S SEBOU", "after": [{"t": "JENŽE…", "size": 72, "tone": "muted"}]},
+    {"type": "compare", "dur": 108, "title": "ŠETŘIT vs. VYDĚLAT", "left": {"head": "ŠKRTNEŠ KAFE", "items": ["MAX 20 000 KČ", "ŽIJEŠ HŮŘ", "DÁL UŽ TO NEJDE"]}, "right": {"head": "+5 000 KČ/MĚS.", "items": ["60 000 KČ ROČNĚ", "KAFE SI DÁŠ DÁL", "ROSTE S TEBOU"]}},
+    {"type": "bars", "dur": 108, "title": "ZA ROK MÁŠ NAVÍC", "bars": [{"label": "BEZ KAFE", "value": 20000, "display": "20 000"}, {"label": "+5 000/MĚS.", "value": 60000, "display": "60 000"}]},
+    {"type": "list", "dur": 126, "title": "JAK ZVÝŠIT", "title2": "PŘÍJEM?", "items": ["NAUČ SE PRODÁVAT", "VEZMI PROJEKT NAVÍC", "ZVYŠ SVOJI CENU", "ROZJEĎ VLASTNÍ VĚC"]},
+    {"type": "arrows", "dur": 90, "kicker": "OSTATNÍ ŠKRTAJÍ KAFE,", "label": "TY ZVEDÁŠ PŘÍJEM."},
+    {"type": "spotlight", "dur": 108, "title": "PROBLÉM", "sub": "NENÍ KAFE", "caption": "PROBLÉM JE STROP PŘÍJMU."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "KAFE", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Modelový výpočet. Spolupráce na živnostenský list, příjem závisí na výkonu a není zaručen."}
+  ]
+}

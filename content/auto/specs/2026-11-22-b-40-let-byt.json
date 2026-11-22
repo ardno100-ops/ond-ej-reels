@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-22-b-40-let-byt",
+  "audio": "auto/2026-11-22-b-40-let-byt.wav",
+  "style": "glow",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "40 let práce se rovná jednomu bytu? Spočítám ti to. Minimální mzda 22 400 Kč krát 12 měsíců krát 40 let je 10,75 milionu hrubého za celý život. Byt za 10 milionů. A to ještě před daněmi a odvody, před jídlem a nájmem a před vším ostatním. Jak ten strop prolomit? Umět prodávat, zvyšovat svoji cenu, mít víc zdrojů příjmu a stavět vlastní věc. Mzda roste po krocích, vlastní věc nemá tabulku. 40 let je dlouhá doba – začni je stavět pro sebe. Nevíš, kde začít? Ukážu ti jednu cestu. Napiš STROP.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "40 LET PRÁCE", "size": 120, "tone": "accent"}, {"t": "= JEDEN BYT?", "size": 96}, {"t": "SPOČÍTÁM TI TO.", "size": 56, "tone": "muted"}]},
+    {"type": "counter", "dur": 90, "kicker": "22 400 KČ × 12 × 40 LET =", "value": 10752000, "label": "KČ HRUBÉHO ZA CELÝ ŽIVOT", "foot": "Minimální mzda 2026: 22 400 Kč měsíčně (MPSV)."},
+    {"type": "bars", "dur": 108, "title": "TVŮJ ŽIVOT vs. BYT", "bars": [{"label": "BYT", "value": 10, "display": "10 MIL."}, {"label": "40 LET PRÁCE", "value": 10.75, "display": "10,75 MIL."}]},
+    {"type": "list", "dur": 108, "title": "A TO JEŠTĚ", "title2": "PŘED:", "mark": "x", "items": ["DANĚMI A ODVODY", "JÍDLEM A NÁJMEM", "VŠÍM OSTATNÍM"]},
+    {"type": "list", "dur": 126, "title": "JAK PROLOMIT", "title2": "STROP?", "items": ["UMĚT PRODÁVAT", "ZVYŠOVAT SVOJI CENU", "MÍT VÍC ZDROJŮ PŘÍJMU", "STAVĚT VLASTNÍ VĚC"]},
+    {"type": "arrows", "dur": 90, "kicker": "MZDA ROSTE PO KROCÍCH,", "label": "BYZNYS NEMÁ TABULKU."},
+    {"type": "spotlight", "dur": 108, "title": "40 LET", "sub": "JE DLOUHÁ DOBA", "caption": "ZAČNI JE STAVĚT PRO SEBE."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "STROP", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Byt za 10 mil. Kč je modelový příklad. Spolupráce na živnostenský list, příjem závisí na výkonu a není zaručen."}
+  ]
+}
