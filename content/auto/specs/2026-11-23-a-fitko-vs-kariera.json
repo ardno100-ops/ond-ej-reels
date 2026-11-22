@@ -1,0 +1,22 @@
+{
+  "id": "2026-11-23-a-fitko-vs-kariera",
+  "audio": "auto/2026-11-23-a-fitko-vs-kariera.wav",
+  "look": "story-mono",
+  "script": "Do fitka chodíš 4× týdně. Máš plán, trenéra a měříš progres. Víš přesně, kolik zvedneš za měsíc. Počkej. A kariéra? Kolikrát týdně trénuješ tu? Žádný plán. Žádný trenér. Žádný progres. Jen čekáš, až ti šéf přidá. Ve fitku bys takhle nikdy nevyrostl. Tak proč to děláš se svým životem? Svaly rostou z opakování. Peníze taky. Prodej, kontakty, vlastní klienti – to je tvoje posilovna. Za rok se nepoznáš. Hledám pár lidí, co chtějí trénovat i tohle. Napiš TRÉNINK.",
+  "beats": [
+    {"dur": 72, "label": "TY", "say": "Do fitka chodíš *4× týdně.*", "v": {"k": "lift"}},
+    {"dur": 72, "label": "TRÉNINK", "say": "Máš plán, trenéra a měříš *progres.*", "v": {"k": "checklist", "items": ["PLÁN", "TRENÉR", "PROGRES"]}},
+    {"dur": 72, "label": "PROGRES", "say": "Víš přesně, kolik zvedneš *za měsíc.*", "v": {"k": "chart", "label": "+10 KG"}},
+    {"dur": 54, "label": "POČKEJ.", "say": "Počkej. *A kariéra?*", "v": {"k": "think"}},
+    {"dur": 72, "label": "TVOJE KARIÉRA", "say": "Kolikrát týdně trénuješ *tu?*", "v": {"k": "week", "on": [], "offLabel": "0×"}},
+    {"dur": 72, "label": "REALITA", "say": "Žádný plán. Žádný trenér. *Žádný progres.*", "v": {"k": "crosses", "items": ["PLÁN", "TRENÉR", "PROGRES"]}},
+    {"dur": 72, "label": "ČEKÁNÍ", "say": "Jen čekáš, až ti *šéf přidá.*", "v": {"k": "clock", "label": "ROK 3"}},
+    {"dur": 72, "say": "Ve fitku bys takhle *nikdy nevyrostl.*", "v": {"k": "shrink"}},
+    {"dur": 90, "say": "Tak proč to děláš se svým životem?", "v": {"k": "big", "lines": [{"t": "TAK PROČ"}, {"t": "TO DĚLÁŠ", "big": true}, {"t": "SE SVÝM ŽIVOTEM?"}]}},
+    {"dur": 72, "label": "REALITY CHECK", "say": "Svaly rostou z opakování. *Peníze taky.*", "v": {"k": "equation", "left": "OPAKOVÁNÍ", "right": "VÝSLEDKY"}},
+    {"dur": 90, "label": "TVOJE POSILOVNA", "say": "Prodej. Kontakty. *Vlastní klienti.*", "v": {"k": "icons", "items": [{"icon": "phone", "label": "PRODEJ"}, {"icon": "nodes", "label": "KONTAKTY"}, {"icon": "people", "label": "KLIENTI"}]}},
+    {"dur": 72, "say": "Za rok se *nepoznáš.*", "v": {"k": "future", "left": "TY DNES", "right": "TY ZA ROK"}},
+    {"dur": 72, "label": "HLEDÁM", "say": "Hledám pár lidí, co chtějí *trénovat i tohle.*", "v": {"k": "crowd", "n": 9, "pick": 4}},
+    {"dur": 126, "v": {"k": "cta", "word": "TRÉNINK", "sub": "Pošlu ti, jak to u nás funguje.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}}
+  ]
+}

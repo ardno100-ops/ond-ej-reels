@@ -25,6 +25,16 @@ Produktové finance (penzijko, DPS) mají skip 77–83 % → v automatu jen výj
 **Update 19. 11.: peníze diváka (částka v Kč na 1. snímku) > čas. Náměty:** „Kolik stojí tvoje výplata firmu – a kolik vidíš ty?“, „Kolik hodin stojí tvůj iPhone/dovolená?“, „Kolik ti za 10 let sežere inflace z 100 000 Kč?“, „Kolik musíš vydělávat na byt v Praze?“ (fungovalo 456 zhl.), „Kolik ztratíš, když začneš o 5 let později?“
 Další náměty v tomto duchu: „Kolik hodin týdně pracuješ na cizí sen?“, „Kolik stojí tvůj rok čekání?“, „Kolik let ti zbývá do důchodu – a co budeš mít?“
 
+## 🏋️ PERSONA-NÁMĚTY (sport × kariéra, 22. 11.)
+- Do fitka 4× týdně – a kariéru netrénuješ vůbec ✅ (23. 11.)
+- Winter arc: 90 dní do jara – fitko + první klienti
+- Trenér vs. mentor: ve fitku ho máš, v kariéře ne
+- Den 1 vs. den 365 (progres foto, ale pro dovednosti)
+- Tým: sám to vydržíš týden, v týmu roky (lidi kolem tebe)
+- Zranění = výmluva? „Nemám čas“ vs. „nemám priority“
+- Sezóna: sportovci mají přípravku – kdy máš přípravku na kariéru?
+- Plato: když přestaneš růst, změň trénink (ne sebe)
+
 ## Témata (vyber, kombinuj, střídej)
 **Kariéra / mindset**
 1. 1 % lepší každý den = 37× za rok

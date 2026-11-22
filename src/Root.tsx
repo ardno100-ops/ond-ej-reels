@@ -9,6 +9,7 @@ import {ENV_DUR, EnvReel} from './env/reel';
 import {NABOR_DUR, NaborReel} from './nabor/reel';
 import {SMYCKA_DUR, SmyckaReel} from './smycka/reel';
 import {AUTO_DEFAULT, AutoReel, calcAutoMeta} from './auto/AutoReel';
+import {STORY_DEFAULT, StoryReel, calcStoryMeta} from './auto/StoryReel';
 import {CAROUSEL_DEFAULT, Carousel as AutoCarouselComp, CH as ACH, CW as ACW, calcCarouselMeta} from './auto/Carousel';
 import {CH, CW, SO_SLIDES, SoCarousel, UT_SLIDES, UtCarousel} from './week/carousels';
 
@@ -26,6 +27,7 @@ export const RemotionRoot: React.FC = () => (
 		<Composition id="Nabor" component={NaborReel} durationInFrames={NABOR_DUR} fps={FPS} width={W} height={H} />
 		<Composition id="Smycka" component={SmyckaReel} durationInFrames={SMYCKA_DUR} fps={FPS} width={W} height={H} />
 		<Composition id="AutoReel" component={AutoReel} defaultProps={AUTO_DEFAULT} calculateMetadata={calcAutoMeta} durationInFrames={225} fps={FPS} width={W} height={H} />
+		<Composition id="StoryReel" component={StoryReel} defaultProps={STORY_DEFAULT} calculateMetadata={calcStoryMeta} durationInFrames={72} fps={FPS} width={W} height={H} />
 		<Composition id="AutoCarousel" component={AutoCarouselComp} defaultProps={CAROUSEL_DEFAULT} calculateMetadata={calcCarouselMeta} durationInFrames={1} fps={FPS} width={ACW} height={ACH} />
 	</>
 );

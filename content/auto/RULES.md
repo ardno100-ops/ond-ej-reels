@@ -120,3 +120,20 @@ Po naplánování připiš do `log.md`: datum, čas, id, téma, klíčové slovo
 - **TikTok:** automaticky jako fotokarusel (media = JPG URL všech slidů, `tiktokData.autoAddMusic: true`, title).
 - **Instagram:** ručně – balíček v 9:25 pošle všechny slidy (SendUserFile) + popisek.
 - Caption soubor: `content/auto/captions/<datum>-a-carousel-<slug>.md` (řádek „**Slidy:**“ s cestou ke složce).
+
+
+## 🎨 VARIABILITA – každé video jiné (přání majitele 22. 11.: „všechny jsou stejný, copypasta“)
+**Žádné dvě videa za sebou ve stejném LOOKU ani se stejnou strukturou.** Střídej:
+| Look | Šablona | Kdy |
+|---|---|---|
+| **STORY-MONO** | `StoryReel` (`scripts/story_render.sh`) – černobílý příběh, věta po větě, piktogramy, titulky slovo po slově | příběh / mindset / nábor („průměrný život → počkej → tvrdá pravda → reality check → nabídka“) |
+| **GLOW-DATA** | `AutoReel` (`scripts/auto_render.sh`) – zelený glow, čísla v Kč, crash/mix/race | čísla, peníze, výpočty |
+Pravidla:
+- Každý den 2 videa = 2 různé looky. Nikdy stejný první obraz, stejné pořadí scén ani stejná pointa dvakrát za týden.
+- U STORY skládej beaty z různých vizuálů (lift, checklist, chart, think, week, crosses, clock, shrink, big, equation, icons, doors, future, crowd, bell) – každé video jinou kombinaci, aspoň 1 vizuál, který v posledních 3 videích nebyl.
+- Každé video = **nová myšlenka**, ne jiná čísla na stejnou myšlenku.
+
+## 🧍 PERSONA (pro koho píšeme)
+Průměrný, trochu ambiciózní člověk 20–25: chodí do fitka / sportuje, má brigádu nebo první práci, scrolluje večer, chce víc, ale neví jak.
+→ Metafory ze sportu (trénink, opakování, progres, trenér, tým, zápas, sezóna, „winter arc“, „locking in“), mluv jako kamarád z fitka, ne jako banka.
+→ Nábor = „hledám pár lidí, co…“, hodnota = dovednost prodávat, kontakty, klienti, tým, mentor, vlastní věc. Bez slibů výdělku.
