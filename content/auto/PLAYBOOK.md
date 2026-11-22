@@ -8,7 +8,7 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 |---|---|---|---|---|---|---|---|---|---|---|
 | 15. 11. | Kolik vyděláš firmě? | otázka „Kolik…?“ na peníze diváka | zelený glow, akce od 1. s (mince) | 45 s | **1 526** | **48,1 %** | 11,2 s | 4 | 9 | 0 |
 | 17. 11. | Takhle vypadá 40 let tvého života (Smyčka) | „Takhle vypadá…“ + číslo ze života | zelený glow, budík zvoní od 1. s, rychlé střihy | 40 s | 470 (19. 11.) | 60,2 % (při 139 zhl. 44,9 %) | 9,1 s | 0 | 0 | 0 |
-| 19. 11. | 1 000 000 Kč na 5 let (přání majitele) | částka v Kč + „2 chyby“ | glow + nové scény crash/mix/race | 30 s | 246 (den 1) | 63,9 % (start 55 %) | 6,4 s | 0 | 0 | 0 |
+| 19. 11. | 1 000 000 Kč na 5 let (přání majitele) | částka v Kč + „2 chyby“ | glow + nové scény crash/mix/race | 30 s | 488 (den 3) | 76,1 % (start 55 %) | 6,5 s | 0 | 0 | 0 |
 | 17. 11. | Nemám čas, studuju (v5, ručně 19:33) | „Nemám čas…“ – výmluva, čas | zelený glow, do rytmu | 30 s | 128 | ❌ 77,5 % | 4,5 s | 0 | 1 | 0 |
 | 18. 11. | Kolik hodin dáváš cizímu snu? | „Kolik…?“ na čas | glow | 30 s | IG jako Trial Reel → bez dat | – | – | – | – | – |
 | 17. 11. | Zaměstnání vs. podnikání (automat 9:30) | otázka „…nebo…?“ | zelený glow | ~30 s | IG: 0 (šlo jako **Trial Reel**) / TT 244 | – | – | 0 | 0 | 0 |
@@ -73,6 +73,11 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
   Pravděpodobné příčiny: (1) video bez zvuku z TikTok knihovny (API neumí přidat trending sound), (2) žádná tvář/hlas, (3) text-only animace.
   → Doporučení majiteli: 1–2× týdně nahrát na TT ručně s trending zvukem z TT knihovny, ideálně s tváří v prvních 2 s; porovnat.
 - Instagram: od 19. 11. nepostnuto (iPhone, inflace, výplata čekají). Jediný IG reel týdne („Milion“) zvedl dosah na 1 100 → **IG je teď hlavní páka**, ruční postování je klíčové.
+
+## 📊 Zjištění z 22. 11.
+- Bez nového IG reelu spadl dosah z 1 100 (19. 11.) na 249 (20. 11.). IG dosah = přímo počet postnutých reelů.
+- „Milion“ se s cizím publikem zhoršil na skip 76 % → investiční téma (i s grafikou) nezastaví cizí lidi. Potvrzeno 3. videem: jen „Kolik vyděláš firmě?“ (otázka na výplatu diváka) drží < 50 %.
+- Plánování TT přes Metricool teď v automatu čeká na schválení (21. a 22. 11. ráno nikdo neschválil → 21. 11. posun na 10:15, 22. 11. dopoledne vypadlo).
 
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
