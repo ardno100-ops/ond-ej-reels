@@ -127,6 +127,7 @@ Po naplánování připiš do `log.md`: datum, čas, id, téma, klíčové slovo
 | Look | Šablona | Kdy |
 |---|---|---|
 | **STORY-MONO** | `StoryReel` (`scripts/story_render.sh`) – černobílý příběh, věta po větě, piktogramy, titulky slovo po slově | příběh / mindset / nábor („průměrný život → počkej → tvrdá pravda → reality check → nabídka“) |
+| **CARTOON-FLOORS** | `FloorsReel` (zatím pevný příběh „Patro po patru“) – kreslená budova, postavička se zelenou kravatou stoupá patry | kariérní cesta / nábor, 1× týdně max |
 | **GLOW-DATA** | `AutoReel` (`scripts/auto_render.sh`) – zelený glow, čísla v Kč, crash/mix/race | čísla, peníze, výpočty |
 Pravidla:
 - Každý den 2 videa = 2 různé looky. Nikdy stejný první obraz, stejné pořadí scén ani stejná pointa dvakrát za týden.
