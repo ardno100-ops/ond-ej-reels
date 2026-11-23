@@ -8,6 +8,8 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 |---|---|---|---|---|---|---|---|---|---|---|
 | 15. 11. | Kolik vyděláš firmě? | otázka „Kolik…?“ na peníze diváka | zelený glow, akce od 1. s (mince) | 45 s | **1 526** | **48,1 %** | 11,2 s | 4 | 9 | 0 |
 | 17. 11. | Takhle vypadá 40 let tvého života (Smyčka) | „Takhle vypadá…“ + číslo ze života | zelený glow, budík zvoní od 1. s, rychlé střihy | 40 s | 470 (19. 11.) | 60,2 % (při 139 zhl. 44,9 %) | 9,1 s | 0 | 0 | 0 |
+| 22. 11. | Fitko 4× týdně vs. kariéra | příběh + sport (persona) | **STORY-MONO** (nový) | 36 s | 235 (den 1) | 65,7 % | 5,8 s | 0 | 0 | 0 |
+| 23. 11. | 40 000 hrubého (IG) | částka z výplaty | GLOW | 30 s | 40 (pár hodin) | 69,4 % | 5,4 s | 0 | 0 | 0 |
 | 19. 11. | 1 000 000 Kč na 5 let (přání majitele) | částka v Kč + „2 chyby“ | glow + nové scény crash/mix/race | 30 s | 488 (den 3) | 76,1 % (start 55 %) | 6,5 s | 0 | 0 | 0 |
 | 17. 11. | Nemám čas, studuju (v5, ručně 19:33) | „Nemám čas…“ – výmluva, čas | zelený glow, do rytmu | 30 s | 128 | ❌ 77,5 % | 4,5 s | 0 | 1 | 0 |
 | 18. 11. | Kolik hodin dáváš cizímu snu? | „Kolik…?“ na čas | glow | 30 s | IG jako Trial Reel → bez dat | – | – | – | – | – |
@@ -78,6 +80,12 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 - Bez nového IG reelu spadl dosah z 1 100 (19. 11.) na 249 (20. 11.). IG dosah = přímo počet postnutých reelů.
 - „Milion“ se s cizím publikem zhoršil na skip 76 % → investiční téma (i s grafikou) nezastaví cizí lidi. Potvrzeno 3. videem: jen „Kolik vyděláš firmě?“ (otázka na výplatu diváka) drží < 50 %.
 - Plánování TT přes Metricool teď v automatu čeká na schválení (21. a 22. 11. ráno nikdo neschválil → 21. 11. posun na 10:15, 22. 11. dopoledne vypadlo).
+
+## 📊 Zjištění z 23. 11.
+- **TikTok: tvůj ručně nahraný meme post s trending zvukem (#jojoreference, 22. 11.) = 338 zhlédnutí, 49 lajků, 6 komentářů, 3 sdílení.**
+  Automatické reely přes Metricool: 0–2 lajky, 0 komentářů. → Potvrzuje hypotézu: na TT rozhoduje **nativní upload s trending zvukem + humor/meme**. Doporučení: TT verze dávat ručně se zvukem z TT knihovny, nebo aspoň 2× týdně ručně.
+- STORY-MONO (Fitko) skip 65,7 % vs. poslední GLOW 69–76 % → nový look je zatím lepší. Málo dat (1 video), sledovat.
+- IG dosah: 21. 11. 205 → 22. 11. 331 (po postnutí Fitka).
 
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
