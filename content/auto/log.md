@@ -15,3 +15,4 @@
 | 2026-11-21 | 18:00 | 2026-11-21-b-5-let-cekani | 5 let čekání = 1,13 mil. (složené úročení + kariéra) | DNES | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-1133254342247363457 |
 | 2026-11-22 | – | 2026-11-22-a-kafe-20k + 2026-11-22-b-40-let-byt | Kafe 20k / 40 let = byt (GLOW) – TT nenaplánováno (schválení nedošlo), jen IG ručně | KAFE / STROP | – |
 | 2026-11-23 | 09:30 | 2026-11-23-a-fitko-vs-kariera | Fitko 4× týdně vs. kariéra (STORY-MONO, nový look) | TRÉNINK | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=1231816485766646207 |
+| 2026-11-23 | 18:00 | 2026-11-23-b-winter-arc | Winter arc: 90 dní do jara (GLOW-DATA) | ZIMA | (TT viz níže) |

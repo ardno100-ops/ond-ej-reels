@@ -1,0 +1,19 @@
+{
+  "id": "2026-11-23-b-winter-arc",
+  "audio": "auto/2026-11-23-b-winter-arc.wav",
+  "style": "glow",
+  "look": "glow-data",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Winter arc: do jara zbývá 90 dní. Budeš makat jen na těle, nebo i na kariéře? Kdo využije zimu, má na jaře náskok. Jedna hodina denně krát 90 dní je 90 hodin – to je 11 pracovních dnů na cokoliv, co chceš umět. Tvůj winter arc: 3× týdně fitko, hodinu denně nová dovednost, 10 nových kontaktů a první klient. Den 1, den 30, den 60, den 90 – na jaře už nezačínáš od nuly. Výmluvy jako je zima, nemám čas, až po svátcích, od ledna – winter arc je nebere. V březnu: buď stejný plat, stejné tělo, stejné výmluvy, nebo nová dovednost, první klienti a lepší forma. Chceš winter arc i pro kariéru? Ukážu ti jednu cestu. Napiš ZIMA.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "WINTER ARC", "size": 120, "tone": "accent"}, {"t": "90 DNÍ DO JARA.", "size": 76}, {"t": "TĚLO, NEBO I KARIÉRA?", "size": 52, "tone": "muted"}]},
+    {"type": "countdown", "dur": 108, "kicker": "DO JARA ZBÝVÁ", "head": "DNÍ", "from": 90, "to": 0, "caption": "KDO VYUŽIJE ZIMU, MÁ NÁSKOK"},
+    {"type": "counter", "dur": 90, "kicker": "1 HODINA DENNĚ × 90 DNÍ =", "value": 90, "suffix": " HODIN", "label": "NA COKOLIV, CO CHCEŠ UMĚT", "after": [{"t": "= 11 PRACOVNÍCH DNŮ", "size": 64, "tone": "accent"}]},
+    {"type": "list", "dur": 108, "title": "TVŮJ", "title2": "WINTER ARC:", "items": ["3× TÝDNĚ FITKO", "1 H DENNĚ NOVÁ DOVEDNOST", "10 NOVÝCH KONTAKTŮ", "PRVNÍ KLIENT"]},
+    {"type": "progress", "dur": 126, "title": "DEN 1 → DEN 90", "sub": "KAŽDÝ DEN KOUSEK", "steps": ["DEN 1", "DEN 30", "DEN 60", "DEN 90"], "goal": "JARO", "caption": "NA JAŘE UŽ NEZAČÍNÁŠ OD NULY"},
+    {"type": "shield", "dur": 90, "kicker": "VÝMLUVY:", "words": ["JE ZIMA", "NEMÁM ČAS", "AŽ PO SVÁTCÍCH", "OD LEDNA"], "caption": "WINTER ARC JE NEBERE."},
+    {"type": "compare", "dur": 108, "title": "V BŘEZNU MÁŠ…", "left": {"head": "ZIMA NA GAUČI", "items": ["STEJNÝ PLAT", "STEJNÉ TĚLO", "STEJNÉ VÝMLUVY"]}, "right": {"head": "WINTER ARC", "items": ["NOVOU DOVEDNOST", "PRVNÍ KLIENTY", "LEPŠÍ FORMU"]}},
+    {"type": "slam", "dur": 49, "lines": [{"t": "WINTER ARC I PRO KARIÉRU?", "size": 64}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "ZIMA", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}
