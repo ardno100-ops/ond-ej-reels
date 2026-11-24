@@ -15,7 +15,7 @@ const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as c
 const SAFE_TITLE = 400;
 
 export type CrashScene = {type: 'crash'; dur: number; kicker: string; title: string; drops: {pct: string; label: string}[]; caption?: string; foot?: string};
-export type MixScene = {type: 'mix'; dur: number; title: string; center: string; parts: {label: string; pct: number; tag: string}[]; caption?: string; foot?: string};
+export type MixScene = {type: 'mix'; dur: number; title: string; center: string; centerSub?: string; parts: {label: string; pct: number; tag: string}[]; caption?: string; foot?: string};
 export type RaceScene = {type: 'race'; dur: number; title: string; years: number; base: number; lines: {label: string; rate: number}[]; badge: string; badgeSub: string; unit?: 'mil' | 'tis'; foot?: string};
 
 const Kicker: React.FC<{text: string; color: string; at?: number}> = ({text, color, at = 0}) => {
@@ -178,7 +178,7 @@ export const Mix: React.FC<{s: MixScene}> = ({s}) => {
 						{s.center}
 					</text>
 					<text x={cx} y={cy + 52} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={26} letterSpacing={3} fill={C.muted} opacity={prog(f, 12, 8)}>
-						NA 5 LET
+						{s.centerSub ?? ''}
 					</text>
 				</svg>
 				<div style={{position: 'absolute', top: 1110, left: 90, right: 140}}>

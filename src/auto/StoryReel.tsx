@@ -20,7 +20,7 @@ type IconK = 'phone' | 'nodes' | 'people' | 'chart' | 'clock' | 'dumbbell' | 'ho
 export type StoryVisual =
 	| {k: 'lift'}
 	| {k: 'checklist'; items: string[]}
-	| {k: 'chart'; down?: boolean; label?: string}
+	| {k: 'chart'; down?: boolean; flat?: boolean; label?: string}
 	| {k: 'think'; mark?: string}
 	| {k: 'week'; on: number[]; onLabel?: string; offLabel?: string}
 	| {k: 'crosses'; items: string[]}
@@ -223,7 +223,7 @@ const Visual: React.FC<{v: StoryVisual; dur: number}> = ({v, dur}) => {
 			const pts = Array.from({length: 30}).map((_, i) => {
 				const t = (i / 29) * p;
 				const x = 160 + t * 760;
-				const base = v.down ? 0.15 + t * 0.85 : 1 - t * 0.85;
+				const base = v.flat ? 0.45 - Math.min(t, 0.3) * 0.6 : v.down ? 0.15 + t * 0.85 : 1 - t * 0.85;
 				const y = 980 - (1 - base) * 380 + Math.sin(t * 18) * 14;
 				return `${x.toFixed(1)},${y.toFixed(1)}`;
 			});

@@ -1,0 +1,19 @@
+{
+  "id": "2026-11-24-b-telo-vs-hlava",
+  "audio": "auto/2026-11-24-b-telo-vs-hlava.wav",
+  "style": "glow",
+  "look": "glow-data",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "Ročně dáš do těla 25 000 Kč. A kolik do hlavy? Permanentka, protein, výbava – modelově 25 tisíc za rok. Do hlavy za rok: 0 Kč – žádný kurz, kniha ani mentor. A pak se divíš, že plat stojí. Říkáš si: na kurz nemám, knížky nudí, mentora neznám, až budu mít víc. Přitom na protein máš. Investuj do hlavy: jednu knihu měsíčně, kurz prodeje, mentora a lidi, co jsou dál. Tělo ti dá formu, hlava ti dá příjem. Nejlepší investice ve 20 letech jsi ty. Nevíš, kde začít? Ukážu ti jednu cestu. Napiš HLAVA.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "25 000 KČ", "size": 128, "tone": "accent"}, {"t": "ROČNĚ DÁŠ DO TĚLA.", "size": 70}, {"t": "A KOLIK DO HLAVY?", "size": 56, "tone": "muted"}]},
+    {"type": "mix", "dur": 126, "title": "ROČNĚ DO TĚLA", "center": "25 TIS.", "centerSub": "KČ ROČNĚ", "parts": [{"label": "PERMANENTKA", "pct": 43, "tag": "10 800 KČ"}, {"label": "PROTEIN", "pct": 38, "tag": "9 600 KČ"}, {"label": "VÝBAVA", "pct": 19, "tag": "5 000 KČ"}], "caption": "A DO HLAVY?", "foot": "Modelový příklad ročních výdajů."},
+    {"type": "counter", "dur": 90, "kicker": "DO HLAVY ZA ROK:", "value": 0, "suffix": " KČ", "label": "ŽÁDNÝ KURZ, KNIHA ANI MENTOR", "tone": "red", "after": [{"t": "A PAK SE DIVÍŠ, ŽE PLAT STOJÍ.", "size": 48}]},
+    {"type": "bubbles", "dur": 108, "kicker": "CO SI ŘÍKÁŠ?", "words": ["NA KURZ NEMÁM", "KNÍŽKY NUDÍ", "MENTORA NEZNÁM", "AŽ BUDU MÍT VÍC"], "mute": true, "caption": "PŘITOM NA PROTEIN MÁŠ."},
+    {"type": "list", "dur": 108, "title": "INVESTUJ", "title2": "DO HLAVY:", "items": ["1 KNIHA MĚSÍČNĚ", "KURZ PRODEJE", "MENTOR", "LIDI, CO JSOU DÁL"]},
+    {"type": "arrows", "dur": 90, "kicker": "TĚLO TI DÁ FORMU,", "label": "HLAVA PŘÍJEM."},
+    {"type": "spotlight", "dur": 108, "title": "NEJLEPŠÍ INVESTICE", "sub": "VE 20 LETECH", "caption": "JSI TY."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "NEVÍŠ, KDE ZAČÍT?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "HLAVA", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Modelový příklad. Spolupráce na živnostenský list, příjem závisí na výkonu a není zaručen."}
+  ]
+}

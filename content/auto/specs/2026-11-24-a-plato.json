@@ -1,0 +1,20 @@
+{
+  "id": "2026-11-24-a-plato",
+  "audio": "auto/2026-11-24-a-plato.wav",
+  "look": "story-mono",
+  "script": "Většina lidí žije přesně uprostřed. Ve fitku to znáš: zvedáš pořád stejně. Měsíce bez progresu – plato. Co uděláš? Změníš trénink. A v práci? Stejná výplata, třetí rok. Stejný týden, pořád dokola. Za deset let budeš pořád u prvních dveří. Stejný trénink se rovná stejné výsledky. Nová dovednost, noví lidé, nový trenér. Plato se prolomí, když změníš plán. Hledám pár lidí, co chtějí změnit trénink. Napiš ZMĚNA.",
+  "beats": [
+    {"dur": 72, "label": "PRŮMĚR", "say": "Většina lidí žije *přesně uprostřed.*", "v": {"k": "bell"}},
+    {"dur": 72, "label": "FITKO", "say": "Ve fitku to znáš: zvedáš *pořád stejně.*", "v": {"k": "lift"}},
+    {"dur": 72, "label": "PLATO", "say": "Měsíce bez progresu. *Plato.*", "v": {"k": "chart", "flat": true, "label": "+0 KG"}},
+    {"dur": 54, "label": "CO UDĚLÁŠ?", "say": "Co uděláš? *Změníš trénink.*", "v": {"k": "think", "mark": "!"}},
+    {"dur": 90, "say": "A v práci? Stejná výplata. Třetí rok.", "v": {"k": "big", "lines": [{"t": "A V PRÁCI?"}, {"t": "STEJNÁ VÝPLATA.", "big": true}, {"t": "TŘETÍ ROK."}]}},
+    {"dur": 72, "label": "TVŮJ TÝDEN", "say": "Stejný týden. *Pořád dokola.*", "v": {"k": "week", "on": [0, 1, 2, 3, 4], "onLabel": "PRÁCE", "offLabel": "–"}},
+    {"dur": 72, "label": "ZA 10 LET", "say": "Za deset let budeš *pořád u prvních dveří.*", "v": {"k": "doors", "n": 10}},
+    {"dur": 72, "label": "REALITY CHECK", "say": "Stejný trénink = *stejné výsledky.*", "v": {"k": "equation", "left": "STEJNÝ TRÉNINK", "right": "STEJNÉ VÝSLEDKY"}},
+    {"dur": 90, "label": "NOVÝ TRÉNINK", "say": "Nová dovednost. Noví lidé. *Nový trenér.*", "v": {"k": "icons", "items": [{"icon": "book", "label": "DOVEDNOST"}, {"icon": "people", "label": "LIDÉ"}, {"icon": "nodes", "label": "MENTOR"}]}},
+    {"dur": 72, "say": "Plato se prolomí, *když změníš plán.*", "v": {"k": "future", "left": "TY NA PLATU", "right": "TY PO ZMĚNĚ"}},
+    {"dur": 72, "label": "HLEDÁM", "say": "Hledám pár lidí, co *chtějí změnit trénink.*", "v": {"k": "crowd", "n": 9, "pick": 6}},
+    {"dur": 126, "v": {"k": "cta", "word": "ZMĚNA", "sub": "Pošlu ti, jak to u nás funguje.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}}
+  ]
+}
