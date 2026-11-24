@@ -16,3 +16,5 @@
 | 2026-11-22 | – | 2026-11-22-a-kafe-20k + 2026-11-22-b-40-let-byt | Kafe 20k / 40 let = byt (GLOW) – TT nenaplánováno (schválení nedošlo), jen IG ručně | KAFE / STROP | – |
 | 2026-11-23 | 09:30 | 2026-11-23-a-fitko-vs-kariera | Fitko 4× týdně vs. kariéra (STORY-MONO, nový look) | TRÉNINK | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=1231816485766646207 |
 | 2026-11-23 | 18:00 | 2026-11-23-b-winter-arc | Winter arc: 90 dní do jara (GLOW-DATA) | ZIMA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-6376717653292332067 |
+| 2026-11-24 | 09:30 | 2026-11-24-a-plato | Plato: když přestaneš růst (STORY-MONO) | ZMĚNA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-4072716922904097602 |
+| 2026-11-24 | 18:00 | 2026-11-24-b-telo-vs-hlava | 25 000 Kč do těla, 0 Kč do hlavy (GLOW-DATA, mix donut) | HLAVA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=8023772258349566842 |
