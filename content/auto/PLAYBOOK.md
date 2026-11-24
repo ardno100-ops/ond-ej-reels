@@ -87,6 +87,11 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 - STORY-MONO (Fitko) skip 65,7 % vs. poslední GLOW 69–76 % → nový look je zatím lepší. Málo dat (1 video), sledovat.
 - IG dosah: 21. 11. 205 → 22. 11. 331 (po postnutí Fitka).
 
+## 📊 Zjištění z 24. 11.
+- Ruční TT meme (#jojoreference) po 2 dnech: 775 zhl., 172 lajků, **43 komentářů**, 14 sdílení. Automatické TT: ~230–240 zhl., 0 komentářů.
+  → Komentáře (= leady) vznikají u humoru/memů s trending zvukem. **Přidat 1–2× týdně MEME formát** (krátký vtip ze života poradce/obchodníka, ruční upload se zvukem).
+- IG data Metricool od 22. 11. neaktualizoval (zpoždění na jejich straně).
+
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
 |---|---|---|
