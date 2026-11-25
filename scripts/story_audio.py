@@ -60,6 +60,13 @@ for i, b in enumerate(beats):
         add(sfx, fr(t0 + 4), whoosh(0.8, True, 0.4), 1)
     elif k == 'bell':
         add(sfx, fr(t0 + 4), whoosh(0.9, True, 0.4), 1)
+    elif k == 'photo':
+        add(sfx, fr(t0 + 2), whoosh(0.5, True, 0.5), 1)
+        add(sfx, fr(t0 + 14), chime([987.8, 1318.5], 1.0), 0.55)
+    elif k == 'dots':
+        for j in range(0, d - 24, 3):
+            add(sfx, fr(t0 + 6 + j), tick(1800 + j * 12), 0.22)
+        add(sfx, fr(t0 + d - 18), ping(1760, 0.4), 0.6)
     elif k == 'cta':
         add(sfx, fr(t0) - 0.7, riser(0.7), 0.6)
         add(sfx, fr(t0 + 14), impact(), 1.0)

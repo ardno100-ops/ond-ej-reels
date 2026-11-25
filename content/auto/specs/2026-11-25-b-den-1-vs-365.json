@@ -1,0 +1,19 @@
+{
+  "id": "2026-11-25-b-den-1-vs-365",
+  "audio": "auto/2026-11-25-b-den-1-vs-365.wav",
+  "look": "story-mono",
+  "script": "Den 1 vs. den 365 – progress fotku znáš. Rozdíl nedělá jeden trénink, dělá ho 365. Přijít, odmakat, opakovat. A kde bude tvoje kariéra za 365 dní? Většina lidí jen čeká na lepší dobu. Nemám čas, nemám kontakty, nemám zkušenosti. Den 1 je dneska. Jeden hovor, jedna schůzka, jeden nový člověk týdně. Za rok uvidíš progress fotku i v kariéře. Hledám pár lidí, co chtějí začít den 1. Napiš ROK.",
+  "beats": [
+    {"dur": 72, "label": "PROGRESS FOTKA", "say": "Den 1 vs. den 365. *Znáš to.*", "v": {"k": "photo", "left": "DEN 1", "right": "DEN 365"}},
+    {"dur": 90, "label": "365 DNÍ", "say": "Rozdíl nedělá jeden trénink. *Dělá ho 365.*", "v": {"k": "dots", "n": 365}},
+    {"dur": 72, "label": "RECEPT", "say": "Přijít. Odmakat. *Opakovat.*", "v": {"k": "checklist", "items": ["PŘIJÍT", "ODMAKAT", "OPAKOVAT"]}},
+    {"dur": 54, "label": "OTÁZKA", "say": "A kde bude tvoje kariéra *za 365 dní?*", "v": {"k": "think", "mark": "?"}},
+    {"dur": 72, "label": "REALITA", "say": "Většina lidí jen *čeká na lepší dobu.*", "v": {"k": "clock", "label": "ČEKÁNÍ"}},
+    {"dur": 72, "label": "VÝMLUVY", "say": "Nemám čas. Nemám kontakty. *Nemám zkušenosti.*", "v": {"k": "crosses", "items": ["ČAS", "KONTAKTY", "PRAXE"]}},
+    {"dur": 72, "say": "Den 1 je dneska.", "v": {"k": "big", "lines": [{"t": "DEN 1", "big": true}, {"t": "JE DNESKA."}]}},
+    {"dur": 90, "label": "TÝDENNÍ PLÁN", "say": "Jeden hovor. Jedna schůzka. *Jeden nový člověk týdně.*", "v": {"k": "icons", "items": [{"icon": "phone", "label": "HOVOR"}, {"icon": "clock", "label": "SCHŮZKA"}, {"icon": "people", "label": "LIDI"}]}},
+    {"dur": 72, "label": "ZA ROK", "say": "Za rok uvidíš *progress fotku i v kariéře.*", "v": {"k": "photo", "left": "KARIÉRA DEN 1", "right": "DEN 365"}},
+    {"dur": 72, "label": "HLEDÁM", "say": "Hledám pár lidí, co chtějí *začít den 1.*", "v": {"k": "crowd", "n": 9, "pick": 2}},
+    {"dur": 126, "v": {"k": "cta", "word": "ROK", "sub": "Pošlu ti, jak vypadá první rok u nás.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}}
+  ]
+}

@@ -1,0 +1,13 @@
+{
+ "id": "2026-11-25-fitko-byznys",
+ "slides": [
+  {"kicker": "Fitko · Kariéra", "title": ["Chodíš do fitka?"], "accent": ["Už umíš 5 věcí,", "co potřebuje byznys."], "body": "Možná o tom ani nevíš. Projeď si to.", "image": "carousel/lib/dvere-mistnost.png", "titleSize": 78},
+  {"kicker": "Disciplína", "title": ["Chodit, i když se nechce."], "accent": ["To je disciplína."], "body": "V byznysu jsou dny bez nálady taky. Výsledky dělá ten, kdo přijde i tak.", "bigNumber": "01"},
+  {"kicker": "Progres", "title": ["Přidávat po kilech."], "accent": ["Ne po tunách."], "body": "První klient, pak pět, pak deset. Malé kroky každý týden porazí velký skok jednou za rok.", "bigNumber": "02"},
+  {"kicker": "Měření", "title": ["Zapisuješ si váhy."], "accent": ["Zapisuj si i čísla."], "body": "Kolik hovorů, kolik schůzek, kolik doporučení. Co neměříš, to nezlepšíš.", "bigNumber": "03"},
+  {"kicker": "Trenér", "title": ["Sám to dlouho nejde."], "accent": ["Potřebuješ trenéra."], "body": "Mentor ti ušetří roky chyb. Stejně jako trenér zranění.", "bigNumber": "04"},
+  {"kicker": "Regenerace", "title": ["Bez odpočinku nerosteš."], "accent": ["Ani v práci."], "body": "Spánek, sport, lidi kolem tebe. Vyhořelý obchodník nic neprodá.", "bigNumber": "05"},
+  {"kicker": "Rozdíl", "title": ["Ve fitku to víš."], "accent": ["V kariéře to zkus."], "columns": [{"head": "Fitko", "text": "Plán, trenér, měření, 4× týdně. Progres vidíš."}, {"head": "Kariéra", "text": "Většinou nic z toho. Jen čekání, až šéf přidá."}], "image": "carousel/lib/kniha-model-domu.png"},
+  {"kicker": "Další krok", "title": ["Chceš trénovat", "i kariéru?"], "accent": ["Hledám pár lidí."], "cta": "Napiš mi „PLÁN“", "body": "Pošlu ti, jak to u nás funguje: plán, mentor a tým.", "image": "carousel/lib/student-vs-podnikatel.png"}
+ ]
+}

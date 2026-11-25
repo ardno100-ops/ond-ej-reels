@@ -33,6 +33,8 @@ export type StoryVisual =
 	| {k: 'future'; left?: string; right?: string}
 	| {k: 'crowd'; n?: number; pick?: number}
 	| {k: 'bell'}
+	| {k: 'photo'; left: string; right: string}
+	| {k: 'dots'; n?: number}
 	| {k: 'cta'; word: string; sub: string; foot?: string};
 
 export type StoryBeat = {dur: number; say?: string; label?: string; v: StoryVisual};
@@ -429,6 +431,40 @@ const Visual: React.FC<{v: StoryVisual; dur: number}> = ({v, dur}) => {
 						<Person x={540} y={640} s={0.4} lit />
 						<Label x={540} y={1050} text="PRŮMĚR" />
 					</g>
+				</svg>
+			);
+		}
+		case 'photo': {
+			const p2 = prog(f, 14, 12, Easing.out(Easing.back(1.6)));
+			const frame = (x: number, lbl: string, lit: boolean, s: number, o: number) => (
+				<g opacity={o} transform={`rotate(${lit ? 3 : -3} ${x} 760)`}>
+					<rect x={x - 170} y={540} width={340} height={440} rx={10} fill="#141414" stroke={lit ? W : G} strokeWidth={6} style={lit ? {filter: wglow(16)} : undefined} />
+					<line x1={x - 150} x2={x + 150} y1={900} y2={900} stroke={G} strokeWidth={2} opacity={0.5} />
+					<Person x={x} y={900} s={s} lit={lit} />
+					<Label x={x} y={950} text={lbl} lit={lit} size={30} />
+				</g>
+			);
+			return (
+				<svg width={1080} height={1920} style={{position: 'absolute', inset: 0, opacity: appear}}>
+					{frame(330, v.left, false, 0.7, 1)}
+					{frame(760, v.right, true, 0.7 + 0.25 * p2, p2)}
+				</svg>
+			);
+		}
+		case 'dots': {
+			const n = v.n ?? 365;
+			const cols = 25;
+			const p = prog(f, 6, Math.max(20, dur - 24), Easing.inOut(Easing.cubic));
+			const on = Math.round(p * n);
+			return (
+				<svg width={1080} height={1920} style={{position: 'absolute', inset: 0, opacity: appear}}>
+					<Label x={540} y={560} text={`DEN ${Math.max(1, on)}`} lit size={44} />
+					{Array.from({length: n}).map((_, i) => {
+						const x = 132 + (i % cols) * 34;
+						const y = 610 + Math.floor(i / cols) * 30;
+						const lit = i < on;
+						return <circle key={i} cx={x} cy={y} r={lit ? 9 : 6} fill={lit ? W : DIM} />;
+					})}
 				</svg>
 			);
 		}
