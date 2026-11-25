@@ -92,6 +92,11 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
   → Komentáře (= leady) vznikají u humoru/memů s trending zvukem. **Přidat 1–2× týdně MEME formát** (krátký vtip ze života poradce/obchodníka, ruční upload se zvukem).
 - IG data Metricool od 22. 11. neaktualizoval (zpoždění na jejich straně).
 
+## 📊 Zjištění z 25. 11.
+- Ruční TT meme už **2 026 zhl., 514 lajků** a TT sledující 1 336 → 1 342 (+6 za den – první růst za 2 týdny). Automatické TT dál 186–252 zhl.
+  → **MEME/trend + ruční upload je jediné, co na TT roste. Priorita č. 1.**
+- IG: Fitko (STORY) 338 zhl., skip 69,7 %; Plato (STORY) 226, 71,5 %; Výplata (GLOW) 117, 70,2 %. Styl sám skip nemění – rozhoduje háček a téma. IG dosah 23. 11. 587, 24. 11. 408; sledující 497 (+2).
+
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
 |---|---|---|
