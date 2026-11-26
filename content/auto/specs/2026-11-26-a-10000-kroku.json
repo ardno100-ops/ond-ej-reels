@@ -1,0 +1,19 @@
+{
+  "id": "2026-11-26-a-10000-kroku",
+  "audio": "auto/2026-11-26-a-10000-kroku.wav",
+  "style": "glow",
+  "look": "glow-data",
+  "beat": {"song": "Roncona (Hyper Slowed)", "bpm": 100, "firstBeatSec": 0.24, "breakSec": [24.4, 25.8], "dropSec": 25.86},
+  "script": "10 000 kroků denně hlídáš. A kolik kroků jsi dnes udělal ke svým cílům? 10 000 kroků krát 365 je 3,65 milionu kroků ročně – přes 2 500 km. Žádný krok není velký, sčítají se. Kariéra funguje stejně: jedna kniha měsíčně je 12 knih, jeden nový člověk týdně je 52 lidí, jeden hovor denně je 250 hovorů za rok. Trasa: hovor, schůzka, klient, doporučení, cíl. Kroky ti počítají hodinky, kariéru nikdo – ten streak je na nule. Kariéru ti nikdo nepočítá, počítej si ji sám. Chceš plán kroků? Ukážu ti jednu cestu. Napiš KROK.",
+  "scenes": [
+    {"type": "slam", "dur": 79, "hits": [7, 25, 43], "lines": [{"t": "10 000 KROKŮ", "size": 118, "tone": "accent"}, {"t": "DENNĚ HLÍDÁŠ.", "size": 80}, {"t": "A KROKY KE KARIÉŘE?", "size": 52, "tone": "muted"}]},
+    {"type": "counter", "dur": 90, "kicker": "10 000 KROKŮ × 365 DNÍ =", "value": 3650000, "label": "KROKŮ ZA ROK", "after": [{"t": "= PŘES 2 500 KM", "size": 72, "tone": "accent"}], "foot": "Při délce kroku cca 70 cm."},
+    {"type": "spotlight", "dur": 108, "title": "ŽÁDNÝ KROK", "sub": "NENÍ VELKÝ", "caption": "SČÍTAJÍ SE."},
+    {"type": "bars", "dur": 108, "title": "1 KROK = ZA ROK:", "bars": [{"label": "1 KNIHA/MĚS.", "value": 12, "display": "12 KNIH"}, {"label": "1 ČLOVĚK/TÝD.", "value": 52, "display": "52 LIDÍ"}, {"label": "1 HOVOR/DEN", "value": 250, "display": "250 HOVORŮ"}]},
+    {"type": "progress", "dur": 126, "title": "TVOJE TRASA", "sub": "KROK ZA KROKEM", "steps": ["HOVOR", "SCHŮZKA", "KLIENT", "DOPORUČENÍ"], "goal": "CÍL", "caption": "MALÉ KROKY, VELKÁ TRASA"},
+    {"type": "compare", "dur": 108, "title": "KARIÉRA vs. KROKY", "left": {"head": "KARIÉRA", "items": ["NIKDO NEPOČÍTÁ", "ŽÁDNÝ CÍL", "STREAK: 0"]}, "right": {"head": "KROKY", "items": ["HODINKY POČÍTAJÍ", "CÍL 10 000", "STREAK: 47 DNÍ"]}},
+    {"type": "arrows", "dur": 90, "kicker": "KARIÉRU TI NIKDO NEPOČÍTÁ,", "label": "POČÍTEJ SI JI SÁM."},
+    {"type": "slam", "dur": 49, "lines": [{"t": "CHCEŠ PLÁN KROKŮ?", "size": 80}, {"t": "UKÁŽU TI JEDNU CESTU.", "size": 70, "tone": "accent"}]},
+    {"type": "cta", "dur": 142, "pre": "CHCEŠ JI VIDĚT?", "word": "KROK", "sub": "POŠLU TI JI DO ZPRÁV.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}
+  ]
+}
