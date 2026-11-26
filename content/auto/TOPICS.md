@@ -25,6 +25,9 @@ Produktové finance (penzijko, DPS) mají skip 77–83 % → v automatu jen výj
 **Update 19. 11.: peníze diváka (částka v Kč na 1. snímku) > čas. Náměty:** „Kolik stojí tvoje výplata firmu – a kolik vidíš ty?“, „Kolik hodin stojí tvůj iPhone/dovolená?“, „Kolik ti za 10 let sežere inflace z 100 000 Kč?“, „Kolik musíš vydělávat na byt v Praze?“ (fungovalo 456 zhl.), „Kolik ztratíš, když začneš o 5 let později?“
 Další náměty v tomto duchu: „Kolik hodin týdně pracuješ na cizí sen?“, „Kolik stojí tvůj rok čekání?“, „Kolik let ti zbývá do důchodu – a co budeš mít?“
 
+## 🗣️ OD MAJITELE (reálné detaily – mají přednost; doplň, co Ondřej pošle)
+_(zatím prázdné – čeká na odpovědi na otázky z 26. 11.)_
+
 ## 🏋️ PERSONA-NÁMĚTY (sport × kariéra, 22. 11.)
 - Do fitka 4× týdně – a kariéru netrénuješ vůbec ✅ (23. 11.)
 - Winter arc: 90 dní do jara – fitko + první klienti
