@@ -18,3 +18,5 @@
 | 2026-11-23 | 18:00 | 2026-11-23-b-winter-arc | Winter arc: 90 dní do jara (GLOW-DATA) | ZIMA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-6376717653292332067 |
 | 2026-11-24 | 09:30 | 2026-11-24-a-plato | Plato: když přestaneš růst (STORY-MONO) | ZMĚNA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-4072716922904097602 |
 | 2026-11-24 | 18:00 | 2026-11-24-b-telo-vs-hlava | 25 000 Kč do těla, 0 Kč do hlavy (GLOW-DATA, mix donut) | HLAVA | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=8023772258349566842 |
+| 2026-11-26 | – | 2026-11-26-a-10000-kroku | 10 000 kroků vs. kroky ke kariéře (GLOW) – TT nenaplánováno (schválení), IG ručně | KROK | – |
+| 2026-11-26 | 18:00 | 2026-11-23-c-patro-po-patru | Patro po patru (CARTOON-FLOORS), poprvé na TT | PATRO | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=1831854585782357077 |
