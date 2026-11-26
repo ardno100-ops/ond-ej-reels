@@ -97,6 +97,10 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
   → **MEME/trend + ruční upload je jediné, co na TT roste. Priorita č. 1.**
 - IG: Fitko (STORY) 338 zhl., skip 69,7 %; Plato (STORY) 226, 71,5 %; Výplata (GLOW) 117, 70,2 %. Styl sám skip nemění – rozhoduje háček a téma. IG dosah 23. 11. 587, 24. 11. 408; sledující 497 (+2).
 
+## 📊 Zjištění z 26. 11.
+- IG sledující 499 (+4 za týden). Výplata 40k už 341 zhl. (skip 71,5 %), Plato 252 (72,1 %), Den 1 vs 365 70 zhl. první den (67,2 %, sledování jen 3,7 s – dots scéna asi zdržuje). Žádné nové video pod 50 %.
+- Ranní plánování TT přes Metricool opakovaně visí na schválení (21., 22., 25., 26. 11.). Bez „Vždy povolit“ automat TT neumí.
+
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
 |---|---|---|
