@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-27-a-den-poradce",
+  "audio": "auto/2026-11-27-a-den-poradce.wav",
+  "look": "cartoon",
+  "script": "Jak vypadá den finančního poradce ve 23 letech? 7:30 – kafe a plán dne, kalendář je plný schůzek. 9:00 – schůzka v kavárně: klient řeší rezervu a první byt, společně uděláme plán. 12:00 – oběd a školení s týmem, každý týden se něco nového naučíš. 14:00 – telefony: hodně NE, pár ANO, a každé ANO je nový klient. 17:00 – fitko, rozvrh si skládáš sám. Šéf a píchačky vs. vlastní rozvrh a vlastní klienti. 20:00 – doma, a víš, že dnešek tě posunul. Není to pro každého, ale pro někoho je to přesně ono. Chceš zažít jeden takový den? Napiš DEN.",
+  "scenes": [
+    {"dur": 84, "set": {"k": "street", "title": ["JAK VYPADÁ DEN", "FINANČNÍHO PORADCE?"]}, "caps": ["Ve 23 letech. Bez kanceláře od 8 do 16."]},
+    {"dur": 108, "badge": "PLÁN DNE", "time": "7:30", "set": {"k": "calendar", "label": "DNES"}, "caps": ["Kafe a plán dne.", "Kalendář plný schůzek."]},
+    {"dur": 150, "badge": "SCHŮZKA", "time": "9:00", "set": {"k": "cafe", "bubbles": ["CO ŘEŠÍTE?", "REZERVU A BYT", "UDĚLÁME PLÁN", "DÍKY!"]}, "caps": ["Schůzka v kavárně.", "Klient řeší rezervu a první byt.", "Společně uděláme plán."]},
+    {"dur": 108, "badge": "TÝM", "time": "12:00", "set": {"k": "team", "n": 3}, "caps": ["Oběd a školení s týmem.", "Každý týden se naučíš něco nového."]},
+    {"dur": 120, "badge": "TELEFONY", "time": "14:00", "set": {"k": "office", "stamps": true, "phone": true}, "caps": ["Telefony. Hodně NE, pár ANO.", "Každé ANO je nový klient."]},
+    {"dur": 96, "badge": "FITKO", "time": "17:00", "set": {"k": "gym"}, "caps": ["Fitko v pět odpoledne?", "Rozvrh si skládáš sám."]},
+    {"dur": 108, "badge": "ROZDÍL", "set": {"k": "split", "left": "ŠÉF + PÍCHAČKY", "right": "TVŮJ ROZVRH"}, "caps": ["Šéf a píchačky…", "…nebo vlastní rozvrh a vlastní klienti."]},
+    {"dur": 96, "badge": "DOMA", "time": "20:00", "set": {"k": "home"}, "caps": ["Doma. A víš, že dnešek tě posunul."]},
+    {"dur": 78, "set": {"k": "big", "lines": [{"t": "NENÍ TO PRO KAŽDÉHO."}, {"t": "ALE PRO NĚKOHO", "green": true}, {"t": "JE TO PŘESNĚ ONO.", "green": true}]}},
+    {"dur": 132, "set": {"k": "cta", "word": "DEN", "sub": "Chceš zažít jeden takový den? Pošlu ti, jak na to.", "foot": "Ilustrativní den. Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}}
+  ]
+}

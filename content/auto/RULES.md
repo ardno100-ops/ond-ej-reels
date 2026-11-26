@@ -138,3 +138,12 @@ Pravidla:
 Průměrný, trochu ambiciózní člověk 20–25: chodí do fitka / sportuje, má brigádu nebo první práci, scrolluje večer, chce víc, ale neví jak.
 → Metafory ze sportu (trénink, opakování, progres, trenér, tým, zápas, sezóna, „winter arc“, „locking in“), mluv jako kamarád z fitka, ne jako banka.
 → Nábor = „hledám pár lidí, co…“, hodnota = dovednost prodávat, kontakty, klienti, tým, mentor, vlastní věc. Bez slibů výdělku.
+
+
+## 🎬 HLAVNÍ LOOK = CARTOON (rozhodnutí majitele 26. 11.)
+„Šablona s buchy (GLOW-DATA) k ničemu – dělej reelska krásný, propracovaný jako Patro po patru, na téma KARIÉRA VE FINANCÍCH.“
+- **GLOW-DATA (AutoReel) se už nepoužívá.**
+- Oba denní reely = **CartoonReel** (`scripts/cartoon_render.sh`, vzor `content/auto/specs/2026-11-27-a-den-poradce.json`): kreslené scény (street, office se stamps NE/ANO, cafe s bublinami, calendar, team, gym, home, think, split, big, cta), badge nahoře (+ čas), titulky v pilulkách.
+  STORY-MONO jen výjimečně (max 1× týdně), FloorsReel „Patro po patru“ už použit.
+- Témata: kariéra ve financích – den poradce, první klient, první rok, jak probíhá schůzka, tým a mentor, co se naučíš, mýty o poradcích, start při škole/práci, kariérní cesta. Hodnota a příběh napřed, nábor nenápadně. Bez čísel o výdělku.
+- Každý reel jiný příběh a jiné pořadí scén; reálné detaily od majitele (TOPICS.md „OD MAJITELE“) mají přednost.

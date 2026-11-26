@@ -65,7 +65,7 @@ const camAt = (f: number): Cam => {
 const levelAt = (f: number) => (f < FL.l1[0] ? -1 : f < FL.l2[0] ? 0 : f < FL.l3[0] ? 1 : f < FL.l4[0] ? 2 : f < FL.later[0] ? 3 : f < FL.twist[0] ? 4 : 0);
 
 /* ---- character ---- */
-const Guy: React.FC<{x: number; y: number; s?: number; mood?: 'ok' | 'wow' | 'happy'; phone?: boolean; tie?: string; hair?: string}> = ({x, y, s = 1, mood = 'ok', phone, tie = GREEN, hair = INK}) => (
+export const Guy: React.FC<{x: number; y: number; s?: number; mood?: 'ok' | 'wow' | 'happy'; phone?: boolean; tie?: string; hair?: string}> = ({x, y, s = 1, mood = 'ok', phone, tie = GREEN, hair = INK}) => (
 	<g transform={`translate(${x} ${y}) scale(${s})`}>
 		{/* body */}
 		<path d="M -46 0 L -40 -78 Q -36 -98 0 -98 Q 36 -98 40 -78 L 46 0 Z" fill="#fff" stroke={INK} strokeWidth={4} />
@@ -94,7 +94,7 @@ const Guy: React.FC<{x: number; y: number; s?: number; mood?: 'ok' | 'wow' | 'ha
 	</g>
 );
 
-const Desk: React.FC<{x: number; y: number; w?: number}> = ({x, y, w = 260}) => (
+export const Desk: React.FC<{x: number; y: number; w?: number}> = ({x, y, w = 260}) => (
 	<g>
 		<rect x={x - w / 2} y={y} width={w} height={22} rx={4} fill="#8a5a3c" stroke={INK} strokeWidth={4} />
 		<rect x={x - w / 2 + 16} y={y + 22} width={14} height={90} fill="#6c442c" stroke={INK} strokeWidth={3} />
@@ -102,7 +102,7 @@ const Desk: React.FC<{x: number; y: number; w?: number}> = ({x, y, w = 260}) => 
 	</g>
 );
 
-const Laptop: React.FC<{x: number; y: number}> = ({x, y}) => (
+export const Laptop: React.FC<{x: number; y: number}> = ({x, y}) => (
 	<g>
 		<rect x={x - 46} y={y - 62} width={92} height={60} rx={6} fill="#3b6b8f" stroke={INK} strokeWidth={4} />
 		<rect x={x - 58} y={y - 4} width={116} height={8} rx={3} fill="#bbb" stroke={INK} strokeWidth={3} />
