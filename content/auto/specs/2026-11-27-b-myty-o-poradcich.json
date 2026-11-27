@@ -1,0 +1,18 @@
+{
+  "id": "2026-11-27-b-myty-o-poradcich",
+  "audio": "auto/2026-11-27-b-myty-o-poradcich.wav",
+  "look": "cartoon-green",
+  "script": "4 mýty o finančních poradcích. Mýtus 1: prodáváš věci, které nikdo nechce. Realita: lidi řeší byt, rezervu a důchod a neví, jak na to – ty jim uděláš plán. Mýtus 2: musíš být hlučný extrovert. Realita: nejdůležitější je umět poslouchat. Mýtus 3: musíš znát spoustu lidí. Realita: kontakty si postavíš – spokojení klienti doporučují dál, a nejsi na to sám, máš tým. Mýtus 4: je to práce na pár měsíců. Realita: klienti s tebou zůstávají roky. Je to práce s lidmi a jejich budoucností. Hledám pár lidí, co to chtějí zkusit. Napiš MÝTUS.",
+  "scenes": [
+    {"dur": 84, "set": {"k": "street", "title": ["4 MÝTY O", "FINANČNÍCH PORADCÍCH"]}, "caps": ["Slyšel jsem je všechny. Tady je pravda."]},
+    {"dur": 114, "set": {"k": "myth", "n": 1, "myth": "Prodáváš věci, které nikdo nechce.", "truth": "Lidi řeší byt, rezervu a důchod. Ty jim uděláš plán."}},
+    {"dur": 120, "badge": "SCHŮZKA", "set": {"k": "cafe", "bubbles": ["CHCI SVŮJ BYT", "NEVÍM JAK", "UDĚLÁME PLÁN"]}, "caps": ["Nikoho nepřemlouváš.", "Pomáháš s tím, co lidi stejně řeší."]},
+    {"dur": 114, "set": {"k": "myth", "n": 2, "myth": "Musíš být hlučný extrovert.", "truth": "Nejdůležitější je umět poslouchat."}},
+    {"dur": 84, "badge": "DOVEDNOST Č. 1", "set": {"k": "think", "text": "NEJDŘÍV POSLOUCHAT"}, "caps": ["Kdo poslouchá, ten pomůže líp."]},
+    {"dur": 114, "set": {"k": "myth", "n": 3, "myth": "Musíš znát spoustu lidí.", "truth": "Kontakty si postavíš. Spokojení klienti doporučují dál."}},
+    {"dur": 96, "badge": "NEJSI SÁM", "set": {"k": "team", "n": 3}, "caps": ["A nejsi na to sám.", "Máš tým a mentora."]},
+    {"dur": 114, "set": {"k": "myth", "n": 4, "myth": "Je to práce na pár měsíců.", "truth": "Klienti s tebou zůstávají roky."}},
+    {"dur": 78, "set": {"k": "big", "lines": [{"t": "PRÁCE S LIDMI"}, {"t": "A JEJICH", "green": true}, {"t": "BUDOUCNOSTÍ.", "green": true}]}},
+    {"dur": 126, "set": {"k": "cta", "word": "MÝTUS", "sub": "Hledám pár lidí, co to chtějí zkusit. Pošlu ti, jak začít.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}}
+  ]
+}

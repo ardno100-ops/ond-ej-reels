@@ -21,3 +21,4 @@
 | 2026-11-26 | – | 2026-11-26-a-10000-kroku | 10 000 kroků vs. kroky ke kariéře (GLOW) – TT nenaplánováno (schválení), IG ručně | KROK | – |
 | 2026-11-26 | 18:00 | 2026-11-23-c-patro-po-patru | Patro po patru (CARTOON-FLOORS), poprvé na TT | PATRO | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=1831854585782357077 |
 | 2026-11-27 | 09:30 | 2026-11-27-a-den-poradce | Jak vypadá den finančního poradce (CARTOON, nová šablona) | DEN | https://app.metricool.com/planner/calendar?blogId=8031800&openWithPostUuid=-6629349498245853628 |
+| 2026-11-27 | 18:00 | 2026-11-27-b-myty-o-poradcich | 4 mýty o finančních poradcích (CARTOON zelená, nová scéna myth) | MÝTUS | (viz Metricool) |

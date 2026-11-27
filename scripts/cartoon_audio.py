@@ -45,6 +45,10 @@ for i, s in enumerate(sc):
         add(sfx, fr(t0) - 0.5, riser(0.5), 0.5)
         for j in range(len(st['lines'])):
             add(sfx, fr(t0 + 4 + j * 10), impact(), 0.8 if j < len(st['lines']) - 1 else 1.0)
+    elif k == 'myth':
+        add(sfx, fr(t0 + 30), impact(), 0.9); add(sfx, fr(t0 + 30), thud(), 0.6)
+        add(sfx, fr(t0 + 52), whoosh(0.4, True, 0.7), 1)
+        add(sfx, fr(t0 + 60), chime([987.8, 1318.5, 1568.0], 1.0), 0.6)
     elif k == 'cta':
         add(sfx, fr(t0 + 12), impact(), 1.0); add(sfx, fr(t0 + 12), sub_boom(), 0.7)
         add(sfx, fr(t0 + 26), kaching(), 0.8)

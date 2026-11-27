@@ -7,7 +7,9 @@ import {Desk, Guy, Laptop} from './FloorsReel';
    A reel = list of scenes; each scene = one set (place) + badge on top + 1–3 caption pills.
    Timing for SFX mirrored in scripts/cartoon_audio.py. */
 
-const GREEN = '#9fe870';
+const GREEN = '#c5f29b';
+const BG = '#06110c';
+const DEEP = '#0b1f15';
 const INK = '#1b1b1f';
 const PAPER = '#f6f1e7';
 const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
@@ -25,6 +27,7 @@ export type CartoonSet =
 	| {k: 'think'; text: string}
 	| {k: 'split'; left: string; right: string}
 	| {k: 'big'; lines: {t: string; green?: boolean}[]}
+	| {k: 'myth'; n: number; myth: string; truth: string}
 	| {k: 'cta'; word: string; sub: string; foot?: string};
 
 export type CartoonScene = {dur: number; badge?: string; time?: string; caps?: string[]; set: CartoonSet};
@@ -35,10 +38,11 @@ const Room: React.FC<{wall: string; children?: React.ReactNode; window?: 'day' |
 	<svg width={1080} height={1920} style={{position: 'absolute', inset: 0}}>
 		<rect x={0} y={ROOM_TOP} width={1080} height={FLOOR - ROOM_TOP} fill={wall} />
 		{brick ? Array.from({length: 15}).map((_, r) => <line key={r} x1={0} x2={1080} y1={ROOM_TOP + 40 + r * 40} y2={ROOM_TOP + 40 + r * 40} stroke="#00000020" strokeWidth={3} />) : null}
-		<rect x={640} y={ROOM_TOP + 50} width={260} height={180} fill={window === 'day' ? '#bfe3ff' : '#1b2340'} stroke={INK} strokeWidth={6} />
-		{window === 'night' ? [0, 1, 2].map((i) => <rect key={i} x={660 + i * 80} y={ROOM_TOP + 120 - i * 20} width={50} height={110 + i * 20} fill="#2a3352" />) : <circle cx={850} cy={ROOM_TOP + 95} r={26} fill="#ffe08a" />}
-		<line x1={770} x2={770} y1={ROOM_TOP + 50} y2={ROOM_TOP + 230} stroke={INK} strokeWidth={5} />
-		<rect x={0} y={FLOOR} width={1080} height={70} fill="#6b4a36" stroke={INK} strokeWidth={5} />
+		<rect x={640} y={ROOM_TOP + 50} width={260} height={180} fill={window === 'day' ? '#2e5a3f' : '#0a1a12'} stroke={GREEN} strokeWidth={5} />
+		{window === 'night' ? [0, 1, 2].map((i) => <rect key={i} x={660 + i * 80} y={ROOM_TOP + 120 - i * 20} width={50} height={110 + i * 20} fill="#143022" />) : <circle cx={850} cy={ROOM_TOP + 95} r={26} fill={GREEN} opacity={0.8} />}
+		<line x1={770} x2={770} y1={ROOM_TOP + 50} y2={ROOM_TOP + 230} stroke={GREEN} strokeWidth={4} />
+		<rect x={0} y={FLOOR} width={1080} height={70} fill={DEEP} />
+		<line x1={0} x2={1080} y1={FLOOR} y2={FLOOR} stroke={GREEN} strokeWidth={4} opacity={0.7} />
 		{children}
 	</svg>
 );
@@ -56,6 +60,13 @@ const Bubble: React.FC<{x: number; y: number; text: string; p: number; right?: b
 	);
 };
 
+/* ---------- brand logo (tiger, zoomed, green ring) ---------- */
+export const BrandLogo: React.FC = () => (
+	<div style={{position: 'absolute', top: 268, right: 56, width: 124, height: 124, borderRadius: 62, overflow: 'hidden', border: `4px solid ${GREEN}`, boxShadow: `0 0 28px ${GREEN}88, 0 0 8px ${GREEN}`, background: BG}}>
+		<Img src={staticFile('brand/logo.png')} style={{width: '100%', height: '100%', transform: 'scale(1.42)', transformOrigin: '50% 52%'}} />
+	</div>
+);
+
 /* ---------- sets ---------- */
 const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 	const f = useCurrentFrame();
@@ -66,24 +77,24 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 			return (
 				<AbsoluteFill style={{transform: `scale(${zoom})`}}>
 					<svg width={1080} height={1920} style={{position: 'absolute', inset: 0}}>
-						<rect x={0} y={0} width={1080} height={1920} fill="#0b1020" />
+						<rect x={0} y={0} width={1080} height={1920} fill={BG} />
 						{Array.from({length: 9}).map((_, i) => {
 							const w = 110 + ((i * 47) % 70);
 							const h = 380 + ((i * 131) % 420);
 							const x = -20 + i * 125;
 							return (
 								<g key={i}>
-									<rect x={x} y={FLOOR - h} width={w} height={h} fill={i % 2 ? '#141a2e' : '#1b2340'} />
+									<rect x={x} y={FLOOR - h} width={w} height={h} fill={i % 2 ? '#0d2318' : '#12301f'} />
 									{Array.from({length: Math.floor(h / 70)}).map((_, r) =>
 										[0, 1].map((c) => {
 											const on = Math.sin(i * 7 + r * 3 + c * 11 + Math.floor(f / 30)) > 0.2;
-											return <rect key={`${r}${c}`} x={x + 18 + c * (w / 2.2)} y={FLOOR - h + 24 + r * 70} width={22} height={30} fill={on ? '#ffd682' : '#2a3352'} />;
+											return <rect key={`${r}${c}`} x={x + 18 + c * (w / 2.2)} y={FLOOR - h + 24 + r * 70} width={22} height={30} fill={on ? GREEN : '#173a27'} opacity={on ? 0.85 : 1} />;
 										}),
 									)}
 								</g>
 							);
 						})}
-						<rect x={0} y={FLOOR} width={1080} height={300} fill="#2a2d36" />
+						<rect x={0} y={FLOOR} width={1080} height={300} fill={DEEP} />
 						<Guy x={540 + interpolate(f, [0, dur], [-60, 60])} y={FLOOR + bob * 0.5} mood="ok" s={1.25} />
 					</svg>
 					{s.title ? (
@@ -104,7 +115,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 		}
 		case 'office':
 			return (
-				<Room wall="#b5553e" brick>
+				<Room wall="#17402b" brick>
 					<Desk x={600} y={FLOOR - 130} w={320} />
 					<Laptop x={660} y={FLOOR - 130} />
 					<Guy x={360} y={FLOOR + bob * 0.3} phone={s.phone} mood={f > dur / 2 ? 'happy' : 'ok'} s={1.2} />
@@ -129,7 +140,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 		case 'cafe': {
 			const bubbles = s.bubbles ?? [];
 			return (
-				<Room wall="#d9a35b">
+				<Room wall="#1d4a33">
 					<ellipse cx={540} cy={FLOOR - 120} rx={190} ry={26} fill="#8a5a3c" stroke={INK} strokeWidth={5} />
 					<rect x={530} y={FLOOR - 96} width={20} height={96} fill="#6c442c" stroke={INK} strokeWidth={3} />
 					<rect x={470} y={FLOOR - 172} width={40} height={44} rx={6} fill="#fff" stroke={INK} strokeWidth={4} />
@@ -147,7 +158,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 		}
 		case 'calendar':
 			return (
-				<Room wall="#3e6e63">
+				<Room wall="#123323">
 					<g transform={`translate(150 ${ROOM_TOP + 70})`}>
 						<rect width={440} height={330} rx={16} fill={PAPER} stroke={INK} strokeWidth={6} />
 						<rect width={440} height={56} rx={16} fill={INK} />
@@ -164,7 +175,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 			);
 		case 'team':
 			return (
-				<Room wall="#5a6c8e" window="day">
+				<Room wall="#163a28" window="day">
 					{Array.from({length: s.n ?? 3}).map((_, i) => {
 						const p = prog(f, 6 + i * 12, 10, Easing.out(Easing.back(1.6)));
 						const x = 200 + i * 320;
@@ -182,7 +193,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 			const up = (Math.sin(f / 6) + 1) / 2;
 			const barY = FLOOR - 330 - up * 70;
 			return (
-				<Room wall="#2f4f3f" window="night">
+				<Room wall="#0f2a1d" window="night">
 					{[0, 1, 2, 3].map((i) => (
 						<g key={i}>
 							<rect x={80 + i * 60} y={FLOOR - 140} width={14} height={140} fill="#444" />
@@ -198,7 +209,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 		}
 		case 'home':
 			return (
-				<Room wall="#4a3f5c" window="night">
+				<Room wall="#10281c" window="night">
 					<rect x={180} y={FLOOR - 160} width={460} height={110} rx={30} fill="#7a5a9a" stroke={INK} strokeWidth={6} />
 					<rect x={160} y={FLOOR - 220} width={60} height={170} rx={20} fill="#7a5a9a" stroke={INK} strokeWidth={6} />
 					<rect x={600} y={FLOOR - 220} width={60} height={170} rx={20} fill="#7a5a9a" stroke={INK} strokeWidth={6} />
@@ -210,7 +221,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 		case 'think': {
 			const p = prog(f, 8, 10, Easing.out(Easing.back(2)));
 			return (
-				<Room wall="#3b4a5c">
+				<Room wall="#123323">
 					<Guy x={540} y={FLOOR} s={1.3} mood="wow" />
 					<circle cx={640} cy={FLOOR - 330} r={14} fill="#fff" stroke={INK} strokeWidth={4} opacity={prog(f, 2, 4)} />
 					<circle cx={680} cy={FLOOR - 380} r={22} fill="#fff" stroke={INK} strokeWidth={4} opacity={prog(f, 5, 4)} />
@@ -227,10 +238,10 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 			const p = prog(f, 14, 12, Easing.inOut(Easing.cubic));
 			return (
 				<svg width={1080} height={1920} style={{position: 'absolute', inset: 0}}>
-					<rect x={0} y={ROOM_TOP} width={540} height={FLOOR - ROOM_TOP} fill="#55585f" />
-					<rect x={540} y={ROOM_TOP} width={540} height={FLOOR - ROOM_TOP} fill="#3e6e63" />
+					<rect x={0} y={ROOM_TOP} width={540} height={FLOOR - ROOM_TOP} fill="#2b302d" />
+					<rect x={540} y={ROOM_TOP} width={540} height={FLOOR - ROOM_TOP} fill="#17402b" />
 					<line x1={540} x2={540} y1={ROOM_TOP} y2={FLOOR + 70} stroke={INK} strokeWidth={8} />
-					<rect x={0} y={FLOOR} width={1080} height={70} fill="#6b4a36" stroke={INK} strokeWidth={5} />
+					<rect x={0} y={FLOOR} width={1080} height={70} fill={DEEP} />
 					<g opacity={0.85}>
 						<Guy x={200} y={FLOOR} s={0.95} mood="ok" tie="#888" />
 						<Guy x={380} y={FLOOR} s={1.1} mood="ok" tie="#d23b3b" hair="#555" />
@@ -255,7 +266,7 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 		}
 		case 'big':
 			return (
-				<AbsoluteFill style={{background: '#0b1020'}}>
+				<AbsoluteFill style={{background: `radial-gradient(ellipse 80% 55% at 50% 45%, #163a28 0%, ${BG} 70%)`}}>
 					<div style={{position: 'absolute', top: 560, left: 50, right: 50, textAlign: 'center', fontFamily: FONT, fontWeight: 900}}>
 						{s.lines.map((l, i) => {
 							const k = f - 4 - i * 10;
@@ -269,10 +280,30 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 					</div>
 				</AbsoluteFill>
 			);
+		case 'myth': {
+			const stamp = prog(f, 30, 6, Easing.out(Easing.back(2.5)));
+			const flip = interpolate(f, [52, 62], [0, 1], {...clamp, easing: Easing.inOut(Easing.cubic)});
+			const sx = Math.abs(Math.cos(flip * Math.PI));
+			const truth = flip > 0.5;
+			const enter = prog(f, 0, 10, Easing.out(Easing.back(1.6)));
+			return (
+				<AbsoluteFill style={{background: `radial-gradient(ellipse 80% 55% at 50% 45%, #163a28 0%, ${BG} 70%)`}}>
+					<div style={{position: 'absolute', top: 470, left: 130, right: 130, height: 520, transform: `scale(${enter}) scaleX(${sx})`, borderRadius: 30, background: truth ? GREEN : DEEP, border: `5px solid ${truth ? '#fff' : '#d96b5b'}`, boxShadow: truth ? `0 0 60px ${GREEN}99` : '0 0 30px #00000088', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 40, fontFamily: FONT, textAlign: 'center'}}>
+						<div style={{fontWeight: 900, fontSize: 34, letterSpacing: 6, color: truth ? DEEP : '#d96b5b'}}>{truth ? 'REALITA' : `MÝTUS #${s.n}`}</div>
+						<div style={{marginTop: 24, fontWeight: 900, fontSize: 56, lineHeight: 1.15, color: truth ? DEEP : '#f1f7ec'}}>{truth ? s.truth : s.myth}</div>
+					</div>
+					{!truth && f >= 30 ? (
+						<div style={{position: 'absolute', top: 900, left: 0, right: 150, display: 'flex', justifyContent: 'flex-end'}}>
+							<div style={{transform: `scale(${2.2 - 1.2 * stamp}) rotate(-14deg)`, background: BG, opacity: stamp, border: '8px solid #e04848', color: '#e04848', fontFamily: FONT, fontWeight: 900, fontSize: 96, padding: '4px 30px', borderRadius: 16, letterSpacing: 6}}>NE!</div>
+						</div>
+					) : null}
+				</AbsoluteFill>
+			);
+		}
 		case 'cta': {
 			const w = prog(f, 12, 8, Easing.out(Easing.back(2)));
 			return (
-				<AbsoluteFill style={{background: '#0b1020'}}>
+				<AbsoluteFill style={{background: `radial-gradient(ellipse 80% 55% at 50% 45%, #163a28 0%, ${BG} 70%)`}}>
 					<div style={{position: 'absolute', top: 430, left: 60, right: 60, textAlign: 'center', fontFamily: FONT}}>
 						<div style={{fontWeight: 800, fontSize: 42, color: '#bbb'}}>NAPIŠ DO KOMENTÁŘE</div>
 						<div style={{marginTop: 20, display: 'inline-block', transform: `scale(${w}) rotate(-2deg)`, background: GREEN, color: INK, fontWeight: 900, fontSize: s.word.length > 6 ? 120 : 150, padding: '6px 40px', borderRadius: 24, border: `6px solid ${INK}`, boxShadow: `0 0 50px ${GREEN}88`}}>{s.word}</div>
@@ -294,7 +325,7 @@ const Badge: React.FC<{text: string; time?: string}> = ({text, time}) => {
 		<div style={{position: 'absolute', top: 280, left: 0, right: 0, display: 'flex', justifyContent: 'center'}}>
 			<div style={{transform: `scale(${p}) rotate(-2deg)`, textAlign: 'center', fontFamily: FONT}}>
 				{time ? <div style={{display: 'inline-block', background: GREEN, color: INK, fontWeight: 900, fontSize: 28, letterSpacing: 3, padding: '6px 18px', borderRadius: '10px 10px 0 0', border: `4px solid ${INK}`, borderBottom: 'none'}}>🕒 {time}</div> : null}
-				<div style={{background: INK, color: '#fff', fontWeight: 900, fontSize: 56, letterSpacing: 2, padding: '10px 30px', borderRadius: 14, border: '4px solid #fff'}}>{text}</div>
+				<div style={{background: DEEP, color: GREEN, fontWeight: 900, fontSize: 56, letterSpacing: 2, padding: '10px 30px', borderRadius: 14, border: `4px solid ${GREEN}`, boxShadow: `0 0 30px ${GREEN}55`}}>{text}</div>
 			</div>
 		</div>
 	);
@@ -307,7 +338,7 @@ const Caps: React.FC<{caps: string[]; dur: number}> = ({caps, dur}) => {
 	const p = prog(f, i * each, 6);
 	return (
 		<div style={{position: 'absolute', top: 1150, left: 80, right: 150, display: 'flex', justifyContent: 'center'}}>
-			<div style={{opacity: p, transform: `translateY(${(1 - p) * 10}px)`, background: INK, color: '#fff', fontFamily: FONT, fontWeight: 800, fontSize: 46, lineHeight: 1.25, padding: '14px 26px', borderRadius: 16, textAlign: 'center', border: '3px solid rgba(255,255,255,0.15)'}}>{caps[i]}</div>
+			<div style={{opacity: p, transform: `translateY(${(1 - p) * 10}px)`, background: 'rgba(6,17,12,0.92)', color: '#f1f7ec', fontFamily: FONT, fontWeight: 800, fontSize: 46, lineHeight: 1.25, padding: '14px 26px', borderRadius: 16, textAlign: 'center', border: `3px solid ${GREEN}66`}}>{caps[i]}</div>
 		</div>
 	);
 };
@@ -317,7 +348,7 @@ const SceneView: React.FC<{s: CartoonScene; last: boolean}> = ({s, last}) => {
 	const fade = last ? 1 : interpolate(f, [s.dur - 5, s.dur], [1, 0], clamp);
 	const inn = interpolate(f, [0, 5], [0, 1], clamp);
 	return (
-		<AbsoluteFill style={{opacity: Math.min(fade, s.set.k === 'street' ? 1 : inn), background: '#0b1020'}}>
+		<AbsoluteFill style={{opacity: Math.min(fade, s.set.k === 'street' ? 1 : inn), background: BG}}>
 			<SetView s={s.set} dur={s.dur} />
 			{s.badge ? <Badge text={s.badge} time={s.time} /> : null}
 			{s.caps && s.caps.length ? <Caps caps={s.caps} dur={s.dur} /> : null}
@@ -328,7 +359,7 @@ const SceneView: React.FC<{s: CartoonScene; last: boolean}> = ({s, last}) => {
 export const CartoonReel: React.FC<CartoonSpec> = ({scenes, audio, debugSafe}) => {
 	let from = 0;
 	return (
-		<AbsoluteFill style={{background: '#0b1020', overflow: 'hidden'}}>
+		<AbsoluteFill style={{background: BG, overflow: 'hidden'}}>
 			{scenes.map((s, i) => {
 				const el = (
 					<Sequence key={i} from={from} durationInFrames={s.dur} name={`${i + 1}. ${s.set.k}`}>
@@ -338,7 +369,7 @@ export const CartoonReel: React.FC<CartoonSpec> = ({scenes, audio, debugSafe}) =
 				from += s.dur;
 				return el;
 			})}
-			<Img src={staticFile('brand/logo.png')} style={{position: 'absolute', top: 280, right: 50, width: 84, height: 84, borderRadius: 42}} />
+			<BrandLogo />
 			{debugSafe ? (
 				<AbsoluteFill style={{pointerEvents: 'none'}}>
 					<div style={{position: 'absolute', top: 0, left: 0, right: 0, height: 250, background: 'rgba(255,0,80,0.28)'}} />
