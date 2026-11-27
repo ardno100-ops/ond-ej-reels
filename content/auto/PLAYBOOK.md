@@ -101,6 +101,12 @@ Automat se tímto souborem řídí **před** RULES.md tam, kde se liší. Poledn
 - IG sledující 499 (+4 za týden). Výplata 40k už 341 zhl. (skip 71,5 %), Plato 252 (72,1 %), Den 1 vs 365 70 zhl. první den (67,2 %, sledování jen 3,7 s – dots scéna asi zdržuje). Žádné nové video pod 50 %.
 - Ranní plánování TT přes Metricool opakovaně visí na schválení (21., 22., 25., 26. 11.). Bez „Vždy povolit“ automat TT neumí.
 
+## 📊 Zjištění z 27. 11.
+- **IG 500 sledujících** (26. 11.). Dosah 26. 11. 398.
+- Patro po patru (CARTOON) na IG 203 zhl. za první den – v průměru s ostatními; „Den 1“ dorostl na 264, Plato 263.
+- TT sledující 1 346 (+4). Ruční TT #vtentoden 355 zhl. – znovu nad automatickými (204–248).
+- Od 27. 11. všechny reely CARTOON v zelené značce – vyhodnotit za týden (min. 5 videí) proti STORY/GLOW.
+
 ## Experimenty (běží)
 | Experiment | Jak | Vyhodnotit |
 |---|---|---|
