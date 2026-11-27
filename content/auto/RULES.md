@@ -147,3 +147,5 @@ Průměrný, trochu ambiciózní člověk 20–25: chodí do fitka / sportuje, m
   STORY-MONO jen výjimečně (max 1× týdně), FloorsReel „Patro po patru“ už použit.
 - Témata: kariéra ve financích – den poradce, první klient, první rok, jak probíhá schůzka, tým a mentor, co se naučíš, mýty o poradcích, start při škole/práci, kariérní cesta. Hodnota a příběh napřed, nábor nenápadně. Bez čísel o výdělku.
 - Každý reel jiný příběh a jiné pořadí scén; reálné detaily od majitele (TOPICS.md „OD MAJITELE“) mají přednost.
+
+- **27. 11. – majitel: „drž zelenou šablonu, jako na začátku“** → CartoonReel je přebarvený do zelené značky (#06110c pozadí, #c5f29b akcent, tmavě zelené stěny), logo s tygrem vpravo nahoře zvětšené se zeleným rámečkem (BrandLogo). Každý reel ORIGINÁLNÍ – jiný příběh, jiná stavba; nové scény přidávej (např. myth = karta MÝTUS → razítko NE! → otočka REALITA).
