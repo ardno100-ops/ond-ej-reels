@@ -1,0 +1,17 @@
+{
+  "id": "2026-11-28-a-trener-vs-mentor",
+  "audio": "auto/2026-11-28-a-trener-vs-mentor.wav",
+  "look": "cartoon-green",
+  "script": "Ve fitku máš trenéra. V kariéře koho? Trenér ti dá plán, ohlídá techniku a řekne ti, kde přidat. V práci se většina lidí učí sama – pokus, omyl, roky. Jde to i jinak. Mentor ti ukáže, jak vést schůzku, jak plánovat týden a jak se nevzdat po prvních NE. Na první schůzky nechodíš sám. A kolem tebe je tým, co táhne stejným směrem. Trénuješ tělo. Trénuj i kariéru. Hledám pár lidí, co chtějí mentora. Napiš MENTOR.",
+  "scenes": [
+    {"dur": 84, "set": {"k": "big", "lines": [{"t": "VE FITKU MÁŠ"}, {"t": "TRENÉRA.", "green": true}, {"t": "V KARIÉŘE KOHO?"}]}},
+    {"dur": 108, "badge": "TRENÉR", "set": {"k": "gym"}, "caps": ["Trenér ti dá plán.", "Ohlídá techniku a řekne, kde přidat."]},
+    {"dur": 108, "badge": "V PRÁCI?", "set": {"k": "split", "left": "SÁM", "right": "S MENTOREM"}, "caps": ["V práci se většina učí sama.", "Pokus, omyl… roky."]},
+    {"dur": 78, "set": {"k": "think", "text": "KDO MĚ TO NAUČÍ?"}, "caps": ["Jde to i jinak."]},
+    {"dur": 132, "badge": "PLÁN OD MENTORA", "set": {"k": "board", "title": "TRÉNINKOVÝ PLÁN", "items": ["JAK VÉST SCHŮZKU", "JAK PLÁNOVAT TÝDEN", "JAK ZVLÁDNOUT NE"]}, "caps": ["Mentor ti ukáže, jak na to.", "Krok po kroku, jako trenér."]},
+    {"dur": 120, "badge": "PRVNÍ SCHŮZKY", "set": {"k": "cafe", "bubbles": ["DOBRÝ DEN!", "CO ŘEŠÍTE?", "JSEM TU S VÁMI"]}, "caps": ["Na první schůzky nechodíš sám.", "Vidíš, jak to dělá někdo zkušený."]},
+    {"dur": 96, "badge": "TÝM", "set": {"k": "team", "n": 3}, "caps": ["A kolem tebe tým,", "co táhne stejným směrem."]},
+    {"dur": 78, "set": {"k": "big", "lines": [{"t": "TRÉNUJEŠ TĚLO."}, {"t": "TRÉNUJ I", "green": true}, {"t": "KARIÉRU.", "green": true}]}},
+    {"dur": 126, "set": {"k": "cta", "word": "MENTOR", "sub": "Hledám pár lidí, co chtějí mentora. Pošlu ti, jak začít.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}}
+  ]
+}

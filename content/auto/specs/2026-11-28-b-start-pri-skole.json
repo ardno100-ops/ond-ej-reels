@@ -1,0 +1,16 @@
+{
+  "id": "2026-11-28-b-start-pri-skole",
+  "audio": "auto/2026-11-28-b-start-pri-skole.wav",
+  "look": "cartoon-green",
+  "script": "Studuješ a večer koukáš na seriály? Tady je jiný plán. Přednášky máš ráno, odpoledne a večery jsou tvoje. Cesta vypadá takhle: první školení, odborná zkouška, první schůzka s mentorem, vlastní klienti, a jednou vlastní tým. Učíš se mluvit s lidmi – po telefonu i naživo. Mýtus: musíš mít vystudovanou ekonomku. Realita: všechno se naučíš, se zkouškou ti pomůžeme. A na trénink ti čas zbyde. Začni dřív, než budeš muset. Hledám pár studentů, co to chtějí zkusit. Napiš ŠKOLA.",
+  "scenes": [
+    {"dur": 90, "badge": "PO ŠKOLE", "time": "19:00", "set": {"k": "home"}, "caps": ["Studuješ a večer jedeš seriály?", "Tady je jiný plán."]},
+    {"dur": 108, "badge": "TVŮJ ROZVRH", "set": {"k": "calendar", "label": "SEMESTR"}, "caps": ["Přednášky máš ráno.", "Odpoledne a večery jsou tvoje."]},
+    {"dur": 168, "badge": "CESTA", "set": {"k": "ladder", "steps": ["ŠKOLENÍ", "ZKOUŠKA", "S MENTOREM", "VLASTNÍ KLIENTI", "TÝM"]}, "caps": ["První školení a odborná zkouška.", "Schůzky s mentorem.", "Vlastní klienti. A jednou tým."]},
+    {"dur": 102, "badge": "DOVEDNOST", "set": {"k": "office", "phone": true}, "caps": ["Učíš se mluvit s lidmi.", "Po telefonu i naživo."]},
+    {"dur": 114, "set": {"k": "myth", "n": 1, "myth": "Musíš mít vystudovanou ekonomku.", "truth": "Všechno se naučíš. Se zkouškou ti pomůžeme."}},
+    {"dur": 90, "badge": "A TRÉNINK?", "set": {"k": "gym"}, "caps": ["A na trénink ti čas zbyde."]},
+    {"dur": 78, "set": {"k": "big", "lines": [{"t": "ZAČNI DŘÍV,"}, {"t": "NEŽ BUDEŠ", "green": true}, {"t": "MUSET.", "green": true}]}},
+    {"dur": 126, "set": {"k": "cta", "word": "ŠKOLA", "sub": "Hledám pár studentů, co to chtějí zkusit. Pošlu ti, jak začít.", "foot": "Spolupráce na živnostenský list. Příjem závisí na výkonu a není zaručen."}}
+  ]
+}

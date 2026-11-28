@@ -28,6 +28,8 @@ export type CartoonSet =
 	| {k: 'split'; left: string; right: string}
 	| {k: 'big'; lines: {t: string; green?: boolean}[]}
 	| {k: 'myth'; n: number; myth: string; truth: string}
+	| {k: 'board'; title: string; items: string[]}
+	| {k: 'ladder'; steps: string[]}
 	| {k: 'cta'; word: string; sub: string; foot?: string};
 
 export type CartoonScene = {dur: number; badge?: string; time?: string; caps?: string[]; set: CartoonSet};
@@ -298,6 +300,62 @@ const SetView: React.FC<{s: CartoonSet; dur: number}> = ({s, dur}) => {
 						</div>
 					) : null}
 				</AbsoluteFill>
+			);
+		}
+		case 'board': {
+			const n = s.items.length;
+			const gap = Math.floor((dur - 24) / Math.max(1, n));
+			return (
+				<Room wall="#163a28">
+					<rect x={340} y={ROOM_TOP + 40} width={680} height={430} rx={14} fill={PAPER} stroke={INK} strokeWidth={7} />
+					<rect x={340} y={ROOM_TOP + 40} width={680} height={64} rx={14} fill={INK} />
+					<text x={680} y={ROOM_TOP + 84} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={34} fill={GREEN}>{s.title}</text>
+					<line x1={420} x2={420} y1={ROOM_TOP + 470} y2={FLOOR} stroke={INK} strokeWidth={8} />
+					<line x1={940} x2={940} y1={ROOM_TOP + 470} y2={FLOOR} stroke={INK} strokeWidth={8} />
+					{s.items.map((t, i) => {
+						const p = prog(f, 12 + i * gap, 8, Easing.out(Easing.back(2)));
+						const y = ROOM_TOP + 170 + i * (300 / Math.max(1, n));
+						return (
+							<g key={i} opacity={p > 0 ? 1 : 0}>
+								<g transform={`translate(392 ${y - 12}) scale(${p})`}>
+									<circle r={24} fill={GREEN} stroke={INK} strokeWidth={4} />
+									<path d="M -11 0 L -3 9 L 12 -9" fill="none" stroke={INK} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round" />
+								</g>
+								<text x={436} y={y} fontFamily={FONT} fontWeight={900} fontSize={36} fill={INK} opacity={p}>{t}</text>
+							</g>
+						);
+					})}
+					<Guy x={190} y={FLOOR + bob * 0.3} s={1.15} mood="happy" tie="#e0a030" hair="#555" />
+					<line x1={230} x2={330} y1={FLOOR - 120} y2={ROOM_TOP + 300 + Math.sin(f / 8) * 20} stroke={INK} strokeWidth={6} strokeLinecap="round" />
+				</Room>
+			);
+		}
+		case 'ladder': {
+			const n = s.steps.length;
+			const gap = Math.floor((dur - 24) / Math.max(1, n));
+			const W = Math.min(190, 900 / n);
+			const H = Math.min(100, 470 / n);
+			const at = Math.min(n - 1, Math.max(0, Math.floor((f - 10) / gap)));
+			const k = interpolate(f, [10 + at * gap, 10 + at * gap + 8], [Math.max(0, at - 1), at], {...clamp, easing: Easing.out(Easing.cubic)});
+			const gx = 90 + k * W + W / 2;
+			const gy = FLOOR - (k + 1) * H - Math.abs(Math.sin(k * Math.PI)) * 30;
+			return (
+				<Room wall="#0f2a1d" window="night">
+					{s.steps.map((t, i) => {
+						const on = f >= 10 + i * gap;
+						const words = t.split(' ');
+						const lines = t.length > 9 && words.length > 1 ? [words.slice(0, Math.ceil(words.length / 2)).join(' '), words.slice(Math.ceil(words.length / 2)).join(' ')] : [t];
+						return (
+							<g key={i}>
+								<rect x={90 + i * W} y={FLOOR - (i + 1) * H} width={W} height={(i + 1) * H} fill={on ? GREEN : '#1d4a33'} stroke={INK} strokeWidth={5} />
+								{lines.map((l, j) => (
+									<text key={j} x={90 + i * W + W / 2} y={FLOOR - (i + 1) * H + 34 + j * 28} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={24} fill={on ? INK : '#9fc79a'}>{l}</text>
+								))}
+							</g>
+						);
+					})}
+					<Guy x={gx} y={gy} s={0.62} mood={at === n - 1 ? 'happy' : 'ok'} />
+				</Room>
 			);
 		}
 		case 'cta': {
